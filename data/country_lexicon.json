@@ -787,7 +787,7 @@
    {
     "text": "Principado de Andorra",
     "case_sensitive": true,
-    "source": "wikidata_alias_pt"
+    "source": "wikidata_alias_es"
    },
    {
     "text": "Principado dos Vales de Andorra",
@@ -1170,7 +1170,7 @@
    {
     "text": "Anguila",
     "case_sensitive": true,
-    "source": "wikidata_label_pt"
+    "source": "wikidata_label_es"
    },
    {
     "text": "Anguilla",
@@ -1635,7 +1635,7 @@
    {
     "text": "República Argentina",
     "case_sensitive": true,
-    "source": "wikidata_alias_es"
+    "source": "wikidata_alias_pt"
    },
    {
     "text": "République argentine",
@@ -2055,7 +2055,7 @@
    {
     "text": "Åland",
     "case_sensitive": true,
-    "source": "wikidata_label_en"
+    "source": "wikidata_label_pt"
    },
    {
     "text": "Åland Islands",
@@ -3945,7 +3945,7 @@
    {
     "text": "Botsuana",
     "case_sensitive": true,
-    "source": "wikidata_label_es"
+    "source": "wikidata_alias_de"
    },
    {
     "text": "Botswana",
@@ -3980,7 +3980,7 @@
    {
     "text": "Lefatshe la Botswana",
     "case_sensitive": true,
-    "source": "wikidata_alias_en"
+    "source": "wikidata_alias_pt"
    },
    {
     "text": "Motswana",
@@ -6002,7 +6002,7 @@
    {
     "text": "República Checa",
     "case_sensitive": true,
-    "source": "wikidata_label_es"
+    "source": "wikidata_alias_pt"
    },
    {
     "text": "Rép. tchèque",
@@ -6401,13 +6401,13 @@
    },
    {
     "text": "Dominicaine",
-    "case_sensitive": false,
-    "source": "wikidata_demonym_fr"
+    "case_sensitive": true,
+    "source": "wikidata_alias_fr"
    },
    {
     "text": "Dominicaine",
-    "case_sensitive": true,
-    "source": "wikidata_alias_fr"
+    "case_sensitive": false,
+    "source": "wikidata_demonym_fr"
    },
    {
     "text": "Dominicaines",
@@ -6840,7 +6840,7 @@
    {
     "text": "Egipto",
     "case_sensitive": true,
-    "source": "wikidata_alias_pt"
+    "source": "wikidata_label_es"
    },
    {
     "text": "Egito",
@@ -7963,7 +7963,7 @@
    {
     "text": "República Francesa",
     "case_sensitive": true,
-    "source": "wikidata_alias_pt"
+    "source": "wikidata_alias_es"
    },
    {
     "text": "República da França",
@@ -12287,7 +12287,7 @@
    {
     "text": "Daehan Minguk",
     "case_sensitive": true,
-    "source": "wikidata_alias_pt"
+    "source": "wikidata_alias_en"
    },
    {
     "text": "Daehanminguk",
@@ -12847,7 +12847,7 @@
    {
     "text": "Líbano",
     "case_sensitive": true,
-    "source": "wikidata_label_pt"
+    "source": "wikidata_label_es"
    },
    {
     "text": "Republic of Lebanon",
@@ -13212,7 +13212,7 @@
    {
     "text": "Lesoto",
     "case_sensitive": true,
-    "source": "wikidata_label_es"
+    "source": "wikidata_label_pt"
    },
    {
     "text": "Lésothan",
@@ -13849,7 +13849,7 @@
    {
     "text": "Mónaco",
     "case_sensitive": true,
-    "source": "wikidata_label_pt"
+    "source": "wikidata_label_es"
    },
    {
     "text": "Mônaco",
@@ -15727,7 +15727,7 @@
    {
     "text": "México",
     "case_sensitive": true,
-    "source": "wikidata_alias_de"
+    "source": "wikidata_label_es"
    },
    {
     "text": "República Mejicana",
@@ -18583,7 +18583,7 @@
    {
     "text": "Palaos",
     "case_sensitive": true,
-    "source": "wikidata_label_es"
+    "source": "wikidata_label_fr"
    },
    {
     "text": "Palau",
@@ -18722,7 +18722,7 @@
    {
     "text": "Catar",
     "case_sensitive": true,
-    "source": "wikidata_label_es"
+    "source": "wikidata_label_pt"
    },
    {
     "text": "Estado de Catar",
@@ -19202,7 +19202,7 @@
    {
     "text": "Ruanda",
     "case_sensitive": true,
-    "source": "wikidata_label_de"
+    "source": "wikidata_label_pt"
    },
    {
     "text": "Rwanda",
@@ -22186,14 +22186,19 @@
     "source": "wikidata_label_pt"
    },
    {
+    "text": "Trinidad",
+    "case_sensitive": true,
+    "source": "manual"
+   },
+   {
     "text": "Trinidad & Tobago",
     "case_sensitive": true,
-    "source": "openalex"
+    "source": "manual"
    },
    {
     "text": "Trinidad and Tobago",
     "case_sensitive": true,
-    "source": "openalex_alt"
+    "source": "manual"
    },
    {
     "text": "Trinidad e Tobago",
@@ -22213,7 +22218,12 @@
    {
     "text": "Trinidad y Tobago",
     "case_sensitive": true,
-    "source": "wikidata_label_es"
+    "source": "manual"
+   },
+   {
+    "text": "Trinidad-Tobago",
+    "case_sensitive": true,
+    "source": "manual"
    },
    {
     "text": "Trinidad-et-Tobago",
@@ -22228,7 +22238,7 @@
    {
     "text": "Trinité-et-Tobago",
     "case_sensitive": true,
-    "source": "wikidata_label_fr"
+    "source": "manual"
    },
    {
     "text": "trinibagonien",
@@ -24612,6 +24622,9 @@
   "Paris,? Texas",
   "Jersey (?:cows?|cattle|heifers?|breed|milk)",
   "Guernsey (?:cows?|cattle|breed)",
+  "Dominique(?! \\(|, île| island)",
+  "Saint-Martin(?=[- ](?:d[eu']|en|le|la|sur|de|du|des|aux?|[A-Z]))",
+  "(?:Dominique|Jean|Marie|Pierre|Paul|Louis|Jacques|Michel|Anne|François|Philippe|Christophe|Nicolas|Sophie|Catherine|Isabelle|Claude|André|Henri|Yves|Alain|Bernard|Daniel|Laurent|Olivier)[- ]Saint-Martin",
   "Indian Ocean",
   "Indian subcontinent",
   "(?:Latin|South|North|Central|Pan|Ibero)[- ]Americ(?:a|an|ans|as)",

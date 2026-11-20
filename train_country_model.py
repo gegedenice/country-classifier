@@ -16,7 +16,7 @@ Run on HF Jobs (GPU):
   hf jobs uv run --flavor a10g-small --timeout 6h --secrets HF_TOKEN \
      -e DS_REPO=Geraldine/pub-country-classification-dataset-v2 \
      -e MODEL_REPO=Geraldine/pub-country-classifier-v2 \
-     https://raw.githubusercontent.com/gegedenice/country-classifier/main/train_country_model.py
+     train_country_model.py (from a clone of the repository)
 
 Local smoke test (CPU, a few steps, no push):  SMOKE=1 python train_country_model.py
 """
@@ -114,10 +114,11 @@ model = AutoModelForSequenceClassification.from_pretrained(
     id2label={i: c for i, c in enumerate(codes)}, label2id=idx)
 
 gpu = torch.cuda.is_available()
+total_steps = int(np.ceil(len(train) / 32) * EPOCHS)
 args = TrainingArguments(
     output_dir=tempfile.mkdtemp(), per_device_train_batch_size=16, per_device_eval_batch_size=64,
     gradient_accumulation_steps=2, num_train_epochs=EPOCHS, learning_rate=LR, weight_decay=0.01,
-    warmup_ratio=0.05, lr_scheduler_type="linear", max_grad_norm=1.0, bf16=gpu, seed=SEED,
+    warmup_steps=max(1, int(0.05 * total_steps)), lr_scheduler_type="linear", max_grad_norm=1.0, bf16=gpu, seed=SEED,
     logging_steps=10 if SMOKE else 200, eval_strategy="epoch", save_strategy="no", report_to=[],
     dataloader_num_workers=0 if SMOKE else 4, remove_unused_columns=False,
     max_steps=8 if SMOKE else -1)

@@ -19,7 +19,7 @@ The result is pushed as a new config "judged" of the dataset, with, for each row
 Run on HF Jobs (CPU is enough):
   hf jobs uv run --flavor cpu-basic --secrets HF_TOKEN \
      -e DS_REPO=Geraldine/pub-country-classification-dataset-v2 \
-     https://raw.githubusercontent.com/gegedenice/country-classifier/main/judge_labels.py
+     judge_labels.py        (from a clone of the repository)
 
 Env: HF_TOKEN, DS_REPO, JUDGE_MODEL, JUDGE_SPLITS (default "validation,test"),
      JUDGE_MAX_ROWS (per split, default all), JUDGE_CONCURRENCY (default 16).

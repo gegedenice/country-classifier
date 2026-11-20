@@ -143,6 +143,11 @@ def search_terms(code):
     return en, other
 
 
+def label_and_trap(text):
+    ex = lab.explain(text)
+    return sorted({d["code"] for d in ex if d["code"]}), any(d["code"] is None for d in ex)
+
+
 # ---------------------------------------------------------------- main
 def main():
     works = {}   # id -> record
@@ -178,7 +183,7 @@ def main():
     rows, junk = [], 0
     for w in works.values():
         text = w["title"] + ("\n" + w["abstract"] if w["abstract"] else "")
-        labels = sorted(lab.labels(text))
+        labels, trap = label_and_trap(text)
         if len(labels) > MAX_LABELS:
             junk += 1
             continue
@@ -187,10 +192,11 @@ def main():
         base = {"id": w["id"], "language": w["language"], "year": w["year"], "type": w["type"],
                 "origin": "random" if w["origin"] == "random" else "country_query", "split": split}
         rows.append({**base, "text": text, "labels": labels, "has_abstract": bool(w["abstract"]),
-                     "variant": "full", "has_trap": lab.has_trap(text)})
+                     "variant": "full", "has_trap": trap})
         if w["abstract"] and random.random() < TITLE_ONLY_FRAC:
-            rows.append({**base, "text": w["title"], "labels": sorted(lab.labels(w["title"])),
-                         "has_abstract": False, "variant": "title_only", "has_trap": lab.has_trap(w["title"])})
+            t_labels, t_trap = label_and_trap(w["title"])
+            rows.append({**base, "text": w["title"], "labels": t_labels,
+                         "has_abstract": False, "variant": "title_only", "has_trap": t_trap})
     print(f"[label] {len(rows)} rows, {junk} junk works dropped (> {MAX_LABELS} countries)", flush=True)
 
     splits = {s: [r for r in rows if r["split"] == s] for s in ("train", "validation", "test")}

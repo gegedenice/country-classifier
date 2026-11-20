@@ -91,3 +91,12 @@ def test_overrides_have_no_duplicate_keys():
 ])
 def test_shared_aliases(text, expected):
     assert LAB.labels(text) == expected, LAB.explain(text)
+
+
+@pytest.mark.parametrize("text,expected", [
+    ("Dominique Saint-Martin", set()),
+    ("University of the West Indies, Trinidad-Tobago", {"TT"}),
+    ("Tourism in Saint-Martin and Sint Maarten", {"MF", "SX"}),
+])
+def test_names_and_places(text, expected):
+    assert LAB.labels(text) == expected, LAB.explain(text)

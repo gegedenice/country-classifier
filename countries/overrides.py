@@ -87,6 +87,7 @@ ADD = {
     "PG": ["Papua New Guinea", "Papouasie-Nouvelle-Guinée", "Papúa Nueva Guinea", "Papua-Neuguinea"],
     "NE": ["Niger", "Nigerien", "Nigérien", "Nigériens", "Nigérienne"],
     "TD": ["Chad", "Tchad", "Tschad"],
+    "TT": ["Trinidad and Tobago", "Trinidad & Tobago", "Trinidad-Tobago", "Trinidad", "Trinité-et-Tobago", "Trinidad y Tobago"],
     "JO": ["Jordan", "Jordanie", "Jordania", "Jordânia", "Jordanien"],
     "DM": ["Dominica", "Commonwealth of Dominica"],
     "JE": ["Jersey"],
@@ -149,6 +150,10 @@ BLOCKERS = [
     r"Lebanon,? (?:New Hampshire|NH|Pennsylvania|PA|Ohio|Oregon|Tennessee)",
     r"Holland,? (?:Michigan|MI)", r"Peru,? (?:Indiana|Illinois)", r"Paris,? Texas",
     r"Jersey (?:cows?|cattle|heifers?|breed|milk)", r"Guernsey (?:cows?|cattle|breed)",
+    # Person names and French place names
+    r"Dominique(?! \(|, île| island)", r"Saint-Martin(?=[- ](?:d[eu']|en|le|la|sur|de|du|des|aux?|[A-Z]))",
+    r"(?:Dominique|Jean|Marie|Pierre|Paul|Louis|Jacques|Michel|Anne|François|Philippe|Christophe|Nicolas|"
+    r"Sophie|Catherine|Isabelle|Claude|André|Henri|Yves|Alain|Bernard|Daniel|Laurent|Olivier)[- ]Saint-Martin",
     # Oceans, regions and continents that contain a country name
     r"Indian Ocean", r"Indian subcontinent", r"(?:Latin|South|North|Central|Pan|Ibero)[- ]Americ(?:a|an|ans|as)",
     r"(?:Amérique|América|Amerika) (?:latine|Latina|del Sur|du Sud|do Sul|del Norte|du Nord|do Norte|Central|centrale)",

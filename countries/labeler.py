@@ -48,13 +48,15 @@ class Labeler:
 
         self.re_cs = re.compile(_B + "(?:" + alt(list(self.cs) + list(self.ambiguous)) + ")" + _E)
         self.re_ci = re.compile(_B + "(?:" + alt(self.ci) + ")" + _E, re.I)
-        self.re_block = re.compile("|".join(f"(?:{b})" for b in lex["blockers"]))
+        # one regex per blocker: overlapping blockers are all collected, the longest wins
+        self.re_blocks = [re.compile(b) for b in lex["blockers"]]
 
     def _candidates(self, text):
         cands = []  # (start, end, kind, value)
-        for m in self.re_block.finditer(text):
-            if m.end() > m.start():
-                cands.append((m.start(), m.end(), "block", m.group(0)))
+        for rb in self.re_blocks:
+            for m in rb.finditer(text):
+                if m.end() > m.start():
+                    cands.append((m.start(), m.end(), "block", m.group(0)))
         for m in self.re_cs.finditer(text):
             w = m.group(0)
             if w in self.ambiguous:
