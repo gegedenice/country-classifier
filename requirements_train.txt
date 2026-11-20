@@ -1,6 +1,7 @@
-torch
-transformers
-datasets
-accelerate
+torch>=2.3
+transformers>=4.48
+datasets>=3.0
+accelerate>=0.33
 numpy
-huggingface_hub
+huggingface_hub>=0.30
+openai>=1.40
