@@ -14,7 +14,11 @@ L'objectif est de **compenser le manque d'indexation géographique** des bases b
 | Évaluation | contre les règles | contre les règles **et contre un LLM juge** |
 
 - Dataset v2 : `Geraldine/pub-country-classification-dataset-v2` (privé pour l'instant)
-- Modèle v2 : `Geraldine/pub-country-classifier-v2`, produit par `train_country_model.py`
+- Modèle v2 : `Geraldine/pub-country-classifier-v2` (privé pour l'instant), entraîné le 20/11/2026
+
+**En bref.** Sur le jeu de test, le modèle reproduit l'étiquetage par règles avec un **F1 de 0,98** et une précision de 0,99. Moins de **1 %** des notices sans pays reçoivent un pays par erreur. Jugé par un LLM sur la question « la publication porte-t-elle sur ce pays ? », il obtient un **F1 de 0,85**, au même niveau que les règles elles-mêmes (0,86). Les résultats détaillés et leur lecture sont au § 6.1.
+
+**Statut.** Le modèle est utilisable pour de l'**indexation assistée** : suggestion de pays, validée par un humain ou filtrée par le score. Il n'est pas encore prêt pour une indexation automatique sans contrôle (voir § 9).
 - v1 : [modèle](https://huggingface.co/Geraldine/pub-country-classifier) et [dataset](https://huggingface.co/datasets/Geraldine/pub-country-classification-dataset)
 
 ---
@@ -159,7 +163,17 @@ Des règles détectent des **mentions**. Or, pour l'indexation, on veut savoir s
 Le résultat est publié comme configuration `judged` du dataset, avec les colonnes `judge_labels`, `judge_removed` et `judge_added`.
 
 - Modèle par défaut : `Qwen/Qwen3-235B-A22B-Instruct-2507` via HF Inference Providers (modifiable avec `JUDGE_MODEL`).
-- Coût estimé : quelques dollars pour environ 16 000 notices, facturés sur le compte HF.
+- Durée : environ 20 minutes sur HF Jobs (`cpu-basic`) pour 16 079 notices, sans aucune erreur d'appel.
+
+**Ce que le juge a trouvé**, sur 8 021 notices de test :
+
+| | |
+|---|---|
+| Accord exact règles / juge (même liste de pays) | 85 % |
+| Pays des règles **rejetés** par le juge | 7 %, soit une précision des règles d'environ 0,93 |
+| Pays **ajoutés** par le juge | ~1 800, soit un rappel des règles d'environ 0,80 |
+
+Les rejets sont pour la plupart justifiés. Ils ont révélé de vrais défauts du lexique : *Anguilla anguilla* (l'anguille) pris pour Anguilla, Salvador de Bahia pris pour le Salvador, Granada / Grenade (la ville espagnole), « Salomon » ou « Santa Elena » pris pour des pays, et des gentilés hors sujet (« British » dans un texte sur l'Eswatini colonial). Les ajouts sont plus discutables. Environ un quart correspond au **pays de la langue du texte** : un texte en portugais devient « Brésil » sans indice explicite. Le juge en ajoute aussi parfois trop : pour un article sur l'anguille européenne, il ajoute dix pays européens.
 
 Le juge **ne remplace pas une annotation humaine**. Il est lui-même un modèle et peut se tromper. Avant de citer les chiffres contre le juge comme « vérité », il est recommandé d'en contrôler à la main un échantillon de 100 à 200 notices.
 
@@ -176,7 +190,7 @@ Le juge **ne remplace pas une annotation humaine**. Il est lui-même un modèle 
 | Weight decay / clipping | 0,01 / 1,0 |
 | Précision | bf16 |
 | Graine | 42 |
-| Matériel | 1 GPU A10G (HF Jobs, `a10g-small`), en 2 à 3 h |
+| Matériel | 1 GPU A10G (HF Jobs, `a10g-small`) : 9 142 pas, **1 h 32** au total |
 
 **Calibration.** Pour chaque pays, on cherche sur la partition validation le seuil (de 0,05 à 0,95, par pas de 0,025) qui maximise le F1. La référence est `judge_labels` si la configuration `judged` existe, sinon les étiquettes des règles. Les pays qui ont moins de 3 exemples positifs en validation gardent un seuil fixe de 0,5.
 
@@ -186,6 +200,48 @@ Le juge **ne remplace pas une annotation humaine**. Il est lui-même un modèle 
 - **taux de faux positifs sur les notices sans pays**, une mesure essentielle pour un usage réel ;
 - ventilation par langue et par variante (complet / titre seul) ;
 - comparaison avec les règles **et** avec le juge, ainsi que l'accord entre les règles et le juge.
+
+### 6.1 Résultats (partition test, 8 021 notices, seuils calibrés)
+
+| Référence | Précision | Rappel | F1 micro | F1 macro | Précision du 1er pays | Faux positifs sur les notices sans pays |
+|---|---|---|---|---|---|---|
+| Étiquettes des règles | **0,994** | 0,970 | **0,982** | 0,973 | 0,999 | **0,6 %** |
+| Étiquettes du LLM juge | 0,930 | 0,782 | 0,850 | 0,846 | 0,899 | 5,6 % |
+| *Pour comparaison : les règles elles-mêmes face au juge* | *0,930* | *0,802* | *0,861* | *0,862* | – | *5,1 %* |
+
+Par langue (contre les règles) :
+
+| | en | fr | es | de | pt |
+|---|---|---|---|---|---|
+| F1 micro | 0,988 | 0,970 | 0,974 | 0,974 | 0,957 |
+| Faux positifs sur les notices sans pays | 0,5 % | 1,0 % | 0,7 % | 0,7 % | 0,5 % |
+
+Les notices « titre seul » sont aussi bien traitées que les notices complètes (F1 0,992 contre 0,981).
+
+**Comment lire ces chiffres :**
+- **Contre les règles**, le modèle a appris l'étiquetage à règles presque parfaitement et de façon très prudente. Il se trompe rarement par excès : 0,6 % de faux positifs sur les notices sans pays.
+- **Contre le juge**, le modèle fait à peu près jeu égal avec les règles dont il a appris. Il hérite donc de leurs limites, surtout un rappel d'environ 0,78. Ce rappel est en partie sous-estimé, parce que le juge ajoute des pays déduits de la langue (§ 5).
+- On ne peut pas comparer ces chiffres directement au F1 de 0,957 de la v1 : le jeu de test, la liste de pays et les étiquettes ont changé. La comparaison qualitative ci-dessous est plus parlante.
+- Les pays les moins bien reconnus sont des territoires rares : `MP`, `PM`, `KN`, `WF` et `IO`. Ils n'ont que 0 à 6 exemples dans le jeu de test, donc leurs scores sont peu fiables.
+
+**Comparaison v1 / v2 sur des cas concrets**, aux seuils calibrés :
+
+| Texte | v1 | v2 |
+|---|---|---|
+| Ebola outbreak response in the Democratic Republic of the Congo | `CG` ✗ | `CD` ✓ |
+| Soil survey of New Jersey | `JE` ✗ | rien ✓ |
+| Earthquake damage assessment in Turkey | rien ✗ | `TR` ✓ |
+| Published in the American Journal of Physics: a new laser cooling method | `US` ✗ | rien ✓ |
+| La pauvreté rurale au Sénégal et au Mali | `ML` | `SN` + `ML` ✓ |
+| Enseignement du français langue étrangère à l'université | `FR` ✗ | rien ✓ |
+| Migrationspolitik in Deutschland und Österreich | `ES` + `NL` ✗ | `DE` + `AT` ✓ |
+| Bibliothèques universitaires et science ouverte en Afrique de l'Ouest | `FR` ✗ | rien ✓ |
+| Políticas de salud pública en Colombia durante la pandemia | `CO` ✓ | `CO` ✓ |
+| Circadian rhythm in the eel *Anguilla anguilla* | `AI` ✗ | `AI` ✗ |
+| A agricultura familiar no semiárido brasileiro | `BR` (0,56) | rien ✗ |
+| Urban heat islands in Nairobi | rien ✗ | rien ✗ |
+
+Les trois échecs de la v2 viennent du lexique : un bloqueur *Anguilla anguilla* manque, le gentilé portugais « brasileiro » est absent de Wikidata, et il n'y a pas de villes dans le lexique. Ils sont traités dans les pistes (§ 10).
 
 ## 7. Lancer le pipeline
 
@@ -247,11 +303,13 @@ print([(c, round(float(x), 3)) for c, x in zip(codes, p) if x >= thr[c]])
 - **Langues.** Seules les 5 langues d'entraînement sont couvertes. D'autres langues fonctionneront parfois grâce à mmBERT, sans garantie.
 - **Gentilés anglais.** « French » reste ambigu (le peuple ou la langue) : c'est au juge de trier.
 - **Territoires rares.** `PM` et `WF` ont peu d'exemples, leur fiabilité est plus faible.
+- **Erreurs connues du lexique**, repérées par le juge et pas encore corrigées : *Anguilla anguilla* → `AI` ; Salvador (Bahia) → `SV` ; Granada / Grenade → `GD` ; « Salomon » → `SB` ; « Santa Elena » → `SH` ; « Savage » → `NU`. Il manque aussi des gentilés portugais (« brasileiro/brasileira »…), ce qui explique le score plus faible en portugais.
 - **Troncature** à 512 tokens.
 - **Usage responsable.** C'est un classifieur de sujets de texte. Il ne doit pas servir à déduire la nationalité des auteurs ni à prendre des décisions sur des personnes.
 
 ## 10. Pistes
 
+0. **v2.1** : corriger les erreurs connues du lexique (§ 9), ajouter les gentilés portugais, durcir la consigne du juge (jamais d'ajout déduit de la langue seule), relancer le juge, recalibrer les seuils puis réentraîner.
 1. Faire annoter à la main 300 à 500 notices tirées de votre base (HAL, SUDOC…), pour une vraie mesure de qualité et pour valider le juge.
 2. Lancer le juge sur une partie du train et entraîner sur `judge_labels`, pour apprendre « porte sur » plutôt que « mentionne ».
 3. Ajouter au lexique les capitales et les grandes régions (GeoNames ou Wikidata P36/P150), avec des bloqueurs.
