@@ -115,9 +115,34 @@ LANGUAGE_DEMONYM_CODES = {
     "MM", "NP", "LK", "ET", "SO",
 }
 
+# Portuguese and Spanish demonyms that Wikidata often lacks (masculine singular; the
+# feminine and plural forms are generated). Case-insensitive.
+PT_ES_DEMONYMS = {
+    "BR": ["brasileiro"], "AO": ["angolano"], "MZ": ["moçambicano", "mozambiqueño"],
+    "CV": ["cabo-verdiano", "caboverdiano"], "GW": ["guineense"], "ST": ["são-tomense", "santomense"],
+    "TL": ["timorense"], "MX": ["mexicano"], "AR": ["argentino"], "CO": ["colombiano"], "CL": ["chileno"],
+    "PE": ["peruano"], "VE": ["venezuelano", "venezolano"], "BO": ["boliviano"], "PY": ["paraguaio", "paraguayo"],
+    "UY": ["uruguaio", "uruguayo"], "EC": ["equatoriano", "ecuatoriano"], "CU": ["cubano"],
+    "GT": ["guatemalteco"], "HN": ["hondurenho", "hondureño"], "NI": ["nicaraguense", "nicaragüense"],
+    "CR": ["costarriquenho", "costarricense"], "PA": ["panamenho", "panameño"], "SV": ["salvadorenho", "salvadoreño"],
+    "DO": ["dominicano"], "PR": ["porto-riquenho", "puertorriqueño"], "HT": ["haitiano"],
+    "CA": ["canadense", "canadiense"], "MA": ["marroquino", "marroquí"], "DZ": ["argelino"], "TN": ["tunisino", "tunecino"],
+    "EG": ["egípcio", "egipcio"], "SN": ["senegalês", "senegalés"], "ML": ["maliano", "malinés"], "CI": ["marfinense"],
+    "CM": ["camaronês", "camerunés"], "NG": ["nigeriano"], "KE": ["queniano", "keniano"], "ZA": ["sul-africano", "sudafricano"],
+    "ET": ["etíope"], "IL": ["israelense", "israelita", "israelí"], "BE": ["belga"], "CH": ["suíço", "suizo"],
+    "AT": ["austríaco", "austriaco"], "US": ["estadunidense", "estadounidense"],
+}
+
 # Code -> aliases to remove from the automatic sources.
 REMOVE = {
     "PL": ["polen"],
+    # v2.1: homonyms found by the LLM check on the v2 dataset
+    "SV": ["Salvador"],                 # Salvador de Bahia (BR); "El Salvador" is kept
+    "GD": ["Granada", "Grenade"],       # Spanish city / French "grenade"; "Grenada" is kept
+    "SB": ["Salomon"],                  # first name; "Îles Salomon" is kept
+    "SH": ["Santa Elena"],              # many places in Latin America
+    "NU": ["Savage"],
+    "MP": ["Chamorro", "Chamorros"],    # Chamorro people: Guam and the Marianas
     "CG": ["DRC", "Zaire", "Congo, Democratic Republic of the"],
     "CD": ["Congo"],
     "US": ["Americans", "'Murica", "Amerika", "Unión Americana", "américain", "américaine",
@@ -162,6 +187,8 @@ BLOCKERS = [
     r"East China Sea", r"Irish Sea", r"Dead Sea", r"Arabian (?:Sea|Peninsula)", r"Persian Gulf",
     r"Macedonia,? Greece", r"Greek Macedonia", r"Central Macedonia",
     # Species, diseases, foods and technical terms
+    r"Anguilla (?:anguilla|japonica|rostrata|australis|marmorata|bicolor|mossambica|celebesensis|dieffenbachii|spp?\.?)",
+    r"[Gg]enus Anguilla", r"Anguilla eels?", r"(?:European|Japanese|American) eels? \(Anguilla",
     r"[Gg]uinea[- ](?:pigs?|fowls?|worms?|grass)", r"Chinese hamsters?", r"Chinese medicine",
     r"Traditional Chinese Medicine", r"Spanish flu", r"Spanish influenza", r"German measles",
     r"German shepherds?", r"French (?:horns?|fries|press|kiss|toast)", r"Japanese (?:encephalitis|quail|knotweed|beetles?|"

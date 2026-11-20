@@ -100,3 +100,23 @@ def test_shared_aliases(text, expected):
 ])
 def test_names_and_places(text, expected):
     assert LAB.labels(text) == expected, LAB.explain(text)
+
+
+@pytest.mark.parametrize("text,expected", [
+    # v2.1: homonyms found by the LLM check
+    ("Circadian rhythm in the eel Anguilla anguilla", set()),
+    ("Habitat use by the European eel Anguilla anguilla in Irish waters", {"IE"}),
+    ("Tourism in Anguilla", {"AI"}),
+    ("Urban violence in Salvador, Bahia", set()),
+    ("Elections in El Salvador", {"SV"}),
+    ("Turismo activo en Granada y Sevilla", set()),
+    ("Nutmeg production in Grenada", {"GD"}),
+    ("Salomon Maimons Lebensgeschichte", set()),
+    ("Excursions into Inauthenticity: The Chamorros of Guam", {"GU"}),
+    # v2.1: Portuguese / Spanish demonyms
+    ("A agricultura familiar no semiárido brasileiro", {"BR"}),
+    ("Mulheres angolanas e a guerra civil", {"AO"}),
+    ("La economía mexicana tras el TLCAN", {"MX"}),
+])
+def test_v21(text, expected):
+    assert LAB.labels(text) == expected, LAB.explain(text)

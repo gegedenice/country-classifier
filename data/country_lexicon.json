@@ -1073,7 +1073,7 @@
    {
     "text": "Antigua & Barbuda",
     "case_sensitive": true,
-    "source": "wikidata_alias_de"
+    "source": "wikidata_alias_en"
    },
    {
     "text": "Antigua and Barbuda",
@@ -1457,6 +1457,26 @@
     "text": "República de Angola",
     "case_sensitive": true,
     "source": "wikidata_alias_es"
+   },
+   {
+    "text": "angolana",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "angolanas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "angolano",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "angolanos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "AQ": [
@@ -1523,7 +1543,7 @@
    {
     "text": "Antártida",
     "case_sensitive": true,
-    "source": "wikidata_label_pt"
+    "source": "wikidata_label_es"
    },
    {
     "text": "Antártida o Antártica",
@@ -1635,7 +1655,7 @@
    {
     "text": "República Argentina",
     "case_sensitive": true,
-    "source": "wikidata_alias_pt"
+    "source": "wikidata_alias_es"
    },
    {
     "text": "République argentine",
@@ -1645,22 +1665,22 @@
    {
     "text": "argentina",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "argentinas",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "argentino",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "argentinos",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    }
   ],
   "AS": [
@@ -1692,7 +1712,7 @@
    {
     "text": "Samoa Americana",
     "case_sensitive": true,
-    "source": "wikidata_label_pt"
+    "source": "wikidata_label_es"
    },
    {
     "text": "Samoa Estadounidense",
@@ -1804,22 +1824,42 @@
    {
     "text": "austriaca",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "austriacas",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "austriaco",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "austriacos",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "austríaca",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "austríacas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "austríaco",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "austríacos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "Áustria",
@@ -2510,12 +2550,12 @@
    {
     "text": "belga",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "belgas",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    }
   ],
   "BF": [
@@ -3518,22 +3558,22 @@
    {
     "text": "boliviana",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "bolivianas",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "boliviano",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "bolivianos",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    }
   ],
   "BQ": [
@@ -3708,6 +3748,26 @@
     "text": "République fédérative du Brésil",
     "case_sensitive": true,
     "source": "wikidata_alias_fr"
+   },
+   {
+    "text": "brasileira",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "brasileiras",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "brasileiro",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "brasileiros",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "brasileña",
@@ -4294,6 +4354,16 @@
     "source": "wikidata_alias_es"
    },
    {
+    "text": "canadense",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "canadenses",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
     "text": "canadiana",
     "case_sensitive": false,
     "source": "wikidata_demonym_pt"
@@ -4312,6 +4382,16 @@
     "text": "canadianos",
     "case_sensitive": false,
     "source": "wikidata_demonym_pt"
+   },
+   {
+    "text": "canadiense",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "canadienses",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "CC": [
@@ -4751,22 +4831,42 @@
    {
     "text": "suiza",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "suizas",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "suizo",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "suizos",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "suíça",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "suíças",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "suíço",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "suíços",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "CI": [
@@ -4879,6 +4979,16 @@
     "text": "marfileños",
     "case_sensitive": false,
     "source": "wikidata_demonym_es"
+   },
+   {
+    "text": "marfinense",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "marfinenses",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "CK": [
@@ -5022,22 +5132,22 @@
    {
     "text": "chilena",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "chilenas",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "chileno",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "chilenos",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    }
   ],
   "CM": [
@@ -5102,6 +5212,26 @@
     "source": "wikidata_alias_fr"
    },
    {
+    "text": "camaronesa",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "camaronesas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "camaroneses",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "camaronês",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
     "text": "camerounais",
     "case_sensitive": false,
     "source": "wikidata_demonym_fr"
@@ -5115,6 +5245,26 @@
     "text": "camerounaises",
     "case_sensitive": false,
     "source": "wikidata_demonym_fr"
+   },
+   {
+    "text": "camerunesa",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "camerunesas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "cameruneses",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "camerunés",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "CN": [
@@ -5328,22 +5478,22 @@
    {
     "text": "colombiana",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "colombianas",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "colombiano",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "colombianos",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "colombien",
@@ -5451,6 +5601,36 @@
     "text": "República de Costa Rica",
     "case_sensitive": true,
     "source": "wikidata_alias_es"
+   },
+   {
+    "text": "costarricense",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "costarricenses",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "costarriquenha",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "costarriquenhas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "costarriquenho",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "costarriquenhos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "CU": [
@@ -5542,22 +5722,22 @@
    {
     "text": "cubana",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "cubanas",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "cubano",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "cubanos",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    }
   ],
   "CV": [
@@ -5699,22 +5879,42 @@
    {
     "text": "cabo-verdiana",
     "case_sensitive": false,
-    "source": "wikidata_demonym_pt"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "cabo-verdianas",
     "case_sensitive": false,
-    "source": "wikidata_demonym_pt"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "cabo-verdiano",
     "case_sensitive": false,
-    "source": "wikidata_demonym_pt"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "cabo-verdianos",
     "case_sensitive": false,
-    "source": "wikidata_demonym_pt"
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "caboverdiana",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "caboverdianas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "caboverdiano",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "caboverdianos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "CW": [
@@ -6248,7 +6448,7 @@
    {
     "text": "Danemark",
     "case_sensitive": true,
-    "source": "wikidata_label_fr"
+    "source": "wikidata_alias_en"
    },
    {
     "text": "Danemark métropolitain",
@@ -6401,13 +6601,13 @@
    },
    {
     "text": "Dominicaine",
-    "case_sensitive": true,
-    "source": "wikidata_alias_fr"
+    "case_sensitive": false,
+    "source": "wikidata_demonym_fr"
    },
    {
     "text": "Dominicaine",
-    "case_sensitive": false,
-    "source": "wikidata_demonym_fr"
+    "case_sensitive": true,
+    "source": "wikidata_alias_fr"
    },
    {
     "text": "Dominicaines",
@@ -6483,6 +6683,26 @@
     "text": "République dominicaine",
     "case_sensitive": true,
     "source": "manual"
+   },
+   {
+    "text": "dominicana",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "dominicanas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "dominicano",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "dominicanos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "DZ": [
@@ -6595,6 +6815,26 @@
     "text": "République algérienne démocratique populaire",
     "case_sensitive": true,
     "source": "wikidata_alias_fr"
+   },
+   {
+    "text": "argelina",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "argelinas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "argelino",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "argelinos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "EC": [
@@ -6681,22 +6921,42 @@
    {
     "text": "ecuatoriana",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "ecuatorianas",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "ecuatoriano",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "ecuatorianos",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "equatoriana",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "equatorianas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "equatoriano",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "equatorianos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "Équateur",
@@ -6840,7 +7100,7 @@
    {
     "text": "Egipto",
     "case_sensitive": true,
-    "source": "wikidata_label_es"
+    "source": "wikidata_alias_pt"
    },
    {
     "text": "Egito",
@@ -6881,6 +7141,46 @@
     "text": "República Árabe do Egipto",
     "case_sensitive": true,
     "source": "wikidata_alias_pt"
+   },
+   {
+    "text": "egipcia",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "egipcias",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "egipcio",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "egipcios",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "egípcia",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "egípcias",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "egípcio",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "egípcios",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "Ägypten",
@@ -7157,6 +7457,16 @@
     "text": "República Democrática Federal de Etiopía",
     "case_sensitive": true,
     "source": "wikidata_alias_es"
+   },
+   {
+    "text": "etíope",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "etíopes",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "Äthiopianer",
@@ -8040,7 +8350,7 @@
    {
     "text": "República Gabonesa",
     "case_sensitive": true,
-    "source": "wikidata_alias_es"
+    "source": "wikidata_alias_pt"
    },
    {
     "text": "République Gabonaise",
@@ -8055,7 +8365,7 @@
    {
     "text": "République gabonaise",
     "case_sensitive": true,
-    "source": "wikidata_alias_de"
+    "source": "wikidata_alias_fr"
    }
   ],
   "GB": [
@@ -8252,19 +8562,9 @@
   ],
   "GD": [
    {
-    "text": "Granada",
-    "case_sensitive": true,
-    "source": "wikidata_label_es"
-   },
-   {
     "text": "Grenada",
     "case_sensitive": true,
     "source": "openalex"
-   },
-   {
-    "text": "Grenade",
-    "case_sensitive": true,
-    "source": "wikidata_label_fr"
    },
    {
     "text": "Grenader",
@@ -9436,6 +9736,26 @@
     "text": "République du Guatémala",
     "case_sensitive": true,
     "source": "wikidata_alias_fr"
+   },
+   {
+    "text": "guatemalteca",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "guatemaltecas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "guatemalteco",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "guatemaltecos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "GU": [
@@ -9640,6 +9960,16 @@
     "text": "République de Guinée-Bissau",
     "case_sensitive": true,
     "source": "wikidata_alias_fr"
+   },
+   {
+    "text": "guineense",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "guineenses",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "GY": [
@@ -10053,6 +10383,46 @@
     "text": "République du Honduras",
     "case_sensitive": true,
     "source": "wikidata_alias_fr"
+   },
+   {
+    "text": "hondurenha",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "hondurenhas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "hondurenho",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "hondurenhos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "hondureña",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "hondureñas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "hondureño",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "hondureños",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "HR": [
@@ -10222,6 +10592,26 @@
     "text": "República do Haiti",
     "case_sensitive": true,
     "source": "wikidata_alias_pt"
+   },
+   {
+    "text": "haitiana",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "haitianas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "haitiano",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "haitianos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "HU": [
@@ -10535,6 +10925,36 @@
     "text": "Yisrael",
     "case_sensitive": true,
     "source": "wikidata_alias_en"
+   },
+   {
+    "text": "israelense",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "israelenses",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "israelita",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "israelitas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "israelí",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "israelíes",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "État hébreu",
@@ -11533,22 +11953,42 @@
    {
     "text": "keniana",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "kenianas",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "keniano",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "kenianos",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "queniana",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "quenianas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "queniano",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "quenianos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "KG": [
@@ -12287,7 +12727,7 @@
    {
     "text": "Daehan Minguk",
     "case_sensitive": true,
-    "source": "wikidata_alias_en"
+    "source": "wikidata_alias_pt"
    },
    {
     "text": "Daehanminguk",
@@ -12847,7 +13287,7 @@
    {
     "text": "Líbano",
     "case_sensitive": true,
-    "source": "wikidata_label_es"
+    "source": "wikidata_label_pt"
    },
    {
     "text": "Republic of Lebanon",
@@ -13212,7 +13652,7 @@
    {
     "text": "Lesoto",
     "case_sensitive": true,
-    "source": "wikidata_label_pt"
+    "source": "wikidata_label_es"
    },
    {
     "text": "Lésothan",
@@ -13775,14 +14215,34 @@
     "source": "wikidata_alias_fr"
    },
    {
+    "text": "marroquina",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "marroquinas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "marroquino",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "marroquinos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
     "text": "marroquí",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "marroquíes",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    }
   ],
   "MC": [
@@ -13849,7 +14309,7 @@
    {
     "text": "Mónaco",
     "case_sensitive": true,
-    "source": "wikidata_label_es"
+    "source": "wikidata_label_pt"
    },
    {
     "text": "Mônaco",
@@ -14694,6 +15154,46 @@
     "text": "République du Mali",
     "case_sensitive": true,
     "source": "wikidata_alias_de"
+   },
+   {
+    "text": "maliana",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "malianas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "maliano",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "malianos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "malinesa",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "malinesas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "malineses",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "malinés",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "MM": [
@@ -15033,16 +15533,6 @@
    }
   ],
   "MP": [
-   {
-    "text": "Chamorro",
-    "case_sensitive": true,
-    "source": "wikidata_demonym_en"
-   },
-   {
-    "text": "Chamorros",
-    "case_sensitive": true,
-    "source": "wikidata_demonym_en"
-   },
    {
     "text": "Commonwealth of the Northern Maria Islands",
     "case_sensitive": true,
@@ -15727,7 +16217,7 @@
    {
     "text": "México",
     "case_sensitive": true,
-    "source": "wikidata_label_es"
+    "source": "wikidata_alias_de"
    },
    {
     "text": "República Mejicana",
@@ -15757,22 +16247,22 @@
    {
     "text": "mexicana",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "mexicanas",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "mexicano",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "mexicanos",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "États-Unis du Mexique",
@@ -15942,6 +16432,46 @@
     "text": "República de Moçambique",
     "case_sensitive": true,
     "source": "wikidata_alias_en"
+   },
+   {
+    "text": "mozambiqueña",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "mozambiqueñas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "mozambiqueño",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "mozambiqueños",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "moçambicana",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "moçambicanas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "moçambicano",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "moçambicanos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "NA": [
@@ -16469,6 +16999,26 @@
     "source": "wikidata_alias_fr"
    },
    {
+    "text": "nigeriana",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "nigerianas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "nigeriano",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "nigerianos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
     "text": "nigérian",
     "case_sensitive": false,
     "source": "wikidata_demonym_fr"
@@ -16564,6 +17114,26 @@
     "text": "République nicaraguayenne",
     "case_sensitive": true,
     "source": "wikidata_alias_fr"
+   },
+   {
+    "text": "nicaraguense",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "nicaraguenses",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "nicaragüense",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "nicaragüenses",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "NL": [
@@ -17061,11 +17631,6 @@
     "source": "wikidata_demonym_en"
    },
    {
-    "text": "Savage",
-    "case_sensitive": true,
-    "source": "wikidata_alias_fr"
-   },
-   {
     "text": "niuenha",
     "case_sensitive": false,
     "source": "wikidata_demonym_pt"
@@ -17307,6 +17872,46 @@
     "source": "wikidata_alias_fr"
    },
    {
+    "text": "panamenha",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "panamenhas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "panamenho",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "panamenhos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "panameña",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "panameñas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "panameño",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "panameños",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
     "text": "panamiana",
     "case_sensitive": false,
     "source": "wikidata_demonym_pt"
@@ -17411,22 +18016,22 @@
    {
     "text": "peruana",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "peruanas",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "peruano",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "peruanos",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    }
   ],
   "PF": [
@@ -18320,6 +18925,26 @@
     "source": "wikidata_demonym_es"
    },
    {
+    "text": "porto-riquenha",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "porto-riquenhas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "porto-riquenho",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "porto-riquenhos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
     "text": "portoricain",
     "case_sensitive": false,
     "source": "wikidata_demonym_fr"
@@ -18362,22 +18987,22 @@
    {
     "text": "puertorriqueña",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "puertorriqueñas",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "puertorriqueño",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "puertorriqueños",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "État libre associé de Porto Rico",
@@ -18716,13 +19341,53 @@
     "text": "République du Paraguay",
     "case_sensitive": true,
     "source": "wikidata_alias_fr"
+   },
+   {
+    "text": "paraguaia",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "paraguaias",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "paraguaio",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "paraguaios",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "paraguaya",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "paraguayas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "paraguayo",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "paraguayos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "QA": [
    {
     "text": "Catar",
     "case_sensitive": true,
-    "source": "wikidata_label_pt"
+    "source": "wikidata_label_es"
    },
    {
     "text": "Estado de Catar",
@@ -18742,7 +19407,7 @@
    {
     "text": "Katar",
     "case_sensitive": true,
-    "source": "wikidata_alias_fr"
+    "source": "wikidata_label_de"
    },
    {
     "text": "Qatar",
@@ -19202,7 +19867,7 @@
    {
     "text": "Ruanda",
     "case_sensitive": true,
-    "source": "wikidata_label_pt"
+    "source": "wikidata_label_es"
    },
    {
     "text": "Rwanda",
@@ -19337,11 +20002,6 @@
     "text": "Islas Solomón",
     "case_sensitive": true,
     "source": "wikidata_alias_es"
-   },
-   {
-    "text": "Salomon",
-    "case_sensitive": true,
-    "source": "wikidata_alias_fr"
    },
    {
     "text": "Salomonais",
@@ -19832,11 +20492,6 @@
     "text": "Sainte-Hélène, Ascension et Tristan da Cunha",
     "case_sensitive": true,
     "source": "wikidata_label_fr"
-   },
-   {
-    "text": "Santa Elena",
-    "case_sensitive": true,
-    "source": "wikidata_alias_es"
    },
    {
     "text": "Santa Elena, Ascensión y Tristán de Acuña",
@@ -20338,22 +20993,27 @@
    {
     "text": "senegalesa",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "senegalesas",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "senegaleses",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "senegalés",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "senegalês",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "SO": [
@@ -20827,6 +21487,26 @@
     "text": "São Toméans",
     "case_sensitive": true,
     "source": "wikidata_demonym_en"
+   },
+   {
+    "text": "santomense",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "santomenses",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "são-tomense",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "são-tomenses",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "SV": [
@@ -20849,11 +21529,6 @@
     "text": "República de El Salvador",
     "case_sensitive": true,
     "source": "wikidata_alias_es"
-   },
-   {
-    "text": "Salvador",
-    "case_sensitive": true,
-    "source": "openalex_alt"
    },
    {
     "text": "Salvadoran",
@@ -20894,6 +21569,46 @@
     "text": "Salvadoriens",
     "case_sensitive": false,
     "source": "wikidata_demonym_fr"
+   },
+   {
+    "text": "salvadorenha",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "salvadorenhas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "salvadorenho",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "salvadorenhos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "salvadoreña",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "salvadoreñas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "salvadoreño",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "salvadoreños",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "SX": [
@@ -21169,7 +21884,7 @@
    {
     "text": "Umbuso weSwatini",
     "case_sensitive": true,
-    "source": "wikidata_alias_pt"
+    "source": "wikidata_alias_en"
    },
    {
     "text": "emaSwati",
@@ -21764,6 +22479,16 @@
     "text": "Timoraises",
     "case_sensitive": false,
     "source": "wikidata_demonym_fr"
+   },
+   {
+    "text": "timorense",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "timorenses",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "TM": [
@@ -21967,22 +22692,22 @@
    {
     "text": "tunecina",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "tunecinas",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "tunecino",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "tunecinos",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "tunisien",
@@ -22003,6 +22728,26 @@
     "text": "tunisiens",
     "case_sensitive": false,
     "source": "wikidata_demonym_fr"
+   },
+   {
+    "text": "tunisina",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "tunisinas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "tunisino",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "tunisinos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "TO": [
@@ -22888,6 +23633,26 @@
     "source": "wikidata_alias_de"
    },
    {
+    "text": "estadounidense",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "estadounidenses",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "estadunidense",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "estadunidenses",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
     "text": "É.-U.",
     "case_sensitive": true,
     "source": "wikidata_alias_fr"
@@ -23020,24 +23785,44 @@
     "source": "wikidata_demonym_de"
    },
    {
+    "text": "uruguaia",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "uruguaias",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "uruguaio",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "uruguaios",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
     "text": "uruguaya",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "uruguayas",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "uruguayo",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "uruguayos",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    }
   ],
   "UZ": [
@@ -23231,7 +24016,7 @@
    {
     "text": "Stato della Città del Vaticano",
     "case_sensitive": true,
-    "source": "wikidata_alias_pt"
+    "source": "wikidata_alias_en"
    },
    {
     "text": "Status Civitatis Vaticanae",
@@ -23540,22 +24325,42 @@
    {
     "text": "venezolana",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "venezolanas",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "venezolano",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "venezolanos",
     "case_sensitive": false,
-    "source": "wikidata_demonym_es"
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "venezuelana",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "venezuelanas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "venezuelano",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "venezuelanos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    }
   ],
   "VG": [
@@ -24083,13 +24888,13 @@
    },
    {
     "text": "Kosovar",
-    "case_sensitive": true,
-    "source": "wikidata_demonym_en"
+    "case_sensitive": false,
+    "source": "wikidata_demonym_fr"
    },
    {
     "text": "Kosovar",
-    "case_sensitive": false,
-    "source": "wikidata_demonym_fr"
+    "case_sensitive": true,
+    "source": "wikidata_demonym_en"
    },
    {
     "text": "Kosovare",
@@ -24356,6 +25161,46 @@
     "text": "Südafrika",
     "case_sensitive": true,
     "source": "wikidata_label_de"
+   },
+   {
+    "text": "sudafricana",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "sudafricanas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "sudafricano",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "sudafricanos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "sul-africana",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "sul-africanas",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "sul-africano",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
+   },
+   {
+    "text": "sul-africanos",
+    "case_sensitive": false,
+    "source": "manual_demonym_pt_es"
    },
    {
     "text": "África do Sul",
@@ -24646,6 +25491,10 @@
   "Macedonia,? Greece",
   "Greek Macedonia",
   "Central Macedonia",
+  "Anguilla (?:anguilla|japonica|rostrata|australis|marmorata|bicolor|mossambica|celebesensis|dieffenbachii|spp?\\.?)",
+  "[Gg]enus Anguilla",
+  "Anguilla eels?",
+  "(?:European|Japanese|American) eels? \\(Anguilla",
   "[Gg]uinea[- ](?:pigs?|fowls?|worms?|grass)",
   "Chinese hamsters?",
   "Chinese medicine",
