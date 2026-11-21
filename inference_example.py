@@ -1,7 +1,7 @@
 """Minimal CLI inference for the publication country classifier.
 
 Usage:
-  python inference_example.py --title "..." [--abstract "..."] [--repo Geraldine/pub-country-classifier-v2.1]
+  python inference_example.py --title "..." [--abstract "..."] [--repo Geraldine/pub-country-classifier]
   python inference_example.py "Title on the first line\nAbstract on the second"
 """
 import argparse
@@ -17,7 +17,7 @@ def main():
     ap.add_argument("text", nargs="?", help="publication text (title, then abstract on line 2)")
     ap.add_argument("--title")
     ap.add_argument("--abstract")
-    ap.add_argument("--repo", default="Geraldine/pub-country-classifier-v2.1")
+    ap.add_argument("--repo", default="Geraldine/pub-country-classifier")
     ap.add_argument("--top", type=int, default=10)
     a = ap.parse_args()
 

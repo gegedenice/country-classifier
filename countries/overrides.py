@@ -1,6 +1,6 @@
 """Manual corrections applied on top of the automatic OpenAlex + Wikidata lexicon.
 
-Each entry below fixes a problem observed in the v1 dataset or in labeler tests
+Each entry below fixes a labelling error observed in the data or in the labeler tests
 (tests/test_labeler.py). Keep them small and documented.
 """
 
@@ -136,7 +136,7 @@ PT_ES_DEMONYMS = {
 # Code -> aliases to remove from the automatic sources.
 REMOVE = {
     "PL": ["polen"],
-    # v2.1: homonyms found by the LLM check on the v2 dataset
+    # homonyms found by the LLM check
     "SV": ["Salvador"],                 # Salvador de Bahia (BR); "El Salvador" is kept
     "GD": ["Granada", "Grenade"],       # Spanish city / French "grenade"; "Grenada" is kept
     "SB": ["Salomon"],                  # first name; "Îles Salomon" is kept

@@ -6,18 +6,15 @@
 """Fine-tune a multilingual encoder (default jhu-clsp/mmBERT-base) as a 247-label multi-label
 "country mention" classifier, evaluate it and push it to the Hub.
 
-One definition of the target everywhere: the labels are the rule labels checked by the LLM
-(column verified_labels, files verified/*.parquet written by judge_labels.py). If those files
-do not exist, the raw rule labels are used. Training, validation and test use the same labels.
+Labels: the column `labels` of the final dataset (Geraldine/pub-country), i.e. the rule labels after the
+two-step LLM check. Training, validation and test use the same labels.
 
 Decision rule: a country is predicted when its probability is >= THRESHOLD (default 0.5, the
 same for every country). CALIBRATE=1 instead picks one threshold per country on the validation
 split (the one maximising F1); it is optional and off by default.
 
 Run on HF Jobs (GPU), from a clone of the repository:
-  hf jobs uv run --flavor a10g-small --timeout 6h --secrets HF_TOKEN \
-     -e DS_REPO=Geraldine/pub-country-classification-dataset-v2.1 \
-     -e MODEL_REPO=Geraldine/pub-country-classifier-v2.1 train_country_model.py
+  hf jobs uv run --flavor a10g-small --timeout 6h --secrets HF_TOKEN train_country_model.py
 
 Local smoke test (CPU, a few steps, no push):  SMOKE=1 DS_LOCAL=build python train_country_model.py
 """
@@ -34,8 +31,8 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer, Trai
 
 SMOKE = os.environ.get("SMOKE") == "1"
 TOK = os.environ.get("HF_TOKEN")
-DS_REPO = os.environ.get("DS_REPO", "Geraldine/pub-country-classification-dataset-v2.1")
-MODEL_REPO = os.environ.get("MODEL_REPO", "Geraldine/pub-country-classifier-v2.1")
+DS_REPO = os.environ.get("DS_REPO", "Geraldine/pub-country")
+MODEL_REPO = os.environ.get("MODEL_REPO", "Geraldine/pub-country-classifier")
 PRIVATE = os.environ.get("MODEL_PRIVATE", "1") == "1"
 BASE = os.environ.get("BASE_MODEL", "jhu-clsp/mmBERT-base")
 MAXLEN = int(os.environ.get("MAXLEN", "512"))
@@ -44,7 +41,7 @@ LR = float(os.environ.get("LR", "3e-5"))
 THRESHOLD = float(os.environ.get("THRESHOLD", "0.5"))
 CALIBRATE = os.environ.get("CALIBRATE") == "1"
 DS_LOCAL = os.environ.get("DS_LOCAL")   # directory with train/validation/test.jsonl (smoke tests)
-LABELS_DIR = os.environ.get("LABELS_DIR", "verified")   # folder of LLM-checked splits in the dataset repo
+LABELS_DIR = os.environ.get("LABELS_DIR", "")   # optional: folder of parquet splits with a verified_labels column
 SEED = 42
 random.seed(SEED); np.random.seed(SEED); torch.manual_seed(SEED)
 
@@ -66,13 +63,13 @@ if DS_LOCAL:
     LABEL_COL = "labels"
 else:
     files = set(HfApi(token=TOK).list_repo_files(DS_REPO, repo_type="dataset"))
-    if all(any(f.startswith(f"{LABELS_DIR}/{s}-") for f in files) for s in SPLITS):
+    if LABELS_DIR and all(any(f.startswith(f"{LABELS_DIR}/{s}-") for f in files) for s in SPLITS):
         ds = load_dataset(DS_REPO, data_files={s: f"{LABELS_DIR}/{s}-*.parquet" for s in SPLITS}, token=TOK)
         LABEL_COL = "verified_labels"
     else:
         ds = load_dataset(DS_REPO, token=TOK)
         LABEL_COL = "labels"
-print(f"[init] {N} labels, base={BASE}, labels from column '{LABEL_COL}' ({LABELS_DIR if LABEL_COL != 'labels' else 'rules'})", flush=True)
+print(f"[init] {N} labels, base={BASE}, labels from column '{LABEL_COL}'" + (f" ({LABELS_DIR}/)" if LABEL_COL != "labels" else ""), flush=True)
 
 if SMOKE:
     ds["train"] = ds["train"].shuffle(seed=0).select(range(256))
@@ -227,14 +224,14 @@ card = [
     "---", "language: [en, fr, es, de, pt]", "license: apache-2.0", f"base_model: {BASE}",
     f"datasets: [{DS_REPO}]", "pipeline_tag: text-classification",
     "tags: [multi-label-classification, country-detection, geographic-indexing, scholarly-metadata, openalex]", "---", "",
-    f"# Publication Country Classifier ({MODEL_REPO.split('/')[-1]})",
+    "# Publication Country Classifier",
     "",
     f"Given a scholarly publication (title, optional abstract) in English, French, Spanish, German or Portuguese, "
     f"returns the countries it **mentions** among the {N} OpenAlex countries (ISO 3166-1 alpha-2, plus XK). "
     "A mention is an explicit name, variant or demonym of the country, in its geographic or political sense "
     "(not a homonym such as *Anguilla anguilla*, *New Jersey* or *Jordan curve*).",
     f"Fine-tuned from {BASE}. Training labels: a multilingual rule labeler (OpenAlex + Wikidata lexicon), "
-    "with every label checked by an LLM (Qwen3-235B) for wrong or missed mentions.",
+    "checked by an LLM (Qwen3-235B) in two steps for wrong or missed mentions.",
     "", "Code and methodology (in French): https://github.com/gegedenice/country-classifier", "",
     "## Usage", "", "```python",
     "import json, torch", "from huggingface_hub import hf_hub_download",

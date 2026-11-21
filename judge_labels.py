@@ -2,30 +2,28 @@
 # requires-python = ">=3.10"
 # dependencies = ["openai>=1.40", "datasets>=3.0", "huggingface_hub>=0.30", "pandas", "pyarrow"]
 # ///
-"""LLM check of the rule labels: is each country MENTION correct?
+"""LLM check, step 1: check every rule label and look for missed mentions.
 
-The task is deliberately narrow. For each publication the LLM sees the text and the
-countries found by the rules, and answers two questions:
-  1. reject: which of these are NOT a mention of the country? (homonyms: a species,
-     a city or US state with the same name, a person's name, a word in another sense);
-  2. missed: which countries are explicitly NAMED in the text (name, variant or
-     demonym) but missing from the list? Each one must come with the exact words of
-     the text; the script checks that those words really appear in the text.
-It never judges relevance ("is the paper about it?") and never infers a country from
-the language of the text, a city or an institution.
+For each publication the LLM sees the text and the countries found by the rules, and answers:
+  1. reject: which of these are NOT a mention of the country? (homonyms: a species, a city or
+     US state with the same name, a person's name, a word in another sense);
+  2. missed: which countries are explicitly NAMED in the text (name, variant or demonym) but
+     missing from the list? Each one must come with the exact words of the text; the script
+     checks that those words really appear in the text.
+It never judges relevance and never infers a country from the language of the text, a city or
+an institution.
 
-    verified_labels = (rule labels - rejected) + missed (with a quote found in the text)
+This step is reliable for what it keeps and adds, but too strict in what it rejects: the
+rejections are checked again, one by one, by step 2 (recheck_tags.py).
 
-Output: parquet files verified/{split}-NNNNN.parquet in the dataset repo, written chunk
-by chunk, so an interrupted job resumes where it stopped. train_country_model.py uses
-them automatically.
+Output: verified/{split}-NNNNN.parquet in the working dataset repo (columns judge_rejected,
+judge_added, judge_quotes...), written chunk by chunk so that an interrupted job resumes.
 
 Run on HF Jobs (CPU is enough), from a clone of the repository:
-  hf jobs uv run --flavor cpu-basic --timeout 8h --secrets HF_TOKEN \
-     -e DS_REPO=Geraldine/pub-country-classification-dataset-v2.1 judge_labels.py
+  hf jobs uv run --flavor cpu-basic --timeout 8h --secrets HF_TOKEN judge_labels.py
 
-Env: HF_TOKEN, DS_REPO, JUDGE_MODEL, JUDGE_SPLITS (default "validation,test,train"),
-     JUDGE_CONCURRENCY (default 32), CHUNK (default 5000).
+Env: HF_TOKEN, DS_REPO (working dataset), JUDGE_MODEL, JUDGE_SPLITS (default
+     "validation,test,train"), JUDGE_CONCURRENCY (default 32), CHUNK (default 5000).
 """
 import asyncio
 import io
@@ -38,13 +36,13 @@ from datasets import load_dataset
 from huggingface_hub import HfApi, hf_hub_download
 from openai import AsyncOpenAI
 
-DS_REPO = os.environ.get("DS_REPO", "Geraldine/pub-country-classification-dataset-v2.1")
+DS_REPO = os.environ.get("DS_REPO", "Geraldine/pub-country-build")
 MODEL = os.environ.get("JUDGE_MODEL", "Qwen/Qwen3-235B-A22B-Instruct-2507")
 SPLITS = os.environ.get("JUDGE_SPLITS", "validation,test,train").split(",")
 CONC = int(os.environ.get("JUDGE_CONCURRENCY", "32"))
 CHUNK = int(os.environ.get("CHUNK", "5000"))
 TOKEN = os.environ["HF_TOKEN"]
-PROMPT_VERSION = "mention-check-1"
+PROMPT_VERSION = "step1"
 
 api = HfApi(token=TOKEN)
 lex = json.load(open(hf_hub_download(DS_REPO, "country_lexicon.json", repo_type="dataset", token=TOKEN)))

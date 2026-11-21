@@ -1,4 +1,4 @@
-"""Build the pub-country-classification dataset (v2) from OpenAlex.
+"""Build the working dataset (rule labels) from OpenAlex.
 
 Pipeline
   1. For each of the 247 OpenAlex countries, fetch works whose title/abstract mention it:
@@ -42,7 +42,7 @@ from countries.labeler import Labeler  # noqa: E402
 
 API = "https://api.openalex.org/works"
 KEY = os.environ.get("OPENALEX_API_KEY", "")
-DS_REPO = os.environ.get("DS_REPO", "Geraldine/pub-country-classification-dataset-v2.1")
+DS_REPO = os.environ.get("DS_REPO", "Geraldine/pub-country-build")
 DS_PRIVATE = os.environ.get("DS_PRIVATE", "1") == "1"
 CACHE = Path(os.environ.get("CACHE_DIR", ROOT / ".cache" / "openalex"))
 OUT_DIR = Path(os.environ.get("OUT_DIR", ROOT / "build"))
