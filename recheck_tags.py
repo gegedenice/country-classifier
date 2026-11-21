@@ -130,8 +130,13 @@ async def main():
     df["prompt"] = PROMPT_VERSION
     buf = io.BytesIO()
     df.to_parquet(buf, index=False)
-    api.upload_file(path_or_fileobj=buf.getvalue(), path_in_repo=OUTPUT, repo_id=DS_REPO, repo_type="dataset",
-                    commit_message=f"LLM tag recheck ({PROMPT_VERSION}): {OUTPUT}")
+    try:
+        api.upload_file(path_or_fileobj=buf.getvalue(), path_in_repo=OUTPUT, repo_id=DS_REPO, repo_type="dataset",
+                        commit_message=f"LLM tag recheck ({PROMPT_VERSION}): {OUTPUT}")
+    except Exception as e:  # noqa: BLE001  (e.g. a read-only token): keep the results in the logs
+        print(f"[upload failed] {e!r}"[:300], flush=True)
+        for row in df[["item_id", "code", "verdict", "reason", "error"]].to_dict("records"):
+            print("RESULT " + json.dumps(row, ensure_ascii=False), flush=True)
     print(f"[done] {OUTPUT}: keep {sum(df.verdict == 'keep')}, reject {sum(df.verdict == 'reject')}, "
           f"errors {sum(df.error != '')}", flush=True)
 
