@@ -12,7 +12,7 @@ REJECT decisions were wrong. The first prompt had three gaps:
   2. the LLM was not told which word had triggered the tag ("GB" for "Écosse");
   3. nothing was said about historical or colonial forms ("British raj", "Belgian Congo"),
      and passing mentions were still dropped as "irrelevant".
-Prompt v2 fixes these: one verdict per tag, the triggering words are given, territories and
+Prompt v2 fixed these (v3 adds two rules: language names and names of other territories, and sends a window around the trigger word for long texts): one verdict per tag, the triggering words are given, territories and
 historical forms are explicitly in scope, and a short reason is required.
 
 Input:  a parquet file in the dataset repo with columns
@@ -40,7 +40,7 @@ INPUT = os.environ.get("INPUT", "eval/judge_sample.parquet")
 OUTPUT = os.environ.get("OUTPUT", "eval/judge_sample_v2.parquet")
 CONC = int(os.environ.get("JUDGE_CONCURRENCY", "32"))
 TOKEN = os.environ["HF_TOKEN"]
-PROMPT_VERSION = "mention-check-2"
+PROMPT_VERSION = "mention-check-3"
 
 api = HfApi(token=TOKEN)
 lex = json.load(open(hf_hub_download(DS_REPO, "country_lexicon.json", repo_type="dataset", token=TOKEN)))
@@ -73,16 +73,31 @@ REJECT the tag only when the words mean something else:
   channel or ocean ("Georgia, USA", "Salvador, Bahia", "Gulf of Mexico", "Persian Gulf");
 - the name of a journal, society or company that merely contains the word ("Journal of Chinese
   Studies", "American Chemical Society");
-- a language used as a language ("translated from Italian", "Portuguese grammar");
+- a LANGUAGE: whenever the word names a language, a dialect or a script (grammar, syntax, dialects,
+  texts, documents, translation, teaching, "Old Norse", "Mycenaean Greek", "Basque dialects"),
+  reject it, even if the language is linked to the country;
+- the name of ANOTHER country or territory that merely contains the word: "French Guiana" is not
+  France nor Guyana, "American Samoa" is not the United States, "New Caledonia" is not GB,
+  "Dutch Caribbean" is not the Netherlands;
 - a common word or other homonym ("chile peppers", "jersey cattle", "turkey meat").
 
 Answer with JSON only:
 {"tags": [{"code": "XX", "verdict": "keep" or "reject", "reason": "a few words"}]}"""
 
 
+def excerpt(text, words, size=4000):
+    """The whole text if short, else the title + a window around the first trigger word."""
+    if len(text) <= size:
+        return text
+    pos = min([p for p in (text.find(w) for w in words) if p >= 0] or [0])
+    title = text.split("\n", 1)[0][:300]
+    start = max(0, pos - size // 2)
+    return title + "\n[...]\n" + text[start:start + size - len(title)]
+
+
 def user_prompt(text, code, words):
     w = ", ".join(f'"{x}"' for x in words) or "(not given)"
-    return (f"Text:\n<<<\n{text[:4000]}\n>>>\n\n"
+    return (f"Text:\n<<<\n{excerpt(text, list(words))}\n>>>\n\n"
             f"Tag: {code} ({NAMES.get(code, code)}), triggered by: {w}")
 
 
