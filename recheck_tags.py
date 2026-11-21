@@ -74,11 +74,10 @@ REJECT the tag only when the words mean something else:
 - the name of a journal, society or company that merely contains the word ("Journal of Chinese
   Studies", "American Chemical Society");
 - a LANGUAGE: whenever the word names a language, a dialect or a script (grammar, syntax, dialects,
-  texts, documents, translation, teaching, "Old Norse", "Mycenaean Greek", "Basque dialects"),
+  texts, documents, translation, teaching, "Old Norse", "Basque dialects", "Classical Chinese"),
   reject it, even if the language is linked to the country;
-- the name of ANOTHER country or territory that merely contains the word: "French Guiana" is not
-  France nor Guyana, "American Samoa" is not the United States, "New Caledonia" is not GB,
-  "Dutch Caribbean" is not the Netherlands;
+- the name of ANOTHER country or territory that merely contains the word: "British Virgin Islands" is
+  not the United Kingdom, "Papua New Guinea" is not Guinea, "New Caledonia" is not GB;
 - a common word or other homonym ("chile peppers", "jersey cattle", "turkey meat").
 
 Answer with JSON only:
