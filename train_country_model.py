@@ -44,6 +44,7 @@ LR = float(os.environ.get("LR", "3e-5"))
 THRESHOLD = float(os.environ.get("THRESHOLD", "0.5"))
 CALIBRATE = os.environ.get("CALIBRATE") == "1"
 DS_LOCAL = os.environ.get("DS_LOCAL")   # directory with train/validation/test.jsonl (smoke tests)
+LABELS_DIR = os.environ.get("LABELS_DIR", "verified")   # folder of LLM-checked splits in the dataset repo
 SEED = 42
 random.seed(SEED); np.random.seed(SEED); torch.manual_seed(SEED)
 
@@ -65,13 +66,13 @@ if DS_LOCAL:
     LABEL_COL = "labels"
 else:
     files = set(HfApi(token=TOK).list_repo_files(DS_REPO, repo_type="dataset"))
-    if all(any(f.startswith(f"verified/{s}-") for f in files) for s in SPLITS):
-        ds = load_dataset(DS_REPO, data_files={s: f"verified/{s}-*.parquet" for s in SPLITS}, token=TOK)
+    if all(any(f.startswith(f"{LABELS_DIR}/{s}-") for f in files) for s in SPLITS):
+        ds = load_dataset(DS_REPO, data_files={s: f"{LABELS_DIR}/{s}-*.parquet" for s in SPLITS}, token=TOK)
         LABEL_COL = "verified_labels"
     else:
         ds = load_dataset(DS_REPO, token=TOK)
         LABEL_COL = "labels"
-print(f"[init] {N} labels, base={BASE}, labels from column '{LABEL_COL}'", flush=True)
+print(f"[init] {N} labels, base={BASE}, labels from column '{LABEL_COL}' ({LABELS_DIR if LABEL_COL != 'labels' else 'rules'})", flush=True)
 
 if SMOKE:
     ds["train"] = ds["train"].shuffle(seed=0).select(range(256))
@@ -192,7 +193,7 @@ test = ds["test"]
 Pt, Yt = probs_of(test["text"]), Y_of(test[LABEL_COL])
 langs, variants = np.array(test["language"]), np.array(test["variant"])
 report = {
-    "base_model": BASE, "labels": LABEL_COL,
+    "base_model": BASE, "labels": LABEL_COL, "labels_dir": LABELS_DIR,
     "decision": "per-country thresholds calibrated on validation" if CALIBRATE else f"single threshold {THRESHOLD}",
     "hyperparameters": {"epochs": EPOCHS, "lr": LR, "batch_effective": 32, "max_len": MAXLEN,
                         "warmup": "5% of steps", "seed": SEED},
@@ -226,7 +227,7 @@ card = [
     "---", "language: [en, fr, es, de, pt]", "license: apache-2.0", f"base_model: {BASE}",
     f"datasets: [{DS_REPO}]", "pipeline_tag: text-classification",
     "tags: [multi-label-classification, country-detection, geographic-indexing, scholarly-metadata, openalex]", "---", "",
-    "# Publication Country Classifier v2.1",
+    f"# Publication Country Classifier ({MODEL_REPO.split('/')[-1]})",
     "",
     f"Given a scholarly publication (title, optional abstract) in English, French, Spanish, German or Portuguese, "
     f"returns the countries it **mentions** among the {N} OpenAlex countries (ISO 3166-1 alpha-2, plus XK). "

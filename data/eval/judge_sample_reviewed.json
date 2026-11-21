@@ -1,0 +1,2053 @@
+{
+ "description": "120 rule tags (80 rejected and 40 kept by the first LLM pass, prompt mention-check-1), re-judged by prompts mention-check-2 and -3. 'ref' is a blind reference judgement made by Claude (an LLM, not a human annotator): M = correct mention, H = not a mention (homonym, language...), ? = ambiguous, excluded from scores.",
+ "items": [
+  {
+   "n": 1,
+   "id": "W2214716164|full|GN",
+   "work_id": "W2214716164",
+   "split": "test",
+   "language": "fr",
+   "code": "GN",
+   "name": "Guinea",
+   "spans": [
+    "Guinée"
+   ],
+   "text": "Rapport de mission en Papouasie Nouvelle Guinée du 22 au 24 mars 1988",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 2,
+   "id": "W89764299|full|SJ",
+   "work_id": "W89764299",
+   "split": "validation",
+   "language": "en",
+   "code": "SJ",
+   "name": "Svalbard and Jan Mayen",
+   "spans": [
+    "Jan Mayen"
+   ],
+   "text": "Meteorological Observations on Jan Mayen",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 3,
+   "id": "W836659841|full|MK",
+   "work_id": "W836659841",
+   "split": "validation",
+   "language": "fr",
+   "code": "MK",
+   "name": "North Macedonia",
+   "spans": [
+    "Macédoine"
+   ],
+   "text": "Un énigmatique objet monétiforme au type du statère de Philippe II de Macédoine découvert à Strée-lez-Huy (prov. de Liège, B.)",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 4,
+   "id": "W2157016936|full|GR",
+   "work_id": "W2157016936",
+   "split": "validation",
+   "language": "en",
+   "code": "GR",
+   "name": "Greece",
+   "spans": [
+    "Greek"
+   ],
+   "text": "Documents in Mycenaean Greek",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 5,
+   "id": "W1485048514|full|GR",
+   "work_id": "W1485048514",
+   "split": "validation",
+   "language": "en",
+   "code": "GR",
+   "name": "Greece",
+   "spans": [
+    "Greece",
+    "Greek"
+   ],
+   "text": "Greek and Latin Bilingualism\nThis chapter contains sections titled: Introduction Bilingualism in Classical Greece The Encounter of the Greek World with Rome Greek in Rome The Balance of the Two Languages in the Empire Latin in the Greek World Further Reading",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 6,
+   "id": "W2525500840|full|JO",
+   "work_id": "W2525500840",
+   "split": "validation",
+   "language": "fr",
+   "code": "JO",
+   "name": "Jordan",
+   "spans": [
+    "Jordan"
+   ],
+   "text": "Le genre Angonyx Boisduval, [1875], en Nouvelle-Bretagne (Papouasie-Nouvelle-Guinée) (Lepidoptera, Sphingidae)\nLes deux espèces du genre Angonyx Boisduval, [1875], volant en Nouvelle-Bretagne, île de Papouasie-Nouvelle-Guinée, sont représentées par leur habitus et leurs genitalia mâles : A. boisduvali Rothschild, 1 894, et A. testacea bismarcki Clark, 1929, qui est comparé aux autres espèces du genre et considéré comme bonne espèce, et non synonyme de A. papuana Rothschild & Jordan, 1903, après étude de l'holotype.",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 7,
+   "id": "W4254318524|full|NC",
+   "work_id": "W4254318524",
+   "split": "test",
+   "language": "en",
+   "code": "NC",
+   "name": "New Caledonia",
+   "spans": [
+    "New Caledonia"
+   ],
+   "text": "New Caledonia",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 8,
+   "id": "W2158660154|full|GW",
+   "work_id": "W2158660154",
+   "split": "validation",
+   "language": "fr",
+   "code": "GW",
+   "name": "Guinea-Bissau",
+   "spans": [
+    "guineense"
+   ],
+   "text": "Caractérisation des habitats de Dialium guineense (Willd) en République du Bénin\nObjectif : Faute de données scientifiques de base, les habitats du Dialium guineense Willd, au Bénin ne sont pas dotés de plans d’aménagement conséquents et gérés rationnellement par les populations locales. Ils subissent par ailleurs de fortes pressions anthropiques. La présente étude est une contribution à la connaissance de ces habitats à travers des investigations botaniques et écologiques.Méthodologie et résultats : Pour ce faire 150 placeaux de taille variable sont installés dans différentes formations végétales du territoire béninois une fois que Dialium guineense apparaît. Ainsi, 60 placeaux sont installés dans différentes forêts (sacrées, dense sèches, claires) et savanes ; 14 dans les champs et jachères;68 dans les galeries forestières et 9 dans les jardins de case. Sur chaque aire, les inventaires floristiques ont pris en compte toutes les espèces ligneuses et herbacées couplées de leur coefficient d’abondance dominance. Les données d’inventaire forestiers collectées sont : dbh H 10 cm de l’espèce, la hauteur ; le recouvrement moyen, la hauteur et la forme du fût, la hauteur de la couronne et son rayon Nord-Sud et Est- Ouest, le nombre de branches, la forme du fût. Les descripteurs écologique tels ; la pente, les perturbations, l’humidité, la texture des sols, la largeur des cours d’eau, l’influence de la faune et les traces d’activités ont été notés. Des analyses multivariées (DCA et CCA) ont permis de discriminer quatre groupements végétaux et les gradients de leur distribution. Les résultats de la DCA réalisée donnent 4 groupements végétaux. La densité de D. guineense est forte dans les galeries (47 tiges/ha) suivie des jardins de case et maisons (25 tiges/ha). S’agissant de la structure en hauteur et en diamètre de l’espèce dans les tous les habitats, la distribution est asymétrique de gauche.Conclusion et application des résultats : Il est donc, important de connaître les caractéristiques des habitats de l’espèce afin de promouvoir la plantation des espèces indigènesMots clés : Tamarinier noir, habitats, structure, répartition des groupements végétaux, République du Bénin",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 9,
+   "id": "W4212957029|full|CR",
+   "work_id": "W4212957029",
+   "split": "test",
+   "language": "en",
+   "code": "CR",
+   "name": "Costa Rica",
+   "spans": [
+    "Costa Rica"
+   ],
+   "text": "Costa Rica",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 10,
+   "id": "W651831343|full|GH",
+   "work_id": "W651831343",
+   "split": "validation",
+   "language": "es",
+   "code": "GH",
+   "name": "Ghana",
+   "spans": [
+    "Gana"
+   ],
+   "text": "Epistolario de Alberto Blest Gana",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 11,
+   "id": "W2911798061|full|SH",
+   "work_id": "W2911798061",
+   "split": "validation",
+   "language": "en",
+   "code": "SH",
+   "name": "Saint Helena",
+   "spans": [
+    "Saint Helena"
+   ],
+   "text": "The gravel deposits of Saint Helena and Tangipahoa parishes, Louisiana",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 12,
+   "id": "W2796920474|full|CG",
+   "work_id": "W2796920474",
+   "split": "test",
+   "language": "en",
+   "code": "CG",
+   "name": "Congo",
+   "spans": [
+    "Congo-Brazzaville"
+   ],
+   "text": "Determination of the Correlation between the Air Temperature Measured in Situ and Remotely Sensed Data from MODIS and SEVIRI in Congo-Brazzaville\nThis study compared data from the MODerate-resolution Imaging Spectroradiometer (MODIS) onboard NASA’s Terra satellite and the Spinning Enhanced Visible and Infrared Imager (SEVIRI) on EUMETSAT’s Meterosat Second Generation (MSG) satellite with in situ data obtained from ground observation stations in Congo-Brazzaville. Remote sensing instruments can be used to estimate air temperature, which has an important role in monitoring the effects of climate change. Congo-Brazzaville is located in equatorial forest, which is difficult to access, and has a limited number of ground meteorological stations measuring air temperature. This study used MODIS and MSG data for the period 2009-2014 to assess the performance of land surface temperature data from satellites against in situ data from ground-based stations in Congo-Brazzaville using a linear regression model. This work has allowed us to determine which satellite is best adapted for use in Central Africa.",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 13,
+   "id": "W2142456802|full|MN",
+   "work_id": "W2142456802",
+   "split": "validation",
+   "language": "en",
+   "code": "MN",
+   "name": "Mongolia",
+   "spans": [
+    "Mongolian",
+    "Mongols"
+   ],
+   "text": "Mongolian Ethnicity and Linguistic Anxiety in China\nLanguage is one of the official criteria of defining a nationality in socialist China, but it simultaneously has been subjected to an \"ideology of contempt\" by the Chinese regime that builds nationality only to destroy it. This article examines the linguistic anxiety displayed by the Mongols and their controversial language revitalization efforts in a social environment in which they have become an absolute minority even while they have formal autonomy under their name. The tremendous cost—both emotional and economic—at which such language maintenance comes suggests that nationality in China may not be understood as primarily cultural but, instead, as political. As more Mongols lose their language, arguably the last bastion of their \"nationality\" status, they face the prospect of becoming a deinstitutionalized, depoliticized, and deterritorialized \"ethnic group\" in a racialized \"Chinese Nation.\" [Keywords: language, nationality, ethnic group, Mongols, Chinese National Multiculturalism]",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "reject",
+   "ref": "?"
+  },
+  {
+   "n": 14,
+   "id": "W4184021|full|EC",
+   "work_id": "W4184021",
+   "split": "validation",
+   "language": "fr",
+   "code": "EC",
+   "name": "Ecuador",
+   "spans": [
+    "Equateur"
+   ],
+   "text": "Equateur: trevettes contre palétuviers",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 15,
+   "id": "W2088620075|full|SB",
+   "work_id": "W2088620075",
+   "split": "test",
+   "language": "en",
+   "code": "SB",
+   "name": "Solomon Islands",
+   "spans": [
+    "Solomon Islands"
+   ],
+   "text": "The Trouble with RAMSI: Reexamining the Roots of Conflict in Solomon Islands\nWhile the debate that has followed the intervention by the Regional Assistance Mission to the Solomon Islands (ramsi) has centered on the suitability of the failed state label to Solomon Islands, I argue that this debate is misdirected because the concept of state failure itself is accepted uncritically. Examining what is meant by state failure is crucial, because (a) it has assumed an almost commonsensical mantle, which obscures its particular political and ideological underpinnings; and (b) it has considerable conceptual limitations that render it a problematic framework for explaining the roots and possible trajectories of the conflict in Solomon Islands. State failure is essentially a descriptive category with limited explanatory capacity, grounded in a depoliticized and ahistorical theorization of institutions, state, and society. At its core is an unhelpful preoccupation with state capacity as measured against a hypothetical legal-rational good-governance model. Conflicts are understood in this framework as the result of poor governance or recalcitrant social forces. ramsi, consequently, has sought to strengthen the institutional capacity of Solomon Islands as the key to conflict resolution as well as a preventative long-term peace-building initiative. In contrast, I argue that unless we develop a clearer understanding of the causes and dynamics of conflict, ramsi's state-building approach is likely to exacerbate rather than alleviate tensions in Solomon Islands. This approach involves a shift in emphasis away from the current fixation on institutional capacity audits associated with the failed state concept, toward a more constructive theorization of the historically contingent relationship between changing patterns of economic development and social conflict.",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 16,
+   "id": "W437173386|full|MU",
+   "work_id": "W437173386",
+   "split": "test",
+   "language": "fr",
+   "code": "MU",
+   "name": "Mauritius",
+   "spans": [
+    "Maurice"
+   ],
+   "text": "Sur Maurice Blanchot",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 17,
+   "id": "W2109613305|full|GB",
+   "work_id": "W2109613305",
+   "split": "validation",
+   "language": "en",
+   "code": "GB",
+   "name": "United Kingdom",
+   "spans": [
+    "Scottish"
+   ],
+   "text": "Library & Information History Bibliographies, 2012, Issue 1\nAnderson, Peter D., ‘Orkney in the Development of Scottish Archives, 1950–’, New Orkney Antiquarian Journal, 5 (2011), 5–8.Astley, Phil, ‘Alison Fraser: a Personal Tribute’, New Orkney Antiquarian ...",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 18,
+   "id": "W2976195907|full|AL",
+   "work_id": "W2976195907",
+   "split": "validation",
+   "language": "en",
+   "code": "AL",
+   "name": "Albania",
+   "spans": [
+    "Albanian",
+    "Albanians"
+   ],
+   "text": "Kosova: From Resisting Expulsion to Building on Independence\nThis history of Kosova since 1989 can be divided into three periods: the period of Serbian rule and Albanian resistance leading to war in 1998–1999; the nine-year period under the United Nations Interim Mission in Kosovo (UNMIK); and the period since Kosova declared its independence in March 2008. In this chapter I focus on institutional transformations of the three periods, economic issues, and interethnic relations of Kosovar Albanians and Serbs. I also contextualize major events and present initiatives of international mediators such as Kai Eide and Martti Ahtisaari. Kosova is the youngest country in Europe. It suffers from high unemployment, poverty, and corruption, as well as isolation due to the European Union’s continued refusal to accord its citizens visa-free travel with the rest of Europe. At the same time it has a committed diaspora population and was able to pull together at crucial times in its history. I present several of its recent leaders, including Ibrahim Rugova, Shpend Ahmeti, Albin Kurti, and Atifeta Jahjaga.",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "?"
+  },
+  {
+   "n": 19,
+   "id": "W4253616158|full|LB",
+   "work_id": "W4253616158",
+   "split": "validation",
+   "language": "es",
+   "code": "LB",
+   "name": "Lebanon",
+   "spans": [
+    "República Libanesa"
+   ],
+   "text": "República Libanesa",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 20,
+   "id": "W4293282889|title_only|FK",
+   "work_id": "W4293282889",
+   "split": "test",
+   "language": "es",
+   "code": "FK",
+   "name": "Falkland Islands",
+   "spans": [
+    "Islas Malvinas"
+   ],
+   "text": "El colonialismo en las Islas Malvinas. Análisis geopolítico de un fenómeno vigente",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 21,
+   "id": "W4288038258|full|VC",
+   "work_id": "W4288038258",
+   "split": "validation",
+   "language": "es",
+   "code": "VC",
+   "name": "St. Vincent & Grenadines",
+   "spans": [
+    "San Vicente y las Granadinas"
+   ],
+   "text": "Diseño de material para el aprendizaje del español a niños de primaria entre los 9 y 11 años de San Vicente y las Granadinas a partir de un enfoque basado en tareas\nEste trabajo investigativo se desarrolló con el objetivo de diseñar un material didáctico para el aprendizaje del español como lengua extranjera para niños entre los 9 y 11 años que cursan primaria en San Vicente y las Granadinas a partir de un enfoque basado en tareas. De acuerdo al análisis de necesidades, se determinaron cuatro hechos problemáticos: (1) la carencia de un currículo establecido en enseñanza de lengua extranjera, (2) la falta de profesores formados en ELE, (3) la metodología tradicional que se está utilizando para la enseñanza de ELE y el poco desarrollo de la competencia comunicativa, y (4) la dificultad que tienen los estudiantes para acceder a un material para el aprendizaje del español como lengua extranjera. Para el diseño de este material, se siguió la ruta metodológica propuesta por Jolly y Bolitho (2011): identificación de las necesidades para el material, la exploración de las necesidades, la realización contextual del material, la realización pedagógica del material, la producción física y la evaluación del material atendiendo a los objetivos establecidos. A continuación, se estableció la metodología de la unidad mediante el enfoque basado en tareas: la elaboración cognitiva, la fase asociativa, la fase de autonomía y la etapa de la reelaboración. Luego de esto, se diseñó la unidad didáctica bajo los planteamientos de Estaire y Zanón (1990): la elección del tema, la especificación de los objetivos comunicativos, la programación de tareas finales, la especificación de componentes temáticos y lingüísticos y la planificación del proceso. Finalmente, se realizó una evaluación preliminar del material por parte de expertos de ELE, a partir de los criterios de Lozano y Ruiz Campillo (2009). Los resultados muestran que el enfoque basado tareas es un método idóneo para fomentar el aprendizaje de ELE a niños, ya que guarda los principios del enfoque comunicativo y establece la tarea como la unidad articuladora del proceso. Además el material motiva y estimula al niño para aprender e, igualmente, proporciona un input comprensible para el desarrollo de las tareas.",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 22,
+   "id": "W1560728627|full|FR",
+   "work_id": "W1560728627",
+   "split": "validation",
+   "language": "en",
+   "code": "FR",
+   "name": "France",
+   "spans": [
+    "France"
+   ],
+   "text": "Theses and Dissertations Related to Hymnody\nThis bibliography supplements those in previous issues of Hymn. last such listing appeared in Spring 2015 (vol. 66, no. 2). present roster includes papers completed since 2009 that have not been listed before. It was compiled from bibliographic directories, such as ProQuest Dissertations and Theses and WorldCat Dissertations, and from notices provided by authors and supervisors. Additions and corrections should be sent to the contributing editor at parichar@samford.edu.Abbott, Rebecca Nelson. a Curriculum of Spiritual Formation for Children through the Hymns of Charles Wesley at First United Methodist Church, Georgetown, Kentucky. D.W.S., Robert E. Webber Institute for Worship Studies, 2009.Abee, Michele. 'Journey into the Square': Geographical Perspective of Sacred Harp. M.A., University of North Carolina at Greensboro, 2012.Adekale, Elizabeth Hymnody: Its Influence on x^frican American Spirituals and Contemporary Christian Music. MA., Northeastern Illinois University, 2014.Alen, Sterling Martin. a Better Understanding of the Ordo Salutis through the Lyrical Theology of Charles Wesley at & M United Methodist Church, College Station, Texas. D.W.S., Robert E. Webber Institute for Worship Studies, 2010.Anderson, Warren John. Broadening the Congregational Singing Experiences for the Students at Judson University, Elgin, Illinois. D.W.S., Robert E. Webber Institute for Worship Studies, 2010.Balisky, Lila W. Songs of Ethiopia's Tesfaye Gabbiso: Singing with Understanding in Babylon, the Meantime, and Zion. D.I.S., Fuller Theological Seminary, 2015.Beyer, Nancy Wandland. Enhancing Assembly Singing at Messiah Community Church, ELCA, Denver, Colorado. D.W.S., Robert E. Webber Institute for Worship Studies, 2010.Blough, Janie N. A Pilot Program for Building up Community through Congregational Song at the Châtenay Mennonite Church in France. D.W.S., Robert E. Webber Institute for Worship Studies, 2014.Brookey, Jeffrey Marshall. in Worship in the Churches of Christ and Choral Music Performance in Church of Christ Affiliated Colleges and Universities. D.MA., University of Southern California, 2013.Busman, Joshua. (Re)Sounding Passion: Listening to American Evangelical Worship Music, 1997-2015. Ph.D., University of North Carolina at Chapel Hill, 2015.Charter, Vernon John. Embracing a Diverse Hymnody for Community Chapel Services at Prairie Bible Institute, Three Hills, berta. D.W.S., Robert E. Webber Institute for Worship Studies, 2011.Chen, Ruiwen. The Protestant Quest for Contextualized Hymnology in Twentieth-Century China: Case Study of the Collaboration between T. C. Chao and Bliss Wiant in the Contextualization of Chinese Hymns. Ph.D., Chinese University of Hong Kong, 2014.Clark, Douglas F.Turkish Halk Worship Music: Muslim-background Believer Churches of Turkey at Worship in the Language of Their Own People. Ph.D., Evangel University, 2014.Clark, Paul B. A Pilot Project for Renewing Worship through Congregational Singing at the First Baptist Church of Nashville, Tennessee. D.W.S., Robert E. Webber Institute for Worship Studies, 2008.Coleman, Fred Rowel. A History of Congregational Song Leading in Protestant Churches in the United States of America 'with a Manual for Developing Leaders for Its Most Current Practice. P.Th.D., Bob Jones University, 2014.Crawford, Eric Sean. The Negro Spiritual of Saint Helena Island: An Analysis of Its Repertoire during the Periods 1860-1920, 1921-1939, and 1972-Present. Ph.D., Catholic University of America, 2012.Criscuola de Laix, Esther Victoria. Cultures of Music Print in Hamburg, ca. 1550-1630. Ph.D., University of California, Berkeley, 2009.Daniels, Carlie Weisbrod. The Healing Power of Psalms: Utilizing Psalms and Music in Pastoral Care. [Rabbinical ordination], Hebrew Union College-Jewish Institute of Religion, 2015. …",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 23,
+   "id": "W7132868570|full|MS",
+   "work_id": "W7132868570",
+   "split": "validation",
+   "language": "es",
+   "code": "MS",
+   "name": "Montserrat",
+   "spans": [
+    "Monserrate"
+   ],
+   "text": "Cuidado y reforestación de la fuente hídrica que abastece de agua potable del caserío de Monserrate del municipio Cartagena del Chairá, Caquetá, Colombia\nLa presente propuesta de intervención disciplinaria denominada “Cuidado y reforestación de la fuente hídrica que abastece de agua potable del caserío de Monserrate del municipio Cartagena del Chairá, Caquetá, Colombia” se enfoca en la creación de material pedagógico con información recolectada previamente de la fuente hídrica que suministra el agua potable al caserío de Monserrate. Como materiales pedagógicos se creó una aplicación interactiva en la cual se plasmó una información inicial con la problemática que se presenta, posterior una serie de preguntas para evaluar la retención de esta información y por último una demostración en realidad aumentada donde se hace la comparación de dos escenarios con el fin generar conciencia a la conservación. Como estrategia pedagógica se expone a la comunidad el problema para que ella se apropie de esta y como grupo de trabajo cada uno aporte desde sus habilidades en una reforestación con especies de la zona que ayuden a mantener el agua.",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 24,
+   "id": "W2551930679|full|FR",
+   "work_id": "W2551930679",
+   "split": "validation",
+   "language": "en",
+   "code": "FR",
+   "name": "France",
+   "spans": [
+    "French"
+   ],
+   "text": "[Pig farming in French Polynesia]. [French]",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 25,
+   "id": "W7206112125|full|GP",
+   "work_id": "W7206112125",
+   "split": "test",
+   "language": "es",
+   "code": "GP",
+   "name": "Guadeloupe",
+   "spans": [
+    "Guadalupe"
+   ],
+   "text": "Guadalupe Freire",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 26,
+   "id": "W2731842224|full|BR",
+   "work_id": "W2731842224",
+   "split": "validation",
+   "language": "pt",
+   "code": "BR",
+   "name": "Brazil",
+   "spans": [
+    "Brazilian"
+   ],
+   "text": "A dinâmica produtiva e espacial da indústria goiana\nThe few research elaborated about the industry of Goiás usually relate it to the national industry. The vision of an industry complementary to that space can hide its own dynamics and importance in the Goiás state productive structure. The thesis defended in the present research is that the industry of Goiás cannot be observed only from the point of view of the Brazilian industry, it has the own trajectory and, therefore, needs to be understood and to divided in periods. In this way, this work had as objective the construction of the periodization of the industry of Goiás. From the events that influenced the sector, through the statistical data and historical documents, four distinct periods were identified. The first one, from 1912 to 1935, shows the born of Goiás industry and its location along the Goiás Railroad (EFG), especially in the municipalities of Catalão and Ipameri. The second, from 1935 to 1960, is highlighted by the arrival of the EFG in Anápolis, the change of the capital of the state of Goiás to Goiânia, the implantation of the National Agricultural Colony of Goiás (Cang) and the process of construction of Brasília. The productive profile and the location of the industry change significantly, because of the demands caused by the urbanization of the state. There is spatial concentration in the municipalities of Anápolis and Goiânia, with leadership of the first. The third period of the Goiás industry, from 1960 to 1985, is characterized by governmental support to the sector, by the modernization of agriculture and cattle raising, which initiates the process of productive integration and by the expansion of urbanization. The industry increased its participation in the state productive structure, diversified its productive profile and concentrated space in Goiânia, which is to lead, and Anápolis. The fourth and final period, 1985 to the present day, is highlighted by the unfolding of the process of integration of agriculture and industry with the establishment of fiscal and financial incentives in a coordinated way. The industry intensifies its participation in the income generation of the state, diversifies and integrates to the local base (agriculture and mining) and is inserted in the national productive structure. Spatially, there is a new configuration, with the leadership of Anápolis and Goiânia as well as emerging new industrial poles such as Rio Verde, Catalão, Itumbiara and Jataí",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 27,
+   "id": "W2600088383|full|CH",
+   "work_id": "W2600088383",
+   "split": "test",
+   "language": "pt",
+   "code": "CH",
+   "name": "Switzerland",
+   "spans": [
+    "Suíça",
+    "suíça"
+   ],
+   "text": "Hidroterapia e bola suíça no trabalho de parto: ensaio clínico randomizado\nResumo Objetivo Conhecer a influência do banho quente e exercício perineal com bola suíça, de forma isolada e combinada, sobre a progressão do trabalho de parto. Métodos Ensaio clínico randomizado e controlado, realizado em dois hospitais públicos, no período de 2013 a 2014 com 128 mulheres internadas para assistência ao parto. A randomização aleatória alocou 44 parturientes no Grupo Banho Quente, 45 no Grupo Bola Suíça e 39 no Grupo Banho Quente e Bola Suíça associados. Resultados A pesquisa mostrou aumento estatisticamente significante na frequência da contração uterina com uso isolado (p=0,025) e associado da bola suíça (p<0,001), um aumento também significante na frequência cardíaca fetal com uso isolado e associado do banho quente (p< 0,001). Conclusão Associação do banho quente e bola suíça foi mais efetiva para a progressão do trabalho de parto e desfecho para o parto normal quando comparado com o seu uso isolado.",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 28,
+   "id": "W1971354488|title_only|GN",
+   "work_id": "W1971354488",
+   "split": "validation",
+   "language": "en",
+   "code": "GN",
+   "name": "Guinea",
+   "spans": [
+    "Guinea"
+   ],
+   "text": "New Insights into the Population Structure of Anopheles gambiae s.s. in the Gulf of Guinea Islands Revealed by Herves Transposable Elements",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 29,
+   "id": "W2262909116|full|ER",
+   "work_id": "W2262909116",
+   "split": "validation",
+   "language": "fr",
+   "code": "ER",
+   "name": "Eritrea",
+   "spans": [
+    "Erythrée"
+   ],
+   "text": "Le Périple au miroir des sources arabes médiévales. Le cas des produits du commerce\nPour un chercheur familier des sources arabes médiévales portant sur le commerce de l'océan Indien, la lecture du Périple de la mer Erythrée semble offrir au premier abord un miroir saisissant d'une organisation plurimillénaire des échanges dans l'océan Indien. De la similitude apparente des données recueillies dans ces différentes sources, l'historien peut-il néanmoins conclure à une permanence dans la structuration des produits du commerce entre les débuts de l'ère chrétienne et les sept premiers siècles de l'Islam ? La présente contribution examine la nature même des textes, puis le cas de différents ensembles de produits présentant une réelle stabilité : épices, cotonnades, ivoire, encens. Elle avance pour finir l'hypothèse d'une rupture majeure aux XIIe-XIIIe siècle avec l'apparition d'un commerce maritime de masse des chevaux et de la garance.",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 30,
+   "id": "W2312214258|full|AU",
+   "work_id": "W2312214258",
+   "split": "validation",
+   "language": "en",
+   "code": "AU",
+   "name": "Australia",
+   "spans": [
+    "Australian"
+   ],
+   "text": "Birds of Guam\nIN view of the fact that very little information is available on the birds of the islands of the Pacific, the author presents a list of birds observed on Guam, Marianas Islands, between September 19 and December 12, 1945. As my time and opportunities for observing birds was limited and as large sections of the wilder parts of the island were closed to military personnel, I was forced to carry on observations for the most part in the more settled region of the south-central areas. Field work was conducted on the west side of the island in the foothills and -mountains in the vicinity of Mt. Tenjo, along the Masso River (a small stream), the Orote Peninsula, Apra Harbor, and the beaches northeast of the last locality mentioned. Two trips were made to the forests near Point Ritidan (the extreme northern tip of the island), and two trips along the southeast coast as far south as Talofofo Bay. One trip was taken along the west coast south of the Orote Peninsula. Guam lies north of the equator in latitude 130 30' N., longitude 1450 E. It is the largest of the islands in the Marianas group and is approximately thirty miles long and from four to eight miles wide. The southern part is mountainous (the highest elevation, according to an old map, is 1,334 feet on Mt. Lamlam), while the northern part is an elevated plateau, approximately four hundred feet in height. High cliffs, covered with vegetation for the most part, flank the plateau along the coasts. In the central part of the island and along most of the coast are extensive coconut plantations. Marshes and swamps are few; two partially drained areas were found. The high temperature and the rich volcanic soils produce a luxuriant tropical vegetation. The northern plateau is largely covered by heavy forest including such characteristic plants as pandan or screw-pine (Pandanus), cycads (Cycas), wild figs (Ficus), and a bewildering array of other trees, shrubs, and vines. Extensive grasslands clothe large portions of the southern mountains, especially in the Mt. Tenjo area. There are several streams in this section whose headwaters start as springs in the mountains and form cascades over the cliffs. The mountain stream valleys are, for the most part, without forest except isolated scrub vegetation such as screw-pine, hau (Hibiscus tiliaceus), low palms, and an occasional clump of coconut palms (Cocos nucifera). A tall cane grass forms thick growths along the streams and springs in the mountains. Australian-pine (Casuar-",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 31,
+   "id": "W2569023120|full|VA",
+   "work_id": "W2569023120",
+   "split": "validation",
+   "language": "en",
+   "code": "VA",
+   "name": "Vatican City",
+   "spans": [
+    "Holy See"
+   ],
+   "text": "The attitude of the Holy See (Curia Romana) and the Catholic Church towards the founding of the P.R.C.: a case study on the standpoint of the Holy See and the Catholic Church",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 32,
+   "id": "W4232970228|full|MQ",
+   "work_id": "W4232970228",
+   "split": "test",
+   "language": "en",
+   "code": "MQ",
+   "name": "Martinique",
+   "spans": [
+    "Martinique"
+   ],
+   "text": "Martinique",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 33,
+   "id": "W4230338718|full|BB",
+   "work_id": "W4230338718",
+   "split": "test",
+   "language": "en",
+   "code": "BB",
+   "name": "Barbados",
+   "spans": [
+    "Barbados"
+   ],
+   "text": "Barbados",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 34,
+   "id": "W1560728627|full|MH",
+   "work_id": "W1560728627",
+   "split": "validation",
+   "language": "en",
+   "code": "MH",
+   "name": "Marshall Islands",
+   "spans": [
+    "Marshall"
+   ],
+   "text": "Theses and Dissertations Related to Hymnody\nThis bibliography supplements those in previous issues of Hymn. last such listing appeared in Spring 2015 (vol. 66, no. 2). present roster includes papers completed since 2009 that have not been listed before. It was compiled from bibliographic directories, such as ProQuest Dissertations and Theses and WorldCat Dissertations, and from notices provided by authors and supervisors. Additions and corrections should be sent to the contributing editor at parichar@samford.edu.Abbott, Rebecca Nelson. a Curriculum of Spiritual Formation for Children through the Hymns of Charles Wesley at First United Methodist Church, Georgetown, Kentucky. D.W.S., Robert E. Webber Institute for Worship Studies, 2009.Abee, Michele. 'Journey into the Square': Geographical Perspective of Sacred Harp. M.A., University of North Carolina at Greensboro, 2012.Adekale, Elizabeth Hymnody: Its Influence on x^frican American Spirituals and Contemporary Christian Music. MA., Northeastern Illinois University, 2014.Alen, Sterling Martin. a Better Understanding of the Ordo Salutis through the Lyrical Theology of Charles Wesley at & M United Methodist Church, College Station, Texas. D.W.S., Robert E. Webber Institute for Worship Studies, 2010.Anderson, Warren John. Broadening the Congregational Singing Experiences for the Students at Judson University, Elgin, Illinois. D.W.S., Robert E. Webber Institute for Worship Studies, 2010.Balisky, Lila W. Songs of Ethiopia's Tesfaye Gabbiso: Singing with Understanding in Babylon, the Meantime, and Zion. D.I.S., Fuller Theological Seminary, 2015.Beyer, Nancy Wandland. Enhancing Assembly Singing at Messiah Community Church, ELCA, Denver, Colorado. D.W.S., Robert E. Webber Institute for Worship Studies, 2010.Blough, Janie N. A Pilot Program for Building up Community through Congregational Song at the Châtenay Mennonite Church in France. D.W.S., Robert E. Webber Institute for Worship Studies, 2014.Brookey, Jeffrey Marshall. in Worship in the Churches of Christ and Choral Music Performance in Church of Christ Affiliated Colleges and Universities. D.MA., University of Southern California, 2013.Busman, Joshua. (Re)Sounding Passion: Listening to American Evangelical Worship Music, 1997-2015. Ph.D., University of North Carolina at Chapel Hill, 2015.Charter, Vernon John. Embracing a Diverse Hymnody for Community Chapel Services at Prairie Bible Institute, Three Hills, berta. D.W.S., Robert E. Webber Institute for Worship Studies, 2011.Chen, Ruiwen. The Protestant Quest for Contextualized Hymnology in Twentieth-Century China: Case Study of the Collaboration between T. C. Chao and Bliss Wiant in the Contextualization of Chinese Hymns. Ph.D., Chinese University of Hong Kong, 2014.Clark, Douglas F.Turkish Halk Worship Music: Muslim-background Believer Churches of Turkey at Worship in the Language of Their Own People. Ph.D., Evangel University, 2014.Clark, Paul B. A Pilot Project for Renewing Worship through Congregational Singing at the First Baptist Church of Nashville, Tennessee. D.W.S., Robert E. Webber Institute for Worship Studies, 2008.Coleman, Fred Rowel. A History of Congregational Song Leading in Protestant Churches in the United States of America 'with a Manual for Developing Leaders for Its Most Current Practice. P.Th.D., Bob Jones University, 2014.Crawford, Eric Sean. The Negro Spiritual of Saint Helena Island: An Analysis of Its Repertoire during the Periods 1860-1920, 1921-1939, and 1972-Present. Ph.D., Catholic University of America, 2012.Criscuola de Laix, Esther Victoria. Cultures of Music Print in Hamburg, ca. 1550-1630. Ph.D., University of California, Berkeley, 2009.Daniels, Carlie Weisbrod. The Healing Power of Psalms: Utilizing Psalms and Music in Pastoral Care. [Rabbinical ordination], Hebrew Union College-Jewish Institute of Religion, 2015. …",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 35,
+   "id": "W4281644514|full|MD",
+   "work_id": "W4281644514",
+   "split": "validation",
+   "language": "en",
+   "code": "MD",
+   "name": "Moldova",
+   "spans": [
+    "Moldova"
+   ],
+   "text": "TBE in Moldova\nAlthough there are no reliable data on the number of tick-borne encephalitis (TBE) cases or the percentage of infected ticks, based on the geography and the presence of TBE virus (TBEV) in all neighboring countries, it must be assumed that TBEV is present somewhere in Moldova.",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 36,
+   "id": "W4363652805|full|MH",
+   "work_id": "W4363652805",
+   "split": "test",
+   "language": "fr",
+   "code": "MH",
+   "name": "Marshall Islands",
+   "spans": [
+    "Marshall"
+   ],
+   "text": "Marshall Sahlins: to Paris and Back",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 37,
+   "id": "W4411954463|full|HN",
+   "work_id": "W4411954463",
+   "split": "validation",
+   "language": "es",
+   "code": "HN",
+   "name": "Honduras",
+   "spans": [
+    "Higueras"
+   ],
+   "text": "Caracterización epidemiologíca de los resultados neuroquirúrgicos en el Hospital Las Higueras de Talcahuano desde su formación hasta diciembre 2023\nThe Healthcare Network of the Talcahuano Health Service serves a population of 397,625 people, most of whom are located in urban areas. Within this network, Las Higueras Hospital, inaugurated in 1969, has increased its level of complexity and serves as a base for advanced medical care in the region. Despite being a highly complex hospital, high-complexity neurosurgical cases had to be referred to other centers. The hospital’s Neurology Service, established in 2015, observed an increase in neurosurgical cases, which led to the creation of a Neurosurgery Unit. In 2020, the first neurosurgeon was hired, and in 2021 the team was expanded with the hiring of more specialists to provide 24/7 emergency care throughout the year, thus meeting the requirements to operate as a Type C Neurosurgery Center. The unit began surgical operations in October 2021, addressing urgent neurosurgical pathologies. In 2022, the care of patients with traumatic brain injuries was included in the GES network, and the first oncology surgeries were performed. During 2023, the unit received support from the National Neurosurgery Commission, introduced improvements, and continued with its development plan by acquiring specialized instruments and expanding its surgical capabilities. To date, the Neurosurgery Unit has performed 1,260 cranial and spinal neurosurgical procedures (921 patients), improving neurosurgical care in the region, ensuring equitable and timely access for beneficiary patients, and directly contributing to the National Neurosurgery Network. This article describes the historical development of neurosurgery at Las Higueras Hospital, its health impact, and future challenges.",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 38,
+   "id": "W4388385407|full|MV",
+   "work_id": "W4388385407",
+   "split": "test",
+   "language": "en",
+   "code": "MV",
+   "name": "Maldives",
+   "spans": [
+    "Maldives"
+   ],
+   "text": "Maldives",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 39,
+   "id": "W167100020|full|KR",
+   "work_id": "W167100020",
+   "split": "validation",
+   "language": "en",
+   "code": "KR",
+   "name": "South Korea",
+   "spans": [
+    "South Korea"
+   ],
+   "text": "The treatment of tuberculosis in South Korea.\nSouth Korea's complex system of tuberculosis control has never been fully described. The prevalence of tuberculosis has dropped dramatically since 1965, partly because of farsighted governmental policy that provided low-cost, accessible tuberculosis treatment to the entire population. Within the tuberculosis control system, public and private sector entities provide a wide variety of treatment options. The National Tuberculosis Program focuses on improving cure rates for new cases, while the private sector has taken more of a role in the treatment of drug-resistant tuberculosis and other types of complicated cases. There has been a decrease in drug-resistant tuberculosis since 1980 for multiple reasons, including increased cure rates from the introduction of rifampin-based regimens, improved nutrition and living standards, and the treatment of drug-resistant cases in the private sector. Multidrug-resistant tuberculosis, however, still poses a significant threat to public health. The limited outcomes data that exist in South Korea for multidrug-resistant tuberculosis treatment suggest that cure rates are low and failure and abandonment rates are high. New public health measures are needed to improve the control of multidrug-resistant tuberculosis.",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 40,
+   "id": "W2769572985|full|CL",
+   "work_id": "W2769572985",
+   "split": "validation",
+   "language": "en",
+   "code": "CL",
+   "name": "Chile",
+   "spans": [
+    "Chilean"
+   ],
+   "text": "Ticking bombs: the triggering of explosive volcanic eruptions\nApproximately 60 volcanoes erupt every year affecting air traffic, some 4 million people, killing 850 people, and costing an estimated $98M in damages. Understanding what triggers explosive volcanic eruptions is critical for volcanic risk analysis and hazard mitigation. Although Australia has only two active volcanoes (on Heard and McDonald Islands in the Indian Ocean), as a country bound to the north and east by highly active volcanic regions, Australia is vulnerable to the effects of major, ash-producing volcanic eruptions. Such volcanic eruptions can pose significant hazards for air-travel, as exemplified by the effects of the 2010 Icelandic eruption in Europe, and 2011 Chilean eruption across Australasia, and which may also threaten farming economies via ash deposition on land.",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 41,
+   "id": "W4239135520|full|GQ",
+   "work_id": "W4239135520",
+   "split": "test",
+   "language": "en",
+   "code": "GQ",
+   "name": "Equatorial Guinea",
+   "spans": [
+    "Equatorial Guinea"
+   ],
+   "text": "Equatorial Guinea",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 42,
+   "id": "W7206370323|full|PL",
+   "work_id": "W7206370323",
+   "split": "validation",
+   "language": "es",
+   "code": "PL",
+   "name": "Poland",
+   "spans": [
+    "Polonia"
+   ],
+   "text": "Polonia Martín Suárez",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 43,
+   "id": "W7139639427|full|BQ",
+   "work_id": "W7139639427",
+   "split": "validation",
+   "language": "en",
+   "code": "BQ",
+   "name": "Caribbean Netherlands",
+   "spans": [
+    "Saba"
+   ],
+   "text": "County of San Saba\nBusiness correspondence written on letterhead from the late 19th century. Letterhead includes decorative designs with county name and text reading: \"Courts. County, For Criminal and Civil Business 1st Mondays in January, April, July and October. Commissioners'. 2nd Mondays in February, May, August and November.\" Letterhead contains the names John Seiders, County Judge; A. Duggan, County and Dist. Clerk; A. J. Hawkins, Sheriff and Tax Collector; A. B. Wilson, County Attorney; C. W. Lindsey, Tax Assessor; W. H. Estep, County Treasurer; L. W. Rector, Surveyor; J. F. Brown, Inspector; R. Halden, Public Weigher; Precinct Officers: No. 1, S. W. Walker, Com.; Geo. Harris, J. P.; W. C. Edwards, Const., San Saba, Texas; No. 2, J. B. Graham, Com.; J. B. Graham, J. P.; J. L. Locker, Const., Richard Springs, Texas; No. 3, W. M. Gay, Com.; W. M. Gay, J. P., Cherokee, Texas; No. 4, R. S. Alexander, Com.; R. W. Self, J. P.; J. R. Byrd, Const., Bend, Texas.",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 44,
+   "id": "W2053486101|full|SG",
+   "work_id": "W2053486101",
+   "split": "validation",
+   "language": "en",
+   "code": "SG",
+   "name": "Singapore",
+   "spans": [
+    "Singapore"
+   ],
+   "text": "The Passive in Singapore English\nSingapore English has two passive or passive‐like constructions which exhibit substrate influence from Malay and Chinese. They are the kena passive and the give passive. Of the two constructions, the Malay‐derived kena passive is more widely used among Singaporeans regardless of ethnic origin. By contrast, the Chinese‐derived give passive is much rarer. In this paper, we present an analysis of the two passives, and show that while the substrate languages contribute to the grammar of Singapore English, the continued prestige of standard English exerts normative pressure and mitigates the effect of substrate influence – the winner of the competing substrate forms is closer in structure to what may be called the ‘standard’ or ‘prestige’ form.",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 45,
+   "id": "W1980493951|full|ES",
+   "work_id": "W1980493951",
+   "split": "validation",
+   "language": "en",
+   "code": "ES",
+   "name": "Spain",
+   "spans": [
+    "Spanish"
+   ],
+   "text": "Spatial patterns and diversity of bryozoan communities from the Southern Ocean: South Shetland Islands, Bouvet Island and Eastern Weddell Sea\nIn this study, we report new data on the biodiversity and the geographic and bathymetric distribution of bryozoans collected during the ANT XXI/2 cruise (November 2003 to January 2004) in the Eastern Weddell Sea and Bouvet Island, and during the Spanish Antarctic expedition ECOQUIM (January 2006) in the South Shetland Islands. Our data on distribution were analysed together with previous studies carried out in the same regions. A total of 54 species of Antarctic bryozoans (206 samples), including a new species of the genus Reteporella were found. Two species were reported for the first time from Bouvet Island, one from the Weddell Sea and one from Spiess Seamount. Fifty-five per cent of all species identified were endemic to Antarctica. In the Weddell Sea, the regions of Austasen and Kapp Norvegia exhibit the highest relative species richness, followed by the Vestkapp region. Multivariate and cluster analyses revealed small-scale spatial variability in the community structure along depth and between localities.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 46,
+   "id": "W7205907863|full|MS",
+   "work_id": "W7205907863",
+   "split": "test",
+   "language": "es",
+   "code": "MS",
+   "name": "Montserrat",
+   "spans": [
+    "Monserrate"
+   ],
+   "text": "Por don Francisco de Monserrate y Vives, baron de Ribelles, en el principado de Cataluña en el pleyto con don Iñigo de Acuña",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 47,
+   "id": "W3125115082|full|CA",
+   "work_id": "W3125115082",
+   "split": "test",
+   "language": "en",
+   "code": "CA",
+   "name": "Canada",
+   "spans": [
+    "Canada"
+   ],
+   "text": "Diversifying Without Discriminating: Complying with the Mandates of the TRIPS Agreement (with R. Dreyfuss)\nAlthough the technological community was once fairly united in its needs from the patent system, the recent debate over patent reform has made it clear that this is no longer the case. Rather, it has become increasingly difficult to believe that a one–size–fits–all approach to patent law can survive. In this brief contribution to a symposium tackling Diversity in Innovation Policy, we consider the ways in which intellectual property obligations, most notably the TRIPS Agreement, circumscribe the ability of national lawmakers to tailor patent protection to reflect the concerns of different industries. In particular, we propose that TRIPS art. 27, which is cast in terms of nondiscrimination, should be interpreted to permit “differential treatment.” First, we argue that in other areas, treating different cases differently is not always invidious discrimination. Second, we note that many of the proposals for tailoring are not aimed at the nominal legal rights created by patent law, but rather at the economic effects of these patents, a distinction of significance in the WTO’s Canada-Pharmaceutical Patents case. Finally, we suggest that member states claiming de facto discrimination should be required to demonstrate some element over and above those required to establish de iure discrimination, and that member states defending an exclusion should be permitted to rebut a showing of disparate treatment by demonstrating a legitimate purpose. While decision makers will need to evaluate the relation between the stated purpose and the means chosen, this analysis would permit members to adopt most of the tailoring initiatives discussed during the Symposium. We give weight to the normative claims of the TRIPS Agreement to facilitate and enhance free trade. But we think that industry–specific patent laws are fully consistent with the language and purpose of the TRIPS Agreement as well as the comparative advantage philosophy that undergirds the modern trade regime.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 48,
+   "id": "W4251508885|full|KE",
+   "work_id": "W4251508885",
+   "split": "validation",
+   "language": "de",
+   "code": "KE",
+   "name": "Kenya",
+   "spans": [
+    "Kenia"
+   ],
+   "text": "Besuche in Mosambik und Kenia",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 49,
+   "id": "W4285347947|full|FR",
+   "work_id": "W4285347947",
+   "split": "validation",
+   "language": "en",
+   "code": "FR",
+   "name": "France",
+   "spans": [
+    "French"
+   ],
+   "text": "The Ceded Islands–Grenada\nDescribes how Highland Scots responded to the opportunities created by Britain’s acquisition of the Ceded Islands in 1763 and the resulting tensions between Presbyterian Scots and French Catholic planters. Expansion of the plantations was based on the brutal treatment of enslaved Africans and growing resistance which culminated in the Fédon Revolution or Uprising of 1795.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 50,
+   "id": "W2884247365|full|AX",
+   "work_id": "W2884247365",
+   "split": "validation",
+   "language": "fr",
+   "code": "AX",
+   "name": "Åland Islands",
+   "spans": [
+    "Aland"
+   ],
+   "text": "Du temple à l'homme (Paroles retrouvées), Baudouin Decharneux\nThe greatest part of this publication concerns itself with the retirement of Prof. Lic. Dr. Barbara Aland of both the Hermann Kunst-Stiftung and the Institut fur neutestamentliche Textforschung.",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 51,
+   "id": "W4246569325|full|JO",
+   "work_id": "W4246569325",
+   "split": "test",
+   "language": "es",
+   "code": "JO",
+   "name": "Jordan",
+   "spans": [
+    "Jordania"
+   ],
+   "text": "Jordania",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 52,
+   "id": "W3207231182|full|VE",
+   "work_id": "W3207231182",
+   "split": "test",
+   "language": "en",
+   "code": "VE",
+   "name": "Venezuela",
+   "spans": [
+    "Venezuela"
+   ],
+   "text": "Venezuela, Gulf of Venezuela Coast",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 53,
+   "id": "W2123032375|full|CN",
+   "work_id": "W2123032375",
+   "split": "validation",
+   "language": "en",
+   "code": "CN",
+   "name": "China",
+   "spans": [
+    "China"
+   ],
+   "text": "Incidence of hip fracture in Kuwait\nBACKGROUND: Hip fracture as a consequence of osteoporosis is an important cause of morbidity and mortality among the elderly. Due to improving life expectancy, the number of elderly individuals is increasing more rapidly in the developing countries of Asia, the Middle East, Africa, and South America. Incidence of hip fracture, which rises exponentially with age, varies substantially between countries and according to the age, sex, and ethnic distribution of the population. Highest rates are observed in Scandinavia and in whites in the US, intermediate in western Europe, and the lowest rates in Asia. Little is known about the epidemiology of hip fractures in the Middle Eastern populations. In particular, there are no published reports from any of the Arab countries. We have therefore estimated the incidence of hip fracture in Kuwait and compared it with other populations. METHODS: The study was conducted at a specialized orthopaedic hospital which provides services to residents in the three governorates--representing about 70% of the total population of Kuwait. All new hip fracture patients who were operated on or treated conservatively during the 4-year period (1992-1995) were included in the study. Hip fracture was defined as clinical and radiological evidence of fracture of the proximal femur. For comparison with other populations, age-specific incidence rates in females and males aged > or =50 years were standardized to the 1985 US population. RESULTS: A total of 513 cases of hip fracture (205 females, 308 males) were recorded during the study period: 293 (57.1%) cases occurred among Kuwaiti nationals and 220 (42.9%) among non-Kuwaitis (expatriates). Age-standardized rates (per 100,000) of hip fractures were, in Kuwaitis, 295 for females (95% CI: 238.8-350.8) and 200 for males (95% CI: 163.3-236.5)--much higher than those observed in other Asian countries such as Korea, Singapore, China, Malaysia, and Japan (41-202 for females, 49-100 for males). Rates in Kuwaiti females were similar to those observed in some of the European countries (Italy, UK, France) and in Asian females in the US. In contrast, rates in Kuwaiti males, which were relatively high, were almost equal to those observed in white males in the US. Rates of hip fracture in non-Kuwaitis (374 for females [95% CI: 247.6-500.8], 215 for males [95% CI: 126.5-302.9]), who predominantly (96%) originate from southeast Asian and Arab countries, were similar to those observed in Kuwaiti nationals. CONCLUSIONS: The incidence of hip fracture in the Kuwaiti population is higher than that reported from other countries in Asia and is comparable to the incidence in some of the western European and North American populations.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 54,
+   "id": "W3134212872|full|ES",
+   "work_id": "W3134212872",
+   "split": "validation",
+   "language": "fr",
+   "code": "ES",
+   "name": "Spain",
+   "spans": [
+    "Espagne"
+   ],
+   "text": "La participation des jeunes à la vie publique locale en Europe\nParlements, forums et conseils de jeunes : sept regards sur la situation européenne Confrontées à différents phénomènes politiques et sociaux (fin des régimes communistes, perte de confiance dans les femmes et les hommes politiques, désaffection pour les structures traditionnelles, transformation des modes de militantisme ou encore montée de l'individualisme), nos sociétés ont vu progressivement naître, dans les années 1980 et 1990, une méfiance vis-à-vis des processus de définition de l'action publique et des acteurs impliqués ainsi que la revendication d'un plus grand contrôle démocratique des décisions publiques, tant au niveau de leur conception que de leur mise en œuvre.Les autorités locales, les élus locaux et certaines organisations non gouvernementales ont ainsi cherché à accompagner cette transformation du rapport au politique en essayant d'associer directement les citoyens, individuellement ou collectivement, à leur action, faisant de la participation des habitants un outil de gouvernance territoriale.Les jeunes ont également été concernés par ce processus de développement de la démocratie participative au travers de la mise en place, dans la plupart des pays européens et à différents niveaux territoriaux, de parlements, de forums et de conseils de jeunes.Au même moment, l'« enfant », le « jeune » ou le « mineur », le terme usité variant selon les contextes, s'est vu reconnaître une personnalité propre et certains attributs d'une citoyenneté avec l'adoption le 20 novembre 1989 de la Convention internationale des droits de l'enfant qui rappelle dans ses articles 12 à 15 les libertés d'opinion, d'expression et d'association 1 dont il doit bénéficier. Une question portée par les institutions européennesCes évolutions n'ont pas laissé indifférentes les institutions européennes, dans un premier temps le Conseil de l'Europe, puis la Commission européenne qui, à partir du début des années 1990, ont commencé à s'y intéresser.En 1992, le Congrès des pouvoirs locaux et régionaux d'Europe (CPLRE), organe du Conseil de l'Europe, a adopté une charte européenne de la participation des jeunes à la vie locale et régionale.Ce document sera ensuite complété par une recommandation du Comité des ministres du Conseil de l'Europe.Son objectif est d'inciter les élus locaux à s'emparer de cette question et à favoriser la participation des jeunes.Dix ans après et à l'issue d'une conférence-bilan qui s'est déroulée à Cracovie en mars 2002, le Congrès a proposé sa révision afin de tenir compte des évolutions de la société européenne et de l'évaluation de son action.Cette charte révisée a été adoptée en mai 2003.À partir de la fin des années 1990, l'Union européenne a commencé à s'intéresser à cette thématique, notamment à partir de novembre 1999, lorsque à la demande de ses États membres, la Commission européenne a lancé l'élaboration d'un livre blanc sur la jeunesse.Elle a alors engagé un large processus de consultation associant pendant deux années les autorités nationales, les chercheurs, les ONG de jeunesse, les conseils nationaux de jeunesse des quinze pays alors membres ainsi que ceux des pays en voie d'adhésion.Le Forum européen de la jeunesse 2 a pris contacts avec les personnes susceptibles d'être interviewées.Les trois suivants ont permis d'effectuer les déplacements nécessaires, d'une durée d'une semaine pour chaque pays 4 .Une restitution au comité de pilotage était accomplie après chaque déplacement.Le dernier mois a été consacré à la rédaction du rapport.En juin 2004, le comité de pilotage s'est réuni pendant deux jours afin de mettre en perspective les cinq monographies nationales réalisées par Marie-Ève Rialland et de les compléter par les volets français et européen.À la différence des autres monographies nationales, la situation française est décrite à partir de l'expertise de l'ANACEJ et de travaux d'historiens et de sociologues produits sur le sujet.Les monographies nationales ont été élaborées à partir de documents et d'entretiens effectués auprès de plusieurs catégories d'acteurs (coordinateurs et membres de conseils de jeunes, élus locaux, fédéraux, régionaux et nationaux en charge de la jeunesse, responsables de fédérations ou d'associations de conseils de jeunes, animateurs et membres d'ONG de jeunesse et membres de ministères de la Jeunesse ou de directions de la jeunesse au sein des ministères référents pour le niveau national et fédéral le cas échéant).Afin de faciliter le déroulement de l'étude, les membres du comité de pilotage ont mis à la disposition de Marie-Ève Rialland leurs réseaux de partenaires actifs dans le domaine de la participation des jeunes.Ainsi, l'association Youth Planet a des contacts avec les réseaux roumains 5 et polonais 6 des conseils de jeunes et avec un réseau italien d'informations et d'échanges sur la jeunesse 7 , ce qui a permis d'entrer en relation avec les conseils locaux et régionaux de jeunesse.De plus, un des membres de Youth Planet siège au Forum européen de la jeunesse, qui réunit les conseils nationaux de jeunes de plusieurs pays.Les contacts avec les autorités ministérielles pour la jeunesse ont été établis grâce au ministère français de la Jeunesse, des Sports et de la Vie associative.Dans le cas de l'Allemagne et de la Suède, les contacts avec les responsables des conseils étaient peu nombreux, mais ils ont été compensés par l'existence, dans ces pays, d'un solide réseau d'organes gouvernementaux et non gouvernementaux en charge de la jeunesse.Pour l'Allemagne, les conseils des organisations de jeunesse (Jugendring) qui existent à chaque niveau administratif (en particulier ceux de l'État fédéral et des Länder) ont permis de prendre contact avec les conseils et les parlements locaux de jeunes.Pour la Suède, le Bureau national des affaires de jeunesse a facilité la réalisation des entretiens.Une centaine de personnes ont été informées par courriel et par téléphone de la conduite d'une étude sur la participation des jeunes à la vie publique locale en Europe et de l'organisation d'une visite ultérieure.Ces premiers échanges ont permis de cerner les aspects généraux de la participation des jeunes dans chacun des pays concernés, mais aussi d'identifier les personnes qu'il était le plus pertinent de rencontrer compte tenu du temps imparti.Entre dix et quinze personnes ont été interrogées dans chaque pays.Les entretiens, d'une durée d'une heure à une heure trente, ont été réalisés en anglais et, dans la mesure du possible, enregistrés.Une grille d'entretien a été élaborée, ainsi que des questions portant sur la mise en place et le fonctionnement du conseil de jeunes.Les personnes interrogées n'ont répondu qu'en partie aux questions, en fonction de leur position et de leur connaissance de la situation.Une bibliographie, qui ne figure pas dans cette publication, a été élaborée à partir des ressources de l'INJEP (la base de données Télémaque 8 et le dossier documentaire sur la participation des jeunes à la vie locale 9 ), du catalogue de la British Library, du répertoire européen des structures de jeunesse 10 -qui recense notamment les différents centres de ressources européens sur la jeunesse -et d'informations recueillies auprès des personnes interrogées.La bibliographie par pays fait apparaître des disparités nationales quant au volume de documents consacrés à la question de la PRÉAMBULE 5 4/ Italie : du 22 au 28 mars ; Roumanie : du 5 au 11 avril ; Pologne : du 12 au 18 avril ; Allemagne : du 3 au 9 mai et Suède : du 17 au 23 mai.5/ Association Master Forum.6/ OFMSL, Fédération des conseils municipaux de jeunes.7/ Euronet, situé à Potenza, Basilicate.8/ En ligne sur www.injep.fr.9/ Le point sur la participation des jeunes à la vie locale, INJEP, Marly-le-Roi, 2003.10/ Cédérom disponible au centre de documentation de l'INJEP.2/ Pour la France : PERRINEAU P., Le désenchantement démocratique, L'Aube, La Tour-d'Aigues, 2003 ; GRUNBERG G., MAYER N., SNIDERMAN P. M. (dir.),La démocratie à l'épreuve : une nouvelle approche de l'opinion des Français, Presses de Sciences-Po, Paris, 2002.3/ BRÉCHON P., « Les jeunes et la politique en Europe et en France », Agora débats/jeunesse, n o 12, 2 e trimestre 1998 ; MUXEL A., CACOUAULT M. (dir.),Les jeunes d'Europe du Sud et la politique : une enquête France, Italie, Espagne, L'Harmattan, coll.« Logiques politiques », Paris, 2001 ; GAISER W., GILLE M., KRÜGER W., DE RIJKE J., « Désintérêt pour la politique en Allemagne de l'Est et de l'Ouest ?Prises de position des jeunes et des jeunes adultes allemands », Agora débats/jeunesse, n o 23, 1 er trimestre 2001.4/ À ce sujet, voir COMMISSARIAT GÉNÉRAL DU PLAN, Jeunesse, le devoir d'avenir : rapport de la commission présidée par Dominique Charvet, La Documentation française, Paris, 2001.",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 55,
+   "id": "W2979437779|full|GY",
+   "work_id": "W2979437779",
+   "split": "validation",
+   "language": "pt",
+   "code": "GY",
+   "name": "Guyana",
+   "spans": [
+    "República da Guiana"
+   ],
+   "text": "Os selos postais da República da Guiana Independente : República do Cunani, nativos da Amazônia",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "H"
+  },
+  {
+   "n": 56,
+   "id": "W4244348573|full|QA",
+   "work_id": "W4244348573",
+   "split": "validation",
+   "language": "de",
+   "code": "QA",
+   "name": "Qatar",
+   "spans": [
+    "Katar"
+   ],
+   "text": "Die Kausalität der Katar und die menschliche Freiheit",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "H"
+  },
+  {
+   "n": 57,
+   "id": "W2135867492|full|SH",
+   "work_id": "W2135867492",
+   "split": "validation",
+   "language": "en",
+   "code": "SH",
+   "name": "Saint Helena",
+   "spans": [
+    "Saint Helena"
+   ],
+   "text": "The Death of Napoleon, Cancer or Arsenic?\nNapoleon Bonaparte died on May 5, 1821, at the age of 51 on the island of Saint Helena, his prison for 5 years. Four autopsy reports, including 2 from the French contingent, revealed the cause of death to be an extensive carcinoma of the stomach complicated by terminal bleeding, the same disease that took his father and several close relatives, including a purported illegitimate son (1). Napoleon was reasonably well until the autumn of 1820, when he developed recurrent abdominal pain, weakness, and stubborn constipation, and toward the end intractable vomiting, hiccupping, and possibly thrombophlebitis-migrans. In the 1960s, when neutron and other activation techniques became available to measure trace elements in individual hairs, a series of articles appeared reporting that increased arsenic concentrations had been found in Napoleon’s hair, leading to claims that he had been deliberately poisoned while on Saint Helena (2)(3). However, the increased concentrations were measured in hair samples dating back to 1805, including samples taken while he was on Elba in 1814. Indeed, an Italian group has recently reported concentrations of 8 ppm (μg/g) and 6 ppm (modern normal concentration <1 ppm) from 1770 when Napoleon was a baby on Corsica (4). Also, samples of equal provenance have shown both normal and increased arsenic concentrations from hair samples culled on the same day as samples with increased concentrations (5)(6). This confusing situation exemplifies the unreliability of trace-element values measured in individual hair samples; concentrations vary enormously from hair to hair on the same head. Thus, to improve reliability it is necessary to analyze a minimum of 1 g of hair taken from several sites on the head. Even with the use of this amount of specimen, hair arsenic values are only approximately related to degree of toxicity. In 2 persons living in the same house and equally poisoned (confirmed by electromyography) by ingesting arsenic contained in well water, we confirmed differing hair concentrations of 47 ppm and 4.2 ppm (7). To ascribe poisoning on the basis of arsenic measured in hair samples, external contamination must be ruled out, a process that often is not possible. An elegant report, by Professor Ivan Ricordel, director of forensic laboratories of the Paris police, and his colleagues, published in the November 2002 edition of Science et Vie, labeled the poisoning claim ferfelu (harebrained) (8). Their investigation showed the following: The investigators’ own hair, soaked in arsenic for periods of 1 month to 1 year, concentrated the arsenic, and although much could be removed by washing, large amounts remained. Thus, washing the hair sample is not useful for differentiating arsenic in hair derived from ingestion from that derived from external contamination. When inorganic arsenic is injected into patients with leukemia, it is deposited on outer body surfaces, similar to its location in external arsenic contamination, because arsenic is secreted in sweat and sebaceous secretions. We and others have shown that arsenic from ingestion and arsenic from external contamination can be found both in the core and on the outer surface of hair (9); thus the location cannot be used to differentiate the source as ingestion or contamination. Large variations in arsenic concentrations exist between hairs on the same head and on the same hair. Napoleon’s sister Pauline Borghese1 had hair arsenic concentrations of 15 ppm in 1825. Napoleon had a lethal hair arsenic concentration of 296 ppm early in 1815, several months before he died. Although he was seriously ill, he was not moribund at that time. Kintz (10) has speciated the arsenic from Napoleon’s hair and found it to be mostly pentoxide with some trioxide and claims that this finding supports a diagnosis of chronic arsenic intoxication. However, Yamauchi (11) has shown that contamination produces a similar pattern. Some have claimed that arsenic contamination would be evenly distributed along the length of the hair, but this distribution pattern does not occur. Therefore, we know of no way to determine from hair analysis whether arsenic got there from ingestion or external contamination. No convincing clinical evidence indicates that Napoleon died from arsenic poisoning. He did not have the skin changes characteristic of chronic arsenic poisoning, rain-drop pigmentation, arsenic corns, or hyperkeratoses of his feet and hands. Neither did he demonstrate the typical progressive weight loss of arsenic poisoning. Sketches show that he gained much weight from 1815 to 1820. There are no formal records of his weight while on the island, but recently it has been confirmed that he gained weight from 1815 to 1820, then lost 11 kg in his last year as his cancer took hold. This information was obtained by a technique ingenious in its simplicity, the measurement of the waistbands of his trousers (12). Given the conclusion that Napoleon did not suffer arsenic poisoning, what was the source of his hair arsenic? Arsenic was ubiquitous in the 19th century, being used extensively as a rodenticide, insecticide, and preservative and in face and hair powders (Napoleon used hair powder), clothing dyes, and even candy wrappers, as well as being extensively prescribed as a tonic (Fowler’s Solution). Arsenic was also used as a green pigment (Scheele’s and Paris Green) in wallpaper. The wallpaper in Napoleon’s residence on Saint Helena contained some arsenic but probably not enough to increase his hair concentration. There is no evidence from Napoleon’s extensive medical records that the Emperor took arsenic as a medicine; indeed he was highly skeptical of doctors and their remedies, having stated “you medical people will have more lives to answer for in the other world than even we generals (13).” He could have ingested arsenic from his water supply. However, we have analyzed a water sample kindly supplied by the French Consul on Saint Helena, M. Michel Martineau, and found it to have a normal arsenic concentration. External contamination with arsenic would explain the widely varying hair concentrations, including normal ones, seen throughout Napoleon’s life. Only one study has investigated a reference interval for hair arsenic in the 19th century. Hamilton Smith and his colleagues, who analyzed many early hair samples from Napoleon, also analyzed 12 hair samples from separate funerary wreaths and lockets dating 1790–1849 and collected from around the city of Glasgow, Scotland. Even when the results from grossly contaminated specimens were discounted, the arsenic concentrations ranged up to 59 ppm, with concentration in most samples 10 ppm or less (12). Thus, a “normal” range for the Napoleonic era cannot be accurately defined. We suspect that the source of the arsenic in Napoleon’s hair was from the common practice of adding a pinch of arsenic trioxide as a preservative to hair samples cut as mementoes and/or the use of arsenic-containing hair powder. The Emperor said, “History is but a fable oft repeated.” We hope that modern scientific techniques have provided us with some improvement on this statement. © Reproduced with permission.2 Author Contributions:All authors confirmed they have contributed to the intellectual content of this paper and have met the following 3 requirements: (a) significant contributions to the conception and design, acquisition of data, or analysis and interpretation of data; (b) drafting or revising the article for intellectual content; and (c) final approval of the published article. Authors’ Disclosures of Potential Conflicts of Interest:No authors declared any potential conflicts of interest. Role of Sponsor: The funding organizations played no role in the design of study, choice of enrolled patients, review and interpretation of data, or preparation or approval of manuscript.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 58,
+   "id": "W1966695647|full|NF",
+   "work_id": "W1966695647",
+   "split": "validation",
+   "language": "en",
+   "code": "NF",
+   "name": "Norfolk Island",
+   "spans": [
+    "Norfolk Island",
+    "Norfolk Island, Australia"
+   ],
+   "text": "Recent evolution of Zosterops lateralis on Norfolk Island, Australia\nZosterops lateralis invaded Norfolk Island in 1904. In the next 9 years it hybridized with Zosterops tenuirostris to a small extent. Evolutionary change in lateralis is indicated by a comparison of bill measurements in samples collected in different years. Specimens collected in 1926 had narrower bills than did those collected in 1912–1913 and in 1968–1969. These changes were not produced by hybridization. They may have been caused by selection whose direction was reversed after 1926, but the reasons are obscure.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 59,
+   "id": "W1549762933|full|NL",
+   "work_id": "W1549762933",
+   "split": "validation",
+   "language": "en",
+   "code": "NL",
+   "name": "Netherlands",
+   "spans": [
+    "Dutch"
+   ],
+   "text": "The American Colonial State in the Philippines: Global Perspectives\nIn 1898 the United States declared sovereignty over the Philippines, an archipelago of seven thousand islands inhabited by seven million people of various ethnicities. While it became a colonial power at the zenith of global imperialism, the United States nevertheless conceived of its rule as exceptional-an exercise in benevolence rather than in tyranny and exploitation. In this volume, Julian Go and Anne L. Foster untangle this peculiar self-fashioning and insist on the importance of studying U.S. colonial rule in the context of other imperialist ventures. A necessary expansion of critical focus,The American Colonial State in the Philippinesis the first systematic attempt to examine the creation and administration of the American colonial state from comparative, global perspectives.Written by social scientists and historians, these essays investigate various aspects of American colonial government through comparison with and contextualization within colonial regimes elsewhere in the world-from British Malaysia and Dutch Indonesia to Japanese Taiwan and America's other major overseas colony, Puerto Rico. Contributors explore the program of political education in the Philippines; constructions of nationalism, race, and religion; the regulation of opium; connections to politics on the U.S. mainland; and anticolonial resistance. Tracking the complex connections, circuits, and contests across, within, and between empires that shaped America's colonial regime,The American Colonial State in the Philippinessheds new light on the complexities of American imperialism and turn-of-the-century colonialism.",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 60,
+   "id": "W4389281250|full|US",
+   "work_id": "W4389281250",
+   "split": "validation",
+   "language": "es",
+   "code": "US",
+   "name": "United States",
+   "spans": [
+    "Estados Unidos"
+   ],
+   "text": "La organización territorial en Polonia\nLa organización territorial en PoloniaEn el ámbito de la Teoría del Estado existen tres categorías acuñadas para definir los Estados desde un punto de vista de la organización horizontal de poder, lo que Jellinek llamó la «estructura del Estado» por contraposición a la «forma del Estado»:el Estado unitario,la Confederación y la Federación.Estas estructuras tienen una naturaleza diferente a las alianzas de los anteriores reinos medievales o a las Uniones de Estado, pues constituyen una entidad estatal o federal superior a la suma de sus componentes.Y en la historia la evolución de una a otra ha sido en general unidireccionales, es decir, las Uniones de Estados han dado paso en ocasiones a la Confederación y ésta en otras ocasiones al Estado federal.Por el contrario, la evolución del Estado unitario hacia el Estado confederal es menos frecuente.Se crean los Estados federales por una cooperación mayor en el modelo confederal o por una decisión en el seno del Estado unitario, como en Estados Unidos y en Alemania, del mismo modo que se descentraliza el modelo de Estado unitario al reconocer una autonomía limitada a la gestión de intereses intermedios.La propia evolución en el tiempo de sistemas o modelos muy definidos en principio es un ejemplo de adaptación a las circunstancias, como es el caso de la inicial limitación de la Federación en el caso norteamericano y su posterior fortalecimiento sobre todo a raíz de la guerra civil, de la concentración del poder económico y de la crisis de la gran depresión.Las restantes formas de organización del Estado se han producido en camino hacia una de las formas ya mencionadas, dotadas de mayor estabilidad, o han sido contratos entre Estados que no han salido del ámbito del Derecho internacional público, incluyendo desde la simple alianza hasta agrupaciones con mayor estabilidad pero que en ningún caso han llegado a crear un órgano estable de gobierno.Hay casos de entidades intermedias o superiores que adquieren cierto protagonismo pero sin la generalidad de ejercicio de las competencias de la Confederación, en la que para algunas materias los propios confederados delegan el ejercicio de competencias importantes en esos órganos confederales.* Letrado de las Cortes Generales.La caída de los regímenes comunistas fue seguida de una renovación constitucional orientada a la dem ocracia liberal pero por regla general en el marco de Estados descentralizados.Con independencia de los nombres la verdadera realidad política permite más hablar de descentralización que de federación, incluso en el caso de la ex Unión Soviética, donde nominalmente existen nombres de repúblicas o regiones autónomas que podrían hacer pensar en una Federación.Esta descentralización ha tenido el efecto de imponerse desde el centro y de mantener controles en el lado estatal, que en algunos casos se mantienen como controles de oportunidad.Es en ese sentido una descentralización cauta, incluso para algunos en la hora actual demasiado cauta y sobre todo en determinados países en proceso de parcial reversión.Los retos asumidos por los Estados del este europeo tras la caída de los regímenes comunistas han sido de diferente naturaleza.Por un lado, se trataba de crear las condiciones para que los métodos y valores democráticos arraigaran en territorios sometidos hasta ese momento a esquemas políticos de socialismo de Estado, en cualquiera de sus modalidades, más o menos rígido, donde la propia existencia de poderosos partidos únicos convertía a éstos en la verdadera correa de transmisión del poder.Por otro lado, esa misma configuración implicaba la necesidad de recrear las condiciones de una nueva organización territorial del poder al margen de ese peculiar sistema de control vertical desde arriba, organizando un sistema de ejercicio de poderes por entes locales y regionales que discriminara entre competencias centrales y competencias locales y regionales.Posiblemente en este último caso donde las dificultades eran mayores debido a la estricta centralización que los regímenes comunistas implicaban en la articulación centro-periferia, al margen de la nominal construcción de la Constitución.El caso paradigmático de alejamiento de norma y realidad del poder era el de la Unión Soviética, donde a pesar de que existían entidades cuasinacionales era el Partido Comunista el que realmente dominaba esas organizaciones.En este caso existía una constelación de entidades de base territorial, algunas con poder cuasi soberano, que determinaban una Unión con amplia base que sin embargo era unificada férreamente por el control del Partido.Este modelo de poder fue exportado con matices a los países del antiguo bloque comunista, con la secuela de que al producirse el derrumbe del sistema una de las preguntas insólitas que hubo que plantearse es si se resucitaban modelos de autonomía local en sentido normativo, es decir, con competencias no nominales realmente ejercitadas con arreglo a los principios de libertad, representación y autonomía del self government.Pregunta sin duda curiosa desde el momento en que al menos formalmente nunca desapareció el principio de autogobierno al nivel local, al menos con carácter generalizado y uniforme, aunque la superestructura del partido único y director convertía en nada la garantía institucional en que de forma más o menos acrítica ha sido incardinada la mencionada autonomía local.La teoría de los círculos concéntricos de intereses públicos a atender en",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 61,
+   "id": "W4242200170|full|KM",
+   "work_id": "W4242200170",
+   "split": "validation",
+   "language": "en",
+   "code": "KM",
+   "name": "Comoros",
+   "spans": [
+    "Comoros"
+   ],
+   "text": "Dhoinine, Ikililou (Comoros)\nIkililou Dhoinine was sworn in as the president on 26 May 2011, assuming power five months after securing electoral victory. Dhoinine had previously served for 5 years as vice president to the departing head of state, Ahmed Abdallah Mohamed Sambi. The 2001 constitution demands that the presidency rotates every 4 years between representatives of the three islands of which the archipelago is composed. Dhoinine is the first president to hail from the federation’s smallest island, Mohéli, and his appointment was only the second peaceful handover of power.",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 62,
+   "id": "W2337613511|full|HM",
+   "work_id": "W2337613511",
+   "split": "validation",
+   "language": "en",
+   "code": "HM",
+   "name": "Heard & McDonald Islands",
+   "spans": [
+    "Heard Island"
+   ],
+   "text": "First Evidence for Ingestion of Plastic Debris by Seabirds at Sub-antarctic Heard Island",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 63,
+   "id": "W2059330307|full|CA",
+   "work_id": "W2059330307",
+   "split": "test",
+   "language": "en",
+   "code": "CA",
+   "name": "Canada",
+   "spans": [
+    "Canada",
+    "Canadian"
+   ],
+   "text": "Angola, China, and Southern Africa: China and Angola, Angola and After; Editors Reply\nWe publish below two texts received since the publication in our February issue of Azinna Nwafor's \"The Liberation of Angola.\" The first, \"China and Angola,\" is by Clark Kissinger, a New Left student activist of the 1960s who is now a factory worker in the Chicago area and a member of the National Steering Committee of the U.S.-China Peoples Friendship Association. The second, \"Angola and After,\" is by John Saul, a frequent contributor to MR (most recently with \"Free Mozambique,\" December 1975) and co-author with Giovanni Arrighi of MR Press book Essays on the Political Economy of Africa. John Saul taught political science at the University of Tanzania, Dar es Salaam, for many years and now works in Toronto with the Toronto Committee for the Liberation of Southern Africa (TCLSAC). This article is a slightly abridged and edited version of one which appeared in the Canadian radical periodical This Magazine (56 Esplanade St. E, Toronto, Canada) of which John Saul is one of the editors. A comment by the editors of MR follows the Kissinger and Saul texts. —The EditorsThis article can also be found at the Monthly Review website, where most recent articles are published in full.Click here to purchase a PDF version of this article at the Monthly Review website.",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 64,
+   "id": "W4249181774|full|SJ",
+   "work_id": "W4249181774",
+   "split": "test",
+   "language": "en",
+   "code": "SJ",
+   "name": "Svalbard and Jan Mayen",
+   "spans": [
+    "Jan Mayen"
+   ],
+   "text": "Denmark (Greenland)—Iceland—Norway (Jan Mayen)",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 65,
+   "id": "W7171422537|full|BB",
+   "work_id": "W7171422537",
+   "split": "test",
+   "language": "en",
+   "code": "BB",
+   "name": "Barbados",
+   "spans": [
+    "barbadense"
+   ],
+   "text": "A MONOGRAPH ON PLANTS FREQUENTLY USED IN THE TREATMENT OF PROSTATITIS IN TRADITIONAL MEDICINE: THE CASE OF BOKÉ PREFECTURE, REPUBLIC OF GUINEA/CONAKRY\nProstatitis is one of the most common urological conditions in adult men, characterised by inflammation of the prostate, often of infectious origin. In sub-Saharan Africa, and more specifically in Guinea, the management of these conditions still relies heavily on traditional medicine due to inadequate healthcare infrastructure and the high cost of modern treatments. In the prefecture of Boké, numerous medicinal plants are used in the treatment of prostatitis, passed down from generation to generation by traditional practitioners, herbalists and healers. This study aims to catalogue these plants and compile monographs on them, including their taxonomic position, botanical description, traditional uses, parts used, methods of preparation, phytochemical constituents and reported pharmacological activities. An ethnobotanical survey was conducted among 35 traditional practitioners and herbalists, identifying twelve species used with high frequency: Phyllanthus muellerianus, Smilax anceps, Carica papaya, Pterocarpus erinaceus, Dioscorea bulbifera, Vitex doniana, Premna hispida, Gossypium barbadense, Persea americana, Anacardium occidentale, Daniellia oliveri and Cassia sieberiana.",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 66,
+   "id": "W4402275675|full|GL",
+   "work_id": "W4402275675",
+   "split": "test",
+   "language": "en",
+   "code": "GL",
+   "name": "Greenland",
+   "spans": [
+    "Greenland"
+   ],
+   "text": "Climate driven response of the Iceland‐East Greenland‐Jan Mayen capelin distribution\nClimate change is altering the distribution of marine organisms worldwide. This may, in turn, affect the overall structure and functioning of ecosystems, sometimes leading to low productive regimes. Pronounced shifts in distribution and migration have been observed for capelin ( Mallotus villosus ), one of the ecologically and commercially important species in the Arctic. This study attempts to discern whether a relationship existed between the altered capelin dynamics and the changing physical environmental conditions in the Iceland‐East Greenland‐Jan Mayen region. More specifically, three species distribution models were used to predict hindcasts (pre‐shift years 1993–2002) and nowcasts (post‐shift years 2003–2019) of capelin distribution based on relationships with temperature, salinity, current speed, net primary productivity, and bathymetry. The predicted probability of occurrence over these two time periods demonstrates that the changing environmental conditions have contributed to the modified distribution of the stock during its late feeding season in autumn and during the onset of spawning season in winter. The multi‐model approach used in this study has provided a solid statistical framework to describe the environmental niche of capelin and its potential responses to changing ocean climate.",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 67,
+   "id": "W856994621|full|GB",
+   "work_id": "W856994621",
+   "split": "validation",
+   "language": "en",
+   "code": "GB",
+   "name": "United Kingdom",
+   "spans": [
+    "British"
+   ],
+   "text": "Historical Perspective of Pakistan USA Relations; Lessons for Pakistan\nAbstractThe United States and established diplomatic relations in 1947 the US agreement to provide economic and military assistance to and the latter's partnership in the CENTO and SETO strengthened relations between the two nations. However, that US suspension of military assistance during the 1965, 1971, 1975, generated a white spread feeling in that the United States was not a reliable ally. The soviet invasion of Afghanistan in 1979 highlighted the common interest of and the United States in peace and stability in South Asia. The purpose of this paper is to analyze US relationship in historical perspective, highlighting lesson that should learn from its past's experiences with the US and recommended a viable strategy for the future.Key Words Cento, Seto, Taliban, War on TerrorIntroductionThe United States' and established diplomatic relations in 1947 The U.S. agreement to provide economic and military assistance to and the latter's partnership in the Baghdad Pact/CENTO and SEATO strengthened relations between the two nations. However, the U.S. suspension of military assistance during the 1965 lndo- war generated a widespread feeling in that the United States was not a reliable ally. Even though the United States suspended military assistance to both countries involved in the conflict, the suspension of aid affected much more severely. Amongst the masses, the U.S. lost all credibility in the wake of 1971 war and the, ers1 Wag_ tragic bifurcation of Pakistan.On October 1, 1990, however, the United States suspended all military assistance and new economic aid to under the Pressler Amendment which required that the President certify annually that 'does not possess a nuclear explosive device.'The decision by India to conduct nuclear tests in May 1998 and Pakistan's matching response set back U.S. relations in the region, which had seen renewed U.S. Government interest during the second Clinton Administration. A presidential visit scheduled for the first quarter of 1998 was postponed and under the Glenn Amendment, sanctions restricted the provision of credits, military sales, economic assistance, and loans to the (books.google.com.pk/books?isbn=0739711946).The United States has stepped up its economic assistance to Pakistan, providing debt relief and support for a major effort at education reform. However, the mistrust seems to persist on both sides and this marriage of convenience is not professed by many to outlast our previous courtships.PART - IPak-US. Relationship in historical PerspectiveThe Initial Years (1947-1952)After the creation of the two dominions of the British raj in 1947, Pakistan needed financial support for its infrastructure development and modernization of its armed forces it is not known as to when the government of decided to ask for military aid from the United States; Field Marshal Ayub Khan was definitely their living along these lives in August 1951 (Muqeem, 1963). As a US ally in the region, could provide a foot hold for the US in the region against any Soviet expansionist efforts in South Asia.From the US perspective, the United States was more occupied in the post war reconstruction in Western Europe and Japan, its containment efforts in South East and the Middle East. The United States in the initial years of was less interested in getting involved in the emerging conflicts of South Asia (Mahmud, 1991)The Evolving Period & Ayub's Era (1952-1969)Regional Defence OrganizationsThe United States regards as vital to the national interest and world peace the preservation of the independence and integrity on the nations of the Middle East. To this end, if the President determines the necessity thereof, the United States is prepared to use armed forces to assist any such nation or group of nations requesting assistance against armed aggression from any country controlled by International Communism (White House Press Release,5 January1957, Text also in United States Department of State Bulletin, 1957) . …",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 68,
+   "id": "W2520523841|full|KH",
+   "work_id": "W2520523841",
+   "split": "test",
+   "language": "fr",
+   "code": "KH",
+   "name": "Cambodia",
+   "spans": [
+    "Cambodge",
+    "Kampuchea"
+   ],
+   "text": "Ben Kiernan et Serge Thion. Khmers rouges ! ; David P. Chandler Ben Kiernan (ed.). Revolution and its Aftermath in Kampuchea. Eight Essays ; \"Cambodge I\", ASEMI ; Jean Delvert. Le Cambodge\nBui Xuan Quang. Ben Kiernan et Serge Thion. Khmers rouges ! David P. Chandler Ben Kiernan (ed.). Revolution and its Aftermath in Kampuchea. Eight Essays \"Cambodge I\", ASEMI Jean Delvert. Le Cambodge. In: Politique étrangère, n°2 - 1984 - 49ᵉannée. pp. 495-497.",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 69,
+   "id": "W4388843751|full|IN",
+   "work_id": "W4388843751",
+   "split": "test",
+   "language": "en",
+   "code": "IN",
+   "name": "India",
+   "spans": [
+    "India"
+   ],
+   "text": "Maldives\nCountry Overview The Maldives are situated in the Indian Ocean, southwest of India, and consist of approximately 1,190 coral islands grouped in a double chain of twenty-six atolls. Spread over roughly 90,000 square kilometers it is the smallest country in Asia in terms of land area and population. T",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 70,
+   "id": "W2111597581|full|MX",
+   "work_id": "W2111597581",
+   "split": "test",
+   "language": "en",
+   "code": "MX",
+   "name": "Mexico",
+   "spans": [
+    "mexicana"
+   ],
+   "text": "The Natural History of Cutaneous Leishmaniasis in Guatemala\nThe natural history of American cutaneous leishmaniasis was studied in Guatemala by analyzing the characteristics of 355 untreated leishmanial lesions, observing the evolution of 57 lesions on persons who received a placebo in treatment trials, and analyzing data from a population-based survey concerning the duration of 82 untreated lesions. Of 25 lesions caused by Leishmania mexicana that were followed prospectively, 22 (88%) completely reepithelialized by a median lesion age of 14 weeks, and 17 (68%) were classified as cured (no residual wound inflammation or reactivation during at least 6 months of follow-up). In contrast, 7 (22%) of 32 lesions caused by Leishmania braziliensis reepithelialized by a median lesion age of 13 weeks, and only 2 (6%) cured. These data demonstrate that the species of Leishmania is the primary determinant of the clinical course and outcome of untreated lesions and underscore the need for field-applicable diagnostic techniques that provide rapid species identification.",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 71,
+   "id": "W42787986|full|MH",
+   "work_id": "W42787986",
+   "split": "test",
+   "language": "es",
+   "code": "MH",
+   "name": "Marshall Islands",
+   "spans": [
+    "Marshall"
+   ],
+   "text": "El plan Marshall rechazó a Franco",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 72,
+   "id": "W4387370528|full|NL",
+   "work_id": "W4387370528",
+   "split": "validation",
+   "language": "en",
+   "code": "NL",
+   "name": "Netherlands",
+   "spans": [
+    "Dutch"
+   ],
+   "text": "Sint Maarten (Dutch part)",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "?"
+  },
+  {
+   "n": 73,
+   "id": "W650344874|full|KH",
+   "work_id": "W650344874",
+   "split": "validation",
+   "language": "fr",
+   "code": "KH",
+   "name": "Cambodia",
+   "spans": [
+    "Cambodge"
+   ],
+   "text": "Flore du Cambodge, du Laos et du Viêt-nam",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 74,
+   "id": "W3134683693|full|LC",
+   "work_id": "W3134683693",
+   "split": "validation",
+   "language": "en",
+   "code": "LC",
+   "name": "Saint Lucia",
+   "spans": [
+    "Saint Lucia"
+   ],
+   "text": "RSM v Saint Lucia:1With Prejudice—The Unlikely Death Knell\nOn 29 April 2019, the RSM Production Corporation v Saint Lucia ad hoc Annulment Committee partially annulled the International Centre for Settlement of Investment Disputes (ICSID) Tribunal’s Award in RSM Production Corporation v Saint Lucia.3 The ad hoc Committee found that the Tribunal had manifestly exceeded its powers by dismissing the claims ‘with prejudice’. By this finding, the ad hoc Committee effectively reversed the res judicata effect of the Tribunal’s Award4 and gave RSM Production Corporation (RSM) an opportunity to recommence the arbitration. However, the ad hoc Committee rejected two other annulment grounds asserted by RSM: first, that the order of security for costs by the Tribunal constituted a manifest excess of powers; and, secondly, that the alleged lack of impartiality by Tribunal member Dr Gavan Griffith amounted to a departure from a fundamental rule of procedure as well as improper constitution of the Tribunal. This case comment will address the background of the annulment proceedings (Section II), describe the findings in the ad hoc Committee’s Decision on Annulment (Decision) (Section III); and comment on the potential for ‘with prejudice’ dismissal to be used as a means of sanctioning non-compliance with an order for provisional measures (in this case, security for costs) (Section IV).",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 75,
+   "id": "W4414611485|full|MK",
+   "work_id": "W4414611485",
+   "split": "test",
+   "language": "en",
+   "code": "MK",
+   "name": "North Macedonia",
+   "spans": [
+    "Republic of North Macedonia"
+   ],
+   "text": "The Importance of Sports and Trademarks of the Republic of North Macedonia",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 76,
+   "id": "W2169807112|full|ZW",
+   "work_id": "W2169807112",
+   "split": "validation",
+   "language": "en",
+   "code": "ZW",
+   "name": "Zimbabwe",
+   "spans": [
+    "Zimbabwe"
+   ],
+   "text": "Pastoralism and Zimbabwe\nExcavations at the Zimbabwe (enclosure) of Manekweni, in southern coastal Mozambique, have shown that it belongs to the Zimbabwe Culture which was centred on the Rhodesian plateau. Occupation levels have been dated to between the twelfth and eighteenth centuries. The faunal evidence indicates that a section of the population benefited from intensive beef production through transhumant pastoralism on the seasonally-fluctuating fringes of tsetse fly infestation. The settlement pattern of Rhodesian Zimbabwe suggests that their siting was determined by the demands of a similar system of transhumance. This model provides a basis from which to begin to reconstruct some aspects of the economies of early Zimbabwe. It is already clear that Zimbabwe were not simply the products of long-distance trade; rather, their economies integrated farming and cattle-herding as well as gold production and foreign trade.",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "H"
+  },
+  {
+   "n": 77,
+   "id": "W2599322841|full|JE",
+   "work_id": "W2599322841",
+   "split": "validation",
+   "language": "en",
+   "code": "JE",
+   "name": "Jersey",
+   "spans": [
+    "Jersey"
+   ],
+   "text": "Excursion to Jersey",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "reject",
+   "ref": "M"
+  },
+  {
+   "n": 78,
+   "id": "W2737084030|full|US",
+   "work_id": "W2737084030",
+   "split": "validation",
+   "language": "en",
+   "code": "US",
+   "name": "United States",
+   "spans": [
+    "United States"
+   ],
+   "text": "United States Virgin Island's coral reef management priorities",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "?"
+  },
+  {
+   "n": 79,
+   "id": "W4360962882|full|VN",
+   "work_id": "W4360962882",
+   "split": "validation",
+   "language": "fr",
+   "code": "VN",
+   "name": "Vietnam",
+   "spans": [
+    "Viet Nam"
+   ],
+   "text": "Viet Nam",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 80,
+   "id": "W2210254641|full|BN",
+   "work_id": "W2210254641",
+   "split": "validation",
+   "language": "pt",
+   "code": "BN",
+   "name": "Brunei",
+   "spans": [
+    "Brunei"
+   ],
+   "text": "Políticas contemporâneas: fim do direito à saúde?\nRESUMO: O autor apresenta o tema em duas partes distintas: na primeira, analisa o período pós Constituinte e da reforma do Estado no Brasil no âmbito do Sistema Único de Saúde e numa segunda analisa as políticas contemporâneas e o desiderato constitucional do direito à saúde no Brasil.Apresenta inicialmente um quadro com valores do IDH da ONU, transportando o conceito para uma comparação livre com os estados brasileiros mostrando a desigualdade da distribuição de recursos e a qualidade de vida nos diferentes estados do Brasil.Em seguida apresenta o SUS como política de escopo nacional em um contexto de reforma institucional, destacando e ilustrando com diversos dados cinco pontos básicos dessa reforma: a universalização do direito à saúde, a descentralização unificada, a democratização da gestão, a integralidade da assistência, e a execução mista do sistema.Aborda ainda a questão do financiamento dessa política unlversalizante e integral no contexto do orçamento público brasileiro e a recente reforma constitucional relativa ao tema.Destaca as orientações programáticas em direção ao auto-cuidado; a importância de se aliar os avanços políticos a novos mecanismos de gerência com vistas ao papel regulador nos diferentes níveis de gestão do sistema; a necessidade dos pactos sociais como processo de implantação de políticas em um país das dimensões e da complexidade do Brasil.Conclui o autor com uma proposta de reforma organizacional que dê sustentação à ampla política de seguridade social no país considerando as áreas da saúde, da previdência e da assistência social.PALAVRAS-CHAVE: cidadania, política de saúde, Sistema Único de Saúde, Estado Eu agradeço o convite dos organizadores do Congresso, e farei a minha intervenção em duas partes: na primeira apresento uma série de transparências sobre esse período pós Constituinte e da reforma do Estado, que é o Sistema Único de Saúde, e numa segunda parte eu apresento algumas idéias e sugestões sobre como enfrentar a pergunta: fim do direito à saúde?! Para não esquecer que nós estamos no Brasil, vamos usar um mapa que mostra a aplicação do IDH no Brasil.IDH, vocês sabem, é o índice de Desenvolvimento Humano que a ONU desenvolveu para fazer frente à visão dos economistas, que fazem tudo em PIB per capita.A aplicação do IDH no Brasil, de uns quatro anos atrás, se não me engano mostra com muita clareza como o nosso país é dividido, não em dois, talvez em três Brasis.Podemos ver a aplicação do IDH, estado por estado: o Rio Grande do Sul, como o melhor, e a Paraíba, a minha Paraíba, em último lugar; São Paulo está em terceiro.Se os nossos estados federados fossem países e se filiassem à ONU, como é que eles se classificariam nesse \"rank\" de IDH feito pela ONU há uns três, quatro anos atrás?O primeiro estado brasileiro, que é o Rio Grande do Sul, ficaria ali no quadragésimo lugar junto da República Tcheca, Brunei, Venezuela e um pouco abaixo do Chile.A Paraíba estaria em último lugar, ficaria entre os cento e oitenta e tantos países filiados à ONU, em último lugar na classificação do IDH.Isso é uma coisa de uma brutalidade e de uma expressividade total, estar em último lugar!Alagoas, Piauí, estão ali abaixo de Camarões; o Ceará está entre Papuá-Nova Guiné e Camarões, etc; Maranhão está entre Suazilândia e as Ilhas Salomão; essa é uma questão muito importante, a gente não pode esquecer de quê País se está falando, de quê características desse País, gigantesco, que tem tantas potencialidades mas que é tão desigual.É num País desse que nós estamos trabalhando, num País campeão de desigualdades.Nesse sentido, a reforma do Estado, do SUS, traçou um rumo que tem, do meu ponto de vista, cinco orientações básicas: a universalização do direito, a descentralização unificada, a democratização da gestão, a integralidade da assistência, e a execução mista.Com essas cinco grandes orientações, nós começamos a reforma, uma reforma de um sistema mais do que centenário.Houve a regulamentação em 1990, mas a Lei decisiva foi a de 1993 quando finalmente Brasília concordou com a descentralização do gigante que era o INAMPS.Teve também o interregno 89/90 do governo que sucedeu a Constituição, cuja orientação foi francamente anti-universalização, anti-SUS.A partir de 93 essa reforma começou a \"pegar ritmo\", com o Ministro Jamil Hadad, do PSB do Rio de Janeiro.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 81,
+   "id": "W2954257127|full|GY",
+   "work_id": "W2954257127",
+   "split": "validation",
+   "language": "es",
+   "code": "GY",
+   "name": "Guyana",
+   "spans": [
+    "Guyana"
+   ],
+   "text": "Nematodes parasitos colectados por la mision Chauvancy en Guayana francesa\nDurante nuestra estaneia en el Museo de Historia Natural de Paris (Section Verrues), donde tuviruos el privilegio de trabajar bajo la direc¬ tion dcl prof. A. G. Chabaud, pudimos identificar 13 espeeies de néma¬ todes colectadas en la Guyana Francesa por la Mision Chauvancy.A continuation exponemos el resultado de este trabajo.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 82,
+   "id": "W2312507646|full|ES",
+   "work_id": "W2312507646",
+   "split": "test",
+   "language": "en",
+   "code": "ES",
+   "name": "Spain",
+   "spans": [
+    "Spain"
+   ],
+   "text": "The Valley of Mexico\nIN the paper I am about to read to you I endeavour to give some description of the valley and city of Mexico. The city originated in an Aztec settlement on two small muddy islands in a lake which at one time must have filled the greater part of the valley, 800ooo feet above sealevel. By an examination of early maps and plans I shall endeavour to trace the development of the city which, after becoming the capital of a native Indian empire, was successively the colonial capital of New Spain and of the Mexican Republic; furthermore, to follow the engineering works both native and foreign for the protection of the city from inundation, and finally for the drainage of the lakes. The Gulf of Mexico is curiously devoid of harbours, and the early voyagers always sought the shelter of the small island of San Juan de Ulua as a protection from the dreaded  Norte, the cold north wind which sweeps down from North America. This island is close to the shore, and on the mainland opposite to it the city of Vera Cruz was built, a city which always had a bad reputation as the home of yellow fever; but quite recently, mainly owing to the skill of English engineers and contractors, it has become a well-dtained health resort and possesses wharves capable of accommodating ocean-going steamers. However, until quite lately the island of San Juan de Ulua was the only protection for vessels, and the picture plan, dated i608, by Bautista Antonelli shows the ships moored to rings attached to the wall which had been built along the landward side of the island.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "?"
+  },
+  {
+   "n": 83,
+   "id": "W2546083605|full|BR",
+   "work_id": "W2546083605",
+   "split": "validation",
+   "language": "pt",
+   "code": "BR",
+   "name": "Brazil",
+   "spans": [
+    "Brasil"
+   ],
+   "text": "Acessibilidade tecnológica na educação: estudo de caso da viabilidade para o deficiente\nDados da Organizacao das Nacoes Unidas e do Censo de 2010 no Brasil retratam\r\numa populacao expressiva com algum tipo de deficiencia. Nesse contexto essa\r\npesquisa tem com objetivo identificar no ambiente educacional a relacao dos\r\ndeficientes e os servicos facilitadores proporcionados pela tecnologia. O presente\r\ntrabalho apresenta um estudo sobre o historico das pessoas com deficiencia, a\r\nevolucao da sociedade referente ao tratamento a essas pessoas e sua insercao na\r\nsociedade. Este estudo aborda: acessibilidade e inclusao das pessoas que possuem\r\ndeficiencia nas instituicoes de ensino e no mercado de trabalho, bem como a\r\nadequacao do termo utilizado para se direcionar as pessoas com deficiencia. Sao\r\ndemonstrados tambem recursos de tecnologia assistiva existentes e a acessibilidade\r\nno campus Campos Centro do Instituto Federal Fluminense e a relacao de alunos\r\ncom as tecnologias da area de Telecomunicacoes. Este trabalho ainda apresenta\r\num projeto futuro a fim de oferecer dentro das escolas recursos para as pessoas que\r\npossuem deficiencia de modo que estas possam ser mais independentes nas\r\natividades escolares e profissionais. Para isso foi realizada uma pesquisa de campo,\r\nonde foram aplicados 199 questionarios sendo 6% dos entrevistados deficientes e\r\n94% nao deficientes com assuntos referentes a recursos tecnologicos mais\r\nutilizados e a insercao tecnologica. Da pesquisa foram elaborados graficos de barras\r\npara analisar as opinioes dos entrevistados nos quais se observou que, no geral,\r\nmais de 50% alunos afirmaram nao ter dificuldades relacionadas a acessibilidade.",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 84,
+   "id": "W4313235296|full|TJ",
+   "work_id": "W4313235296",
+   "split": "test",
+   "language": "es",
+   "code": "TJ",
+   "name": "Tajikistan",
+   "spans": [
+    "Tayikistán"
+   ],
+   "text": "Tayikistán",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 85,
+   "id": "W7214300902|full|CC",
+   "work_id": "W7214300902",
+   "split": "test",
+   "language": "en",
+   "code": "CC",
+   "name": "Cocos (Keeling) Islands",
+   "spans": [
+    "Cocos (Keeling) Islands"
+   ],
+   "text": "A new species of Bathyeliasona (Annelida, Polynoidae) from the abyssal plain of the eastern Indian Ocean\nA new species of deep-sea polynoid, Bathyeliasona oceanxplorer sp. nov ., is described from the abyssal plain located in international waters between Christmas Island and the Cocos (Keeling) Islands in the eastern Indian Ocean from a single specimen collected at a depth of 4977 m. The new species is characterised using morphology and molecular data from four genetic markers (COI, 16S rRNA, 18S rRNA, and 28S rRNA). Bathyeliasona oceanxplorer sp. nov . is distinguished from its congeners by a combination of characters, including the possession of 18 segments, slender frontal filaments, the presence of a buccal bulb, and ventral pygidial lobes with weakly undulate margins. This is the first species of Bathyeliasona for which the elytra are described and illustrated. This finding highlights the great value of ROV-based sampling for recovering comparatively intact deep-sea polynoid specimen with most delicate features preserved.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 86,
+   "id": "W7214823326|full|MQ",
+   "work_id": "W7214823326",
+   "split": "validation",
+   "language": "es",
+   "code": "MQ",
+   "name": "Martinique",
+   "spans": [
+    "Martinica"
+   ],
+   "text": "Análisis comparativo de los métodos utilizados para el cálculo del factor de seguridad del talud ubicado en el sector portal de la Martinica de la ciudad de Ibagué\nEl presente trabajo consiste en la comparación entre el factor de seguridad obtenido con el apoyo de hojas de cálculo Excel y herramientas computacionales como el software SLIDE para el análisis de la estabilidad del talud ubicado en el sector portal de la Martinica de la ciudad de Ibagué. Para la obtención de datos y el desarrollo del trabajo, se tomó como base el trabajo de grado “análisis de la estabilidad de un talud ubicado en el kilómetro 5+530 vía variante Ibagué-Armenia en el sector del portal de la Martinica en la ciudad de Ibagué; del cual se tomó información acerca de las características mecánicas del suelo, geometría del talud entre otros, para con ella realizar el cálculo de los factores de seguridad a través de los métodos de Fellenius, Bishop simplificado, Janbú simplificado, ábacos de Hoek and Bray y Janbú. Al emplearse los métodos de Fellenius, Bishop simplificado, Janbú simplificado, Ábacos de Hoek and Bray y Janbú, los factores de seguridad obtenidos fueron de 0,299, 0,338, 0,330, 0,164 y 0,00197 respectivamente, para luego ser comparados con los resultados del software SLIDE mediante el método de variación porcentual, obteniendo de esta forma resultados que indicaron cuanto diferían el uno del otro, para así concluir cuales de dichos métodos tenían unos resultados confiables y coherentes. Finalmente se determinó cuál de los métodos era el más acertado para el talud de estudio, eligiendo así el método de Janbú simplificado debido a que este es el planteamiento más conservador, y añade en sus cálculos un factor de corrección y procesos iterativos, los cuales hacen de este método el más aproximado para la obtención del factor de seguridad del caso investigado.",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "keep",
+   "ref": "H"
+  },
+  {
+   "n": 87,
+   "id": "W2031614475|full|MZ",
+   "work_id": "W2031614475",
+   "split": "validation",
+   "language": "en",
+   "code": "MZ",
+   "name": "Mozambique",
+   "spans": [
+    "Mozambique"
+   ],
+   "text": "Bycatch of Protected Megafauna in the Artisanal Coastal Fishery of Mayotte Island, Mozambique Channel\nIn Mayotte, in July 2007 interviews were conducted on 406 fishermen to assess the bycatch issue on marine megafauna. Seventy-eight fishermen said they caught at least one turtle so far that year, of which twelve were deliberate and 66 accidental. Of the turtle bycaught, 59 were released alive, six released dead and one eaten or sold. Nine fishermen caught at least one dugong during their life time, of which seven were accidental and two deliberate catches. All the animals were kept for meat consumption. Ten fishermen had caught one dolphin accidentally, with all animals released: two dead and eight alive. The handline was responsible for 48 turtle bycatches and three dolphin bycatches. The gillnet was responsible for 12 turtle bycatches, all the dugong catches and four dolphin bycatches. The estimation of bycatch mortality gave a range of 111 to 256 individuals year-1 for turtles, and very low rates (",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "keep",
+   "ref": "H"
+  },
+  {
+   "n": 88,
+   "id": "W3020930084|full|MF",
+   "work_id": "W3020930084",
+   "split": "test",
+   "language": "de",
+   "code": "MF",
+   "name": "Saint Martin",
+   "spans": [
+    "St. Martin"
+   ],
+   "text": "Auftakt: Metaphorik des St. Martin",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 89,
+   "id": "W1861786176|full|RU",
+   "work_id": "W1861786176",
+   "split": "test",
+   "language": "fr",
+   "code": "RU",
+   "name": "Russia",
+   "spans": [
+    "Russie"
+   ],
+   "text": "La Bosnie-Herzégovine post-conflit. État(s) redistributeur(s)\nDix sept ans après la sortie de conflit, alors que les dispositions consécutives aux accords de Dayton ont pacifié le pays par une décentralisation territoriale étendue, y compris en matière économique, la Bosnie Herzégovine a rattrapé son niveau de développement économique relatif du début des années 1990, ce qui la place néanmoins tout en bas de l’échelle européenne, en compagnie de la Macédoine et de l’Albanie. Au temps yougoslave, le dynamisme économique était mesuré, comparé à la pression démographique. L’émigration interne et externe évacuait une part des personnes qui seraient autrement restées sans emploi. On constate que la désindustrialisation postérieure à 1992 a surtout touché des activités politiques comme les armements, autrefois liés au non alignement, laissant en place des activités fondées historiquement sur les ressources naturelles, tandis que la tertiarisation marchande n’a pas eu d’effet moteur, et que la décentralisation liée au régime de Dayton (entités et cantons) na en rien réduit en rien l’emploi dans l’administration. Les basses performances de l’industrie sont compensées par un Etat, souvent actionnaire, qui laisse se reconstituer un régime d’illiquidité revenant aux pratiques socialistes de contrainte budgétaire molle, et ce malgré une législation alignée sur les standards internationaux, un régime monétaire strictement contrôlé et un monitoring international sévère sur les budgets.De fait, l’apparente récupération économique repose sur le cumul des chocs démographiques : la baisse de population répartit la richesse produite sur moins de têtes, et l’émigration solvabilise les populations (par les remises), mais aussi l’Etat (par la TVA sur les importations). Le niveau de consommation a considérablement cru par rapport au temps du régime socialiste, alors que la population au travail a diminué, et que les rémunérations sont loin de couvrir les dépenses des ménages. Il faut donc tenir compte des consommations en nature, du travail dissimulé, des remises de l’émigration, mais également de l’impact social des dépenses de l’Etat. Celui-ci contrôle assez largement les rémunérations dans les entreprises où il détient des participations, ainsi que dans le secteur non marchand, et maintient des aides sociales ciblées sur des clientèles sensibles.Or, l’État, ce sont avant tout les deux entités, Fédération de Bosnie-Herzégovine et République serbe. Les pratiques économiques publiques dans les deux entités sont très peu différenciées, et leurs performances économiques diffèrent peu. On peut donc en conclure que les Etats identitaires qui se sont constitués à la suite de Dayton se sont donné un objectif principal de redistribution. Cette dernière joue avec les règles économiques pour stabiliser l’emploi, et joue avec les sources budgétaires pour rendre solvable un large spectre de population.Fort opportunément pour les détenteurs du pouvoir, l’essence même des activités productives réside dans un patrimoine naturel. Il ne reste donc plus aux autorités qu’à rationaliser cette situation en déclarant que le pays est riche de sa nature. On retrouve alors la logique des États redistributeurs (en général dotés d’hydrocarbures ou de minerais à haute valeur). Or, fort opportunément, du côté de la Fédération de Bosnie-Herzégovine, on dispose de la référence des États moyen-orientaux ou des républiques rentières d’Asie centrale, et du côté de la République serbe, de la Russie tout aussi rentière. Ce type de référence permet de satisfaire les aspirations identitaires, à rebours des idéaux du socialisme yougoslave qui voulait mettre l’enjeu productif au cœur de l’identité.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 90,
+   "id": "W4253516580|full|MU",
+   "work_id": "W4253516580",
+   "split": "validation",
+   "language": "fr",
+   "code": "MU",
+   "name": "Mauritius",
+   "spans": [
+    "Maurice"
+   ],
+   "text": "Australie\nZimmermann Maurice. Australie. In: Annales de Géographie, t. 6, n°26, 1897. pp. 190-191.",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 91,
+   "id": "W7207199772|full|GP",
+   "work_id": "W7207199772",
+   "split": "validation",
+   "language": "es",
+   "code": "GP",
+   "name": "Guadeloupe",
+   "spans": [
+    "Guadalupe"
+   ],
+   "text": "Guadalupe Posada Díaz",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 92,
+   "id": "W4405293547|full|IN",
+   "work_id": "W4405293547",
+   "split": "validation",
+   "language": "pt",
+   "code": "IN",
+   "name": "India",
+   "spans": [
+    "Índia"
+   ],
+   "text": "UMA NOVA AUDIÇÃO DE ÍNDIA: NAS DOBRAS DO SILÊNCIO, UM FALANTE CORPO EXPOSTO\nNeste artigo, o objetivo é caracterizar, por meio das vozes que delineiam um corpo feminino indígena na conhecida guarânia Índia (Original 1928; versão brasileira de 1952), o eixo valorativo, socioideológico, que o apresenta como objetificação sexual ou mitificação. A fundamentação teórica e metodológica, advinda da análise dialógica do discurso (ADD), se dá a partir da mobilização dos conceitos de vozes discursivas, interação, imagem, valoração social e centro de valores, os quais apontam para a forma como essa obra musical oferece uma concepção de diversidade, centrada na condição de (in)visibilidade da figura feminina indígena.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 93,
+   "id": "W2114384834|full|GB",
+   "work_id": "W2114384834",
+   "split": "test",
+   "language": "en",
+   "code": "GB",
+   "name": "United Kingdom",
+   "spans": [
+    "British"
+   ],
+   "text": "Civil Engineering in Trinidad & Tobago\nTrinidad & Tobago ~10°N,61°W!, a British colony until 1962, is an upper-to-middle income country in the Caribbean and as of the year 2000 has an estimated population of 1.3 million, a literacy rate of approximately 95% ~World 2000!, and a land area of 5,128 km ~Trinidad—4,828 km and Tobago—300 km!. The larger island of Trinidad has 95% of the population, and Tobago, which is mountainous and has a small tourist industry, is economically dependent on Trinidad. Trinidad & Tobago, henceforth referred to as the island, has ample water resources, arable land ~Shrivastava, unpublished research report, 2001!, and large proven reserves of oil and natural gas, which are estimated to be approximately 716 million barrels and 23.4 trillion cubic feet, respectively ~Radler 2002!. Specifically, the island is currently the world’s leading exporter of both ammonia and methanol, which are derived from natural gas, and the largest exporter of liquefied natural gas to the United States ~Alexander Oil & Gas 2002!. Simply put, the island has a classic petroleum economy, dangerously dependent on oil and gas earnings, and—due to the neglect of agriculture—almost totally dependent on the importation of food. Further, it has a poor transportation infrastructure, and there is a strong need to regenerate urban areas. Accordingly, there are plans for major expansion and modernization of the irrigation, drainage, transportation, and urban infrastructure for addressing these socioeconomic issues ~GORTT 1997; Halcrow 2000; and Trinidad Guardian 2002a!. This forum presents, against this likelihood of considerable civil engineering activity in the foreseeable future, some professional issues in civil engineering education, training, and practice in the island.",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 94,
+   "id": "W4410481090|full|AX",
+   "work_id": "W4410481090",
+   "split": "test",
+   "language": "en",
+   "code": "AX",
+   "name": "Åland Islands",
+   "spans": [
+    "Åland Islands"
+   ],
+   "text": "Birds of Trade: Availability of Water Birds and Bird Products During Medieval and Early Modern Period in the Baltic Sea\nBird bones are generally scarce in zooarchaeological assemblages in the medieval and early modern period from Finland and Sweden. To obtain new information on bird products and the role of water birds in the Baltic Sea during this period, zooarchaeological assemblages and historical documents were studied from these two countries. The aim is to identify chronological and regional differences and similarities in the materials and understand if there is different evidence of historic utilization of water birds in the Baltic Sea area than zooarchaeological evidence suggests. The materials show that ducks were found in most environments compared to other species found mainly in coastal regions. High frequencies of water birds were identified in the central part of the Baltic Sea, on the Åland Islands. Relatively large frequencies were also identified in nearby Stockholm and Lake Mälaren area. Historical documents from the early 17th century suggest that trade in water birds, specifically common eiders, long‐tailed ducks, velvet scoters, and mergansers, was conducted from the archipelago area around Stockholm and from the Åland Islands. The zooarchaeological assemblages suggest that this trade had been ongoing for centuries before it was documented in the administrative records.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 95,
+   "id": "W4390289817|full|SZ",
+   "work_id": "W4390289817",
+   "split": "validation",
+   "language": "en",
+   "code": "SZ",
+   "name": "Eswatini",
+   "spans": [
+    "Swaziland"
+   ],
+   "text": "Swaziland",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 96,
+   "id": "W7161484029|full|CC",
+   "work_id": "W7161484029",
+   "split": "validation",
+   "language": "en",
+   "code": "CC",
+   "name": "Cocos (Keeling) Islands",
+   "spans": [
+    "Cocos (Keeling) Islands"
+   ],
+   "text": "Panulirus versicolor\nPanulirus versicolor (Latreille, 1804) (Fig. 4) Material examined. 1 juvenile male (cl 22.4 mm), 1 young female (cl 36.2 mm) (ZRC 2012.0097), station CK2, beach and reef near airport, outside of lagoon, sandy beach to reef flat with sea grass beds and rocky bottom, Settlement, West Remarks. Although Morgan (2000) recorded it from Christmas Island, we did not manage to obtain or observe this species there. The present specimen, a young male, was collected from intertidal waters in Cocos (Keeling) Islands. This species has a very wide Indo-West Pacific distribution (Holthuis, 1991; Chan, 1998).",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 97,
+   "id": "W2156924872|full|SD",
+   "work_id": "W2156924872",
+   "split": "test",
+   "language": "en",
+   "code": "SD",
+   "name": "Sudan",
+   "spans": [
+    "Sudan"
+   ],
+   "text": "Another civil war in South Sudan: the failure of Guerrilla Government?\nPopular explanations for the outbreak of a new civil war in South Sudan have centred on ethnic factors and leadership personalities. This article demonstrates that the conflict is rooted in deep cleavages within the ruling political party, the Sudan People's Liberation Movement (SPLM). When internal tensions came to a head in late 2013, a combination of neopatrimonial politics, a weak state structure and legacies of violence from the previous civil war allowed this to escalate into a full-scale armed conflict.",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "?"
+  },
+  {
+   "n": 98,
+   "id": "W4254139218|full|GB",
+   "work_id": "W4254139218",
+   "split": "test",
+   "language": "en",
+   "code": "GB",
+   "name": "United Kingdom",
+   "spans": [
+    "British"
+   ],
+   "text": "The Republic of Seychelles\nThis chapter presents the results of field research on the effects of size on politics and democracy in Seychelles. It focuses on the political history, democratization, and political institutions of the microstate, after which an analysis of the Seychellois political system is provided. The results point to a number of democratic deficiencies in Seychellois politics, even though all the formal requisites of democracy are present. Seychelles became an independent republic on 29 June 1976, James Mancham became president and France-Albert Rene prime minister. Under the new constitution, Seychelles acquired a republican political system which included elements of both British and French political traditions. When the political system of Seychelles is measured up to Robert A. Dahl's conditions for polyarchy, it can first be remarked that Freedom House's classification of the microstate as an electoral democracy can be considered justifiable.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 99,
+   "id": "W1570009927|full|GB",
+   "work_id": "W1570009927",
+   "split": "test",
+   "language": "en",
+   "code": "GB",
+   "name": "United Kingdom",
+   "spans": [
+    "Welsh"
+   ],
+   "text": "Structure and Case Marking in Japanese\nCONTENTS: G.M. Awbery, Dialect Syntax, A Neglected Resource for Welsh. A. Rouveret, X-Bar Theory, Minimality, and Barrierhood in Welsh. R.D. Borsely, A GPSG Approach to Breton Word Order. G.T. Stump, Inflection and the Lexical Representation of Compounds in Breton. R. Hendrick, Breton Pronominals, Binding, and Barriers. N. Stenson, Phrase Structure Congruence, Government, and Irish/English Code-Switching. J. McCloskey, Resumptive Pronouns, A-Binding, and Levels of Representation in Irish. References. Index.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 100,
+   "id": "W4255032810|full|IN",
+   "work_id": "W4255032810",
+   "split": "validation",
+   "language": "pt",
+   "code": "IN",
+   "name": "India",
+   "spans": [
+    "Índia"
+   ],
+   "text": "The Crown, the Court and the Casa da Índia\nIn The Crown, the Court and the Casa da Índia, Susannah Humble Ferreira examines the social and political context that gave rise to the Portuguese Overseas Empire during the reigns of João II (1481-95) and Manuel I (1495-1521). In particular the book elucidates the role of the Portuguese royal household in the political consolidation of Portugal in this period. By looking at the relationship of the Manueline Reforms, the expulsion of the Jews and the creation of the Santa Casa da Misericordia to the political threat brought on by the expansion of Ferdinand of Aragon into the Mediterranean, the author re-evaluates the place of the overseas expansion in the policies of the Portuguese crown.",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "?"
+  },
+  {
+   "n": 101,
+   "id": "W3171932620|full|US",
+   "work_id": "W3171932620",
+   "split": "validation",
+   "language": "en",
+   "code": "US",
+   "name": "United States",
+   "spans": [
+    "American"
+   ],
+   "text": "American Sāmoa and Sāmoa\nAmerican Sāmoa and Sāmoa Brian T Alofaituli (bio) A review of Tuvalu is not included in this issue. During the year in review, both American Sāmoa and the Independent State of Sāmoa (hereafter called Sāmoa) faced interesting political discussions surrounding their respective constitutions, new pending laws, and preparations for political elections, among other pressing political topics. To begin, both American Sāmoa and Sāmoa received considerable attention in 2019–2020 because of the measles outbreak that infected over five thousand people. The two Samoan governments announced restrictions on interisland travel between the islands until the end of the public health emergency. American Sāmoa’s high immunization coverage saved hundreds of lives, as there were no measles-related deaths. Unfortunately, Sāmoa’s low vaccination coverage resulted in the deaths of eighty-three people, most of them children. There is speculation that the actual number could be even higher, as there may have been additional undocumented deaths in rural areas. In a major effort to quell the spread of measles, Sāmoa, together with volunteers from around the world, carried out an unprecedented mass vaccination campaign. Sāmoa’s twoday government shutdown at the start of December included the closure of all shops, schools, businesses, and community functions to allow emergency medical team vans and medical staff to reach as many people as possible throughout the islands of ‘Upolu, Savai‘i, Manono, and Apo-lima. Social media and television and radio programs joined in the efforts and relayed government announcements during the door-to-door vaccination campaign. The American Sāmoa government sent supplies of oxygen tanks for the intensive care units in Sāmoa, showing solidarity in a time of emergency with their kin to the west. Lieutenant Governor Josh Green of Hawai‘i, a medical doctor by profession, led a team of more than seventy medical nurses and doctors on a chartered Hawaiian Airlines flight to Sāmoa as part of the World Health Organization’s call for emergency medical teams. The successful twoday campaign resulted in hundreds of people being vaccinated, both adults and children. Anti-vaccination activists immediately took to social media, condemning the efforts of the government and volunteers and calling for more natural solutions as a remedy for the measles. The most popular Samoan anti-vaxxer, Edward Tamasese, was charged with violating section 41 of the 2013 Crimes Act, which forbids inciting “hostility against the Government of Samoa in circumstances where a risk of ‘lawlessness, violence, or disorder’ is present” (so, 8 Dec 2019). At the end of December 2019, Sāmoa proposed and passed the Infants Amendment Bill 2019, which enforced [End Page 173] compulsory immunization as a school-entry requirement. At the beginning of the new year, Samoan Opposition Minister of Parliament (mp) Olo Fiti Va‘ai supported the urgent call by the public for a Commission of Inquiry into the measles outbreak. Va‘ai publicly apologized to the people of Sāmoa during a parliamentary session, stating, “We [the Samoan Government] failed you, Samoa” (so, 7 Dec 2020). Ironically, Sāmoa had just commemorated the one hundredth anniversary of the 1918 influenza pandemic that killed more than 20 percent of the Samoan population. Not long after the measles epidemic subsided, at the start of 2020, the novel Coronavirus Disease 2019, also known as covid-19, became a worldwide pandemic that led to millions of cases. This pandemic continues to ravage countries around the world, causing millions of deaths. Fortunately, American Sāmoa and Sāmoa remain covid-19-free, with no identified cases. Implementing a strict quarantine and closing international borders, including between the two Sāmoas, have both proved successful. Sāmoa has only allowed limited, sanctioned flights from Aotearoa/New Zealand into the islands, and only for those who have undergone strict quarantine and received a covid-19 medical clearance. All arrivals have been required to quarantine in Sāmoa for fourteen days before being released to family or friends. American Sāmoa discussed opening its borders to incoming flights from Hawai‘i but then reconsidered due to the state’s spike in covid-19 cases. Hundreds of residents of both American S...",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "H"
+  },
+  {
+   "n": 102,
+   "id": "W2754898010|full|HM",
+   "work_id": "W2754898010",
+   "split": "test",
+   "language": "en",
+   "code": "HM",
+   "name": "Heard & McDonald Islands",
+   "spans": [
+    "Heard Island and McDonald Islands"
+   ],
+   "text": "Science and Policy in the Marine Realm\nResource management in the Southern Ocean began with the International Whaling Commission (IWC), but was later developed through the Seals Convention and CCAMLR (the Convention on the Conservation of Antarctic Marine Living Resources). These strongly focused bodies and the close relationship between scientists and policymakers has resulted in a collaborative approach to the development of policy, and a strategic approach to science, based on policy needs. Australia entered the field of Antarctic marine research in the early 1980s, after development of the krill fishery and the emergence of CCAMLR as the international body established to manage this, and other fisheries, in the Southern Ocean. With the development of domestic fisheries for Patagonian toothfish and mackerel icefish at Heard Island and McDonald Islands (HIMI), and at Macquarie Island in the 1990s, the Australian Antarctic Division focussed on providing targeted information to policy-makers that enabled direct management of these fisheries. The Australian Antarctic Division's Southern Ocean Ecosystems programme maintains its focus on supporting Australia's position in key forums - including CCAMLR , the IWC and the Agreement on the Conservation of Albatrosses and Petrels. In collaboration with our partners at the Antarctic Climate and Ecosystems Cooperative Research Centre we are also able to address issues relating to the effects of climate change on Southern Ocean ecosystems. Such strongly focussed research programmes are thus capable of serving several masters simultaneously, whilst at the same time producing world-class science.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 103,
+   "id": "W4285080962|full|VI",
+   "work_id": "W4285080962",
+   "split": "validation",
+   "language": "en",
+   "code": "VI",
+   "name": "US Virgin Islands",
+   "spans": [
+    "United States Virgin Islands"
+   ],
+   "text": "United States Virgin Islands",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 104,
+   "id": "W2946425736|full|UY",
+   "work_id": "W2946425736",
+   "split": "test",
+   "language": "es",
+   "code": "UY",
+   "name": "Uruguay",
+   "spans": [
+    "Uruguay"
+   ],
+   "text": "Elecciones en República Dominicana\nPor tercera vez, el actual Presidente Leonel Fernandez, triunfo en las urnas el pasado 16 de mayo. Conociendo la historia dominicana esto no es ninguna sorpresa ya que existen, en su pasado, varios antecedentes similares. En otros terminos: la ciudadania dominicana es un cuerpo electoral acostumbrado a los “mandatos prolongados”. Tales fueron los casos de Balaguer, de Bosch o el del mismo dictador Leonidas Trujillo que ocuparon, todos, largos periodos de gobierno al frente del Ejecutivo dominicano. En ese sentido, Republica Dominicana, evidentemente, no cuenta con un historial verdaderamente democratico, sino que ha escrito su pasado entre democracias paternalistas, dictaduras, gobiernos titeres, elecciones dudosas e intervenciones extranjeras. Trujillo, un dictador que, indudablemente, quedo en la memoria –(y en la literatura)- de los latinoamericanos por su personalidad brutal y hasta caricaturesca, despojo por mucho tiempo a los dominicanos de la real posibilidad de ejercer la democracia. Balaguer -(menos arbitrariamente pero con intervencion estadounidense de por medio)- continuo el legado de Trujillo y, nuevamente, fue un personaje que ocupo un espacio de tiempo muy largo en la historia politica dominicana. En el marco de esta herencia politica, el Presidente Leonel Fernandez -(perteneciente al PLD, fundado por Juan Bosch)- tomara, por tercera vez, el mandato presidencial con el 53% de los votos, quedando en segundo lugar, su opositor, Miguel Vargas Maldonado (con el 41%) por el PRD. Sin pretension de hacer predicciones demasiado ambiciosas, resulta interesante mirar sus mandatos pasados, para intentar anticipar, aunque sea hipoteticamente, cuales seran las caracteristicas mas salientes de este nuevo gobierno. Los mandatos anteriores de Leonel Fernandez fueron gobiernos acusados, nada mas ni nada menos que de compra de opositores, corrupcion, diversas inclinaciones autoritarias y hasta de limitar la tan necesaria libertad de prensa -(vease, entre otras casos, la renuncia de Miguel Franjul, el director de “Listin Diario”)-. A estos elementos, hay que senalar que la practica del clientelismo, que siempre tuvo fuerte presencia en Republica Dominicana, parecio arreciar en los anteriores gobiernos de Fernandez por lo que cabe pensar que este continuara presente en el futuro. En este contexto seria aventurado decir que existio una competencia electoral verdaderamente igualitaria entre los partidos aspirantes al poder. Seria ingenuo pensar, que las elecciones no se vieron tenidas, influidas o empanadas por varios de los elementos anteriormente nombrados. Las elecciones, me atreveria a enunciar, fueron el resultado predecible de un pais que muestra una cierta debilidad tanto de sus instituciones como de su cultura democratica. Ello parece tornar dificil las condiciones minimas para la serena y necesaria aceptacion de la competencia electoral como momento clave de un sistema politico democratico. Pero no es menos cierto que la Republica Dominicana es otro ejemplo vivo que demuestra que, el mejor procedimiento para la consolidacion de una democracia es su misma puesta en practica, mas alla de las limitaciones que en determinado momento historico este pueda manifestar. Admirable caracteristica la del regimen democratico que, mas alla de su intrinseca debilidad, posee la capacidad de ser perfectible y, por lo tanto, la posibilidad de ser sometida al metodo de avanzar mediante el procedimiento de ensayo y error. Es posible que la permanencia en el poder de Leonel Fernandez exteriorice, de alguna manera, una debilidad de la tenue cultura democratica dominicana. Sin embargo no olvidemos que, en los ultimos tiempos, la “moda de la reeleccion” se ha instalado en muchos paises de America Latina. Sin ser esta un pecado, ello no es bueno en un continente donde las tradiciones democraticas –(salvo en contados paises)- son, en el fondo, recientes, fragiles y carentes de verdadero arraigo. Solo resta esperar que la ciudadania dominicana sea, en un futuro, seducida por una democracia mas transparente y saludable. * Estudiante de la Licenciatura en Estudios Internacionales.  Depto de Estudios Internacionales.  FACS - ORT Uruguay.",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "keep",
+   "ref": "?"
+  },
+  {
+   "n": 105,
+   "id": "W626782212|full|AU",
+   "work_id": "W626782212",
+   "split": "validation",
+   "language": "en",
+   "code": "AU",
+   "name": "Australia",
+   "spans": [
+    "Australian"
+   ],
+   "text": "The story behind the stamp : Cocos (Keeling) Islands, Christmas Island (Indian Ocean), Australian Antartic Territory, Norfolk Island decimal stamps : complete issues to 1980",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 106,
+   "id": "W567399237|full|ES",
+   "work_id": "W567399237",
+   "split": "test",
+   "language": "en",
+   "code": "ES",
+   "name": "Spain",
+   "spans": [
+    "Spain",
+    "Spanish"
+   ],
+   "text": "The Spanish Republic and Civil War\nThe Spanish Civil War has gone down in history for the horrific violence that it generated. The climate of euphoria and hope that greeted the overthrow of the Spanish monarchy was utterly transformed just five years later by a cruel and destructive civil war. Here Julián Casanova, one of Spain's leading historians, offers a magisterial new account of this critical period in Spanish history. He exposes the ways in which the Republic brought into the open simmering tensions between Catholics and hardline anticlericalists, bosses and workers, Church and State, order and revolution. In 1936 these conflicts tipped over into the sacas, paseos and mass killings which are still passionately debated today. The book also explores the decisive role of the international instability of the 1930s in the duration and outcome of the conflict. Franco's victory was in the end a victory for Hitler and Mussolini and for dictatorship over democracy.",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 107,
+   "id": "W4236027234|full|DO",
+   "work_id": "W4236027234",
+   "split": "validation",
+   "language": "en",
+   "code": "DO",
+   "name": "Dominican Rep.",
+   "spans": [
+    "Dominican Republic"
+   ],
+   "text": "Dominican Republic\nThe integration of national economies and markets has increased substantially in recent years, putting a strain on the international tax rules, which were designed more than a century ago.Weaknesses in the current rules create opportunities for base erosion and profit shifting (BEPS), requiring bold moves by policy makers to restore confidence in the system and ensure that profits are taxed where economic activities take place and value is created.Following the release of the report Addressing Base Erosion and Profit Shifting in February 2013, OECD and G20 countries adopted a 15-point Action Plan to address BEPS in September 2013.The Action Plan identified 15 actions along three key pillars: introducing coherence in the domestic rules that affect crossborder activities, reinforcing substance requirements in the existing international standards, and improving transparency as well as certainty.After two years of work, measures in response to the 15 actions were delivered to G20 Leaders in Antalya in November 2015.All the different outputs, including those delivered in an interim form in 2014, were consolidated into a comprehensive package.The BEPS package of measures represents the first substantial renovation of the international tax rules in almost a century.Once the new measures become applicable, it is expected that profits will be reported where the economic activities that generate them are carried out and where value is created.BEPS planning strategies that rely on outdated rules or on poorly co-ordinated domestic measures will be rendered ineffective.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 108,
+   "id": "W2146444736|full|GS",
+   "work_id": "W2146444736",
+   "split": "validation",
+   "language": "en",
+   "code": "GS",
+   "name": "South Georgia & South Sandwich Is.",
+   "spans": [
+    "South Georgia"
+   ],
+   "text": "South Georgia pipit nesting at Schlieper Bay, South Georgia\nAn 18-strong international team is hard at work in South Georgia, undertaking the final phase of the world's largest rodent eradication project, run by the South Georgia Heritage Trust. Known collectively as ‘Team Rat’, its departure for South Georgia in January coincided with the discovery of a nest of five South Georgia pipit chicks (Fig. 1) in an area overrun with rats before being baited by the trust in 2013. The pipit is the world's most southerly songbird.",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 109,
+   "id": "W7220064361|full|DE",
+   "work_id": "W7220064361",
+   "split": "test",
+   "language": "fr",
+   "code": "DE",
+   "name": "Germany",
+   "spans": [
+    "Allemand"
+   ],
+   "text": "الترجمة من الفرنسية إلى العربية ودورها في تقوية الكفاءة اللغوية للمتعلمين: شعبة اللغة العربية بالمدرسة العليا لتكوين الأساتذة في بماكو نموذجا\nاهتمت هذه الدراسة بالترجمة ودورها في تكوين المستعربين؛ إذ تعد الترجمة عملية مهمة ترافق كل من يتعلم لغة أجنبية. وللترجمة في عالمنا اليوم أهمية قصوى، وقد فرضت طبيعة - الحياة المعاصرة، بأعبائها المتنوعة والمتفرعة والمعقدة- ضرورة ماسة لدراستها، فأصبحت لونا من ألوان النشاط العلمي والعملي، لها قواعدها الصارمة وأساليبها المعروفة. وشعبة اللغة العربية هي إحدى شعب قسم اللغات (الألمانية – الإنكليزية – العربية - الروسية) بالمدرسة العليا لتكوين الأساتذة وهي تعتبر أولى شعبة لتعليم اللغة والآداب والحضارة العربية في مؤسسات التعليم العالي بجمهورية مالي. أنشأت وافتتحت في السنة الأكاديمية 1993-1994م. تهدف هذه الدراسة إلى تحديد الدور الذي تلعبه الترجمة في تقوية الكفاءة اللغوية للمتعلمين. ستوضح في هذه الدراسة كيف تتمّ دراسة مقرر الترجمة في شعبة اللغة العربية بالمدرسة العليا لتكوين الأساتذة في باماكو – جمهورية مالي. Cette étude s’est intéressée à la traduction et son rôle dans la formation des arabophones. Cependant la traduction est considérée comme un processus important qui accompagne toute personne qui apprend une langue étrangère. La traduction dans notre monde d’aujourd’hui est de la plus haute importance. La nature de la vie contemporaine, avec ses charges diverses, ramifiées et complexes, a imposé un besoin urgent de l’étudier. Elle est devenue une forme d’activité scientifique et pratique, avec ses règles strictes et des méthodes bien connues. La section arabe est l’une des sections du DER langues (Allemand-Anglais-Arabe-Russe) de l'École Normale Supérieure de Bamako. Elle est considérée comme la première section d'enseignement de la langue arabe dans les établissements d'enseignement supérieur de la République du Mali. Elle a été créée et ouverte au cours de l'année universitaire 1993-1994. Cette étude vise à déterminer le rôle que joue la traduction dans le renforcement des compétences linguistiques des apprenants. Elle expliquera comment le cours de traduction est étudié à la section arabe de l'Ecole Normale Supérieure de Bamako - République du Mali. Mots-clés Traduction, Compétence linguistique, apprenants, langue arabe.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "H"
+  },
+  {
+   "n": 110,
+   "id": "W2979653474|full|LI",
+   "work_id": "W2979653474",
+   "split": "validation",
+   "language": "de",
+   "code": "LI",
+   "name": "Liechtenstein",
+   "spans": [
+    "Fürstentum Liechtenstein"
+   ],
+   "text": "Chargenrckruf von Ranitidin-Mepha Ranimed und Zantic\nIn Absprache mit Swissmedic informieren wir Sie über den Rückruf aller Chargen von Ranitidin-Mepha ® 150 mg und 300 mg, aller Chargen von Ranimed ® (Sandoz) 150 mg und 300 mg sowie aller Chargen von Zantic ® (GlaxoSmithKline) bis auf Stufe Detailhandel (Apotheken, Ärzte und Spitäler) in der Schweiz und im Fürstentum Liechtenstein.",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 111,
+   "id": "W2970526936|full|FR",
+   "work_id": "W2970526936",
+   "split": "test",
+   "language": "fr",
+   "code": "FR",
+   "name": "France",
+   "spans": [
+    "France"
+   ],
+   "text": "Capture en Andorre de l'Haliplus lapponum Thoms. [Col.]\nBertrand Henri. Capture en Andorre de l'Haliplus lapponum Thoms. [Col.]. In: Bulletin de la Société entomologique de France, volume 56 (7), juillet 1951. pp. 111-112.",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 112,
+   "id": "W4254486056|full|RU",
+   "work_id": "W4254486056",
+   "split": "validation",
+   "language": "en",
+   "code": "RU",
+   "name": "Russia",
+   "spans": [
+    "Russian"
+   ],
+   "text": "Independent Turkmenistan\nO n 27 October 1991 Turkmenistan declared its independence from the USSR. The country of about 5.1 million people embarked on its independence under very favorable conditions. It possesses enormous reserves of natural gas and significant reserves of oil, which stirred speculation that Turkmenistan would be the Kuwait of Central Asia. From the Soviet era Turkmenistan inherited a relatively diversified economy, in which the gas- and oil-extracting sectors along with a well-developed transportation infrastructure (including export-oriented pipelines) played key roles. Its society is one the most homogeneous in the region, as Turkmens account for 85 percent of the population, Russians about 4 percent, Uzbeks about 5 percent, and others about 6 percent (2007 est.). Since 1991 a significant number of Russians and Russian-speaking groups have left the country. These keywords were added by machine and not by the authors. This process is experimental and the keywords may be updated as the learning algorithm improves.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 113,
+   "id": "W4389321908|full|MF",
+   "work_id": "W4389321908",
+   "split": "test",
+   "language": "en",
+   "code": "MF",
+   "name": "Saint Martin",
+   "spans": [
+    "Saint-Martin"
+   ],
+   "text": "Pre-Columbian Preceramic shellfish consumption and shell tool production: shell remains from Orient Bay, Saint-Martin, Northern Lesser Antilles",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "reject",
+   "ref": "M"
+  },
+  {
+   "n": 114,
+   "id": "W4390362548|full|MG",
+   "work_id": "W4390362548",
+   "split": "test",
+   "language": "en",
+   "code": "MG",
+   "name": "Madagascar",
+   "spans": [
+    "Madagascar"
+   ],
+   "text": "Madagascar",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 115,
+   "id": "W4416534678|full|PF",
+   "work_id": "W4416534678",
+   "split": "test",
+   "language": "en",
+   "code": "PF",
+   "name": "French Polynesia",
+   "spans": [
+    "French Polynesia"
+   ],
+   "text": "French Polynesia",
+   "v1": "keep",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 116,
+   "id": "W2141515883|full|CH",
+   "work_id": "W2141515883",
+   "split": "validation",
+   "language": "fr",
+   "code": "CH",
+   "name": "Switzerland",
+   "spans": [
+    "Suisse"
+   ],
+   "text": "Pogroms contre les Ouzbeks à Och au Kirghizstan. Des dangers de la manipulation politique du nationalisme ethnique\nLe Kirghizstan a fait l’objet d’un véritable marketing : « Suisse de l’Asie centrale » « îlot démocratique », ce pays jouissait encore récemment d’une réputation sans équivalent en Asie centrale auprès de la communauté internationale. Les multiples bailleurs de fonds ont largement copiloté les évolutions politiques depuis 1991 en faisant la promotion d’un modèle politique particulier qui repose sur une libéralisation économique et l’édiﬁcation d’une démocratie ethnonationale. Malgré un tel soutien, comment ce pays a-t-il pu sombrer dans un chaos généralisé débouchant sur les violences qui secouent le sud du pays ces derniers jours ? En vérité, il ne s’agit pas d’un nouveau conﬂit interethnique qui puiserait ses racines dans un système politique traditionnel défaillant (tribalisme, ethnicisme). Les pogroms ethniques qui ont touché les Ouzbeks ces derniers jours sont bien modernes et surgissent dans une situation historique liée à l’émergence d’une gouvernance mondialisée qui se met en place après la guerre froide. Ce pays est devenu un territoire où s’affrontent des groupes politico-maﬁeux. Leur rivalité s’est transformée en affrontement interethnique majeur.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "?"
+  },
+  {
+   "n": 117,
+   "id": "W2511087876|full|RO",
+   "work_id": "W2511087876",
+   "split": "validation",
+   "language": "en",
+   "code": "RO",
+   "name": "Romania",
+   "spans": [
+    "Romanian"
+   ],
+   "text": "Romanian, Istro-Romanian, Megleno-Romanian, and Aromanian\nAbstract This chapter covers history and major dialects divisions; vowels; consonants; prosody and syllable structure; orthography and writing systems; forms and functions of nouns, pronouns, adjectives, and verbs; inflectional morphology of nouns and verbs; patterns of allomorphy; nominal inflection ; case- and number-marking; gender, gender-marking, the ‘neuter’; vocative; morphology of personal pronouns; clitics and their collocation; address pronouns and related phenomena; demonstratives and articles; forms and functions of verbs; inflection classes; tense, mood, person, and number; synthetic and periphrastic forms; aspect-marking in Istro-Romanian and other sub-Danubian dialects; Megleno-Romanian evidentials; non-finite forms and their functions: past participles, supines, gerunds, infinitives; ‘feminization’ of the non-finite; derivational morphology; comparatives and superlatives; syntax of the noun phrase; adjective position; possessive constructions and ‘possessive’ article al; word order in the sentence; negation; interrogation; subordination and complementizers; infinitives vs subjunctives in subordinate clauses; relative clauses; causatives; object marking; coordinators; adverb position.",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "reject",
+   "ref": "H"
+  },
+  {
+   "n": 118,
+   "id": "W321496700|full|BE",
+   "work_id": "W321496700",
+   "split": "test",
+   "language": "fr",
+   "code": "BE",
+   "name": "Belgium",
+   "spans": [
+    "Belgian"
+   ],
+   "text": "[Bilharziosis in the Belgian Congo and in Ruanda-Urundi].",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "M"
+  },
+  {
+   "n": 119,
+   "id": "W62316637|full|BM",
+   "work_id": "W62316637",
+   "split": "test",
+   "language": "es",
+   "code": "BM",
+   "name": "Bermuda",
+   "spans": [
+    "Bermuda"
+   ],
+   "text": "Coastcross- 1 Bermuda graos: nueva graminea de interés pascícola",
+   "v1": "reject",
+   "v2": "reject",
+   "v3": "keep",
+   "ref": "H"
+  },
+  {
+   "n": 120,
+   "id": "W609789066|full|CN",
+   "work_id": "W609789066",
+   "split": "validation",
+   "language": "en",
+   "code": "CN",
+   "name": "China",
+   "spans": [
+    "China"
+   ],
+   "text": "Hybrid Hong Kong\n1. Introduction: Hybridity and the Politics of Desertion Chan Kwok-bun and Chan Nin 2. The Constitutive Rift: Hong and its Politics of Hybridity Chan Nin and Chan Kwok-bun 3. Home But Not Home: Four Vignettes of Return Migrants in Hong Chan Wai-wan and Chan Kwok-bun 4. Blowing in the China Wind: Engagements with Chineseness in Hong Kong's Zhongguofeng Music Videos Yiu Fai Chow and Jeroen De Kloet 5. Brand Hong Asia's World City as Method? Stephen Yiu-wai Chu 6. Structural Hybridization in Film and Television Production in Hong Joseph M. Chan and Anthony Y.-H. Fung 7. Hybridization in the Visual Arts: Now You See Me, Now You Don't Frank Vigneron 8. A Museum of Hybridity: The History of the Display of Art in the Public Museum of Hong Kong, and Its Implications for Cultural Identities Eva Kit-Wah Man 9. From Made in Hong Kong to Designed in Hong Kong: Searching for an Identity in Fashion Wessie Ling 10. Danny Yung In Search of Hybrid Matter and Mind: His Experimental Xiqu for Zuni Icosahedron Jessica Yeung 11. Hybridity, Empowerment and Subversiveness in Cantopop Electronic Dance Music Matthew M. Chew 12. Hybridization and the Emergence of Gay Identities in Hong and in China Day Wong 13. Traditionality and Hybridity: A Village Cuisine in Metropolitan Hong Chan Kwok Shing 14. Mix of Medicines Derrick Kit-Sing Au 15. Everyday Hybridity & Hong Kong's Muslim Youth Paul O'Connor",
+   "v1": "reject",
+   "v2": "keep",
+   "v3": "keep",
+   "ref": "?"
+  }
+ ]
+}
