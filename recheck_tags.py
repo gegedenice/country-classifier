@@ -32,7 +32,7 @@ import pandas as pd
 from huggingface_hub import HfApi, hf_hub_download
 from openai import AsyncOpenAI
 
-DS_REPO = os.environ.get("DS_REPO", "Geraldine/pub-country-mentions-build")
+DS_REPO = os.environ.get("DS_REPO", "Geraldine/pub-country-build")
 MODEL = os.environ.get("JUDGE_MODEL", "Qwen/Qwen3-235B-A22B-Instruct-2507")
 INPUT = os.environ.get("INPUT", "recheck/input-000.parquet")
 OUTPUT = os.environ.get("OUTPUT", "recheck/output-000.parquet")

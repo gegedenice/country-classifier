@@ -6,7 +6,7 @@
 """Fine-tune a multilingual encoder (default jhu-clsp/mmBERT-base) as a 247-label multi-label
 "country mention" classifier, evaluate it and push it to the Hub.
 
-Labels: the column `labels` of the final dataset (Geraldine/pub-country-mentions), i.e. the rule labels after the
+Labels: the column `labels` of the final dataset (Geraldine/pub-country), i.e. the rule labels after the
 two-step LLM check. Training, validation and test use the same labels.
 
 Decision rule: a country is predicted when its probability is >= THRESHOLD (default 0.5, the
@@ -31,8 +31,8 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer, Trai
 
 SMOKE = os.environ.get("SMOKE") == "1"
 TOK = os.environ.get("HF_TOKEN")
-DS_REPO = os.environ.get("DS_REPO", "Geraldine/pub-country-mentions")
-MODEL_REPO = os.environ.get("MODEL_REPO", "Geraldine/pub-country-mentions-classifier")
+DS_REPO = os.environ.get("DS_REPO", "Geraldine/pub-country")
+MODEL_REPO = os.environ.get("MODEL_REPO", "Geraldine/pub-country-classifier")
 PRIVATE = os.environ.get("MODEL_PRIVATE", "1") == "1"
 BASE = os.environ.get("BASE_MODEL", "jhu-clsp/mmBERT-base")
 MAXLEN = int(os.environ.get("MAXLEN", "512"))
@@ -224,7 +224,7 @@ card = [
     "---", "language: [en, fr, es, de, pt]", "license: apache-2.0", f"base_model: {BASE}",
     f"datasets: [{DS_REPO}]", "pipeline_tag: text-classification",
     "tags: [multi-label-classification, country-detection, geographic-indexing, scholarly-metadata, openalex]", "---", "",
-    "# Publication Country Mentions Classifier",
+    "# Publication Country Classifier",
     "",
     f"Given a scholarly publication (title, optional abstract) in English, French, Spanish, German or Portuguese, "
     f"returns the countries it **mentions** among the {N} OpenAlex countries (ISO 3166-1 alpha-2, plus XK). "

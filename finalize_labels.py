@@ -27,8 +27,8 @@ from huggingface_hub import HfApi, hf_hub_download
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 
-BUILD_REPO = os.environ.get("BUILD_REPO", "Geraldine/pub-country-mentions-build")
-FINAL_REPO = os.environ.get("FINAL_REPO", "Geraldine/pub-country-mentions")
+BUILD_REPO = os.environ.get("BUILD_REPO", "Geraldine/pub-country-build")
+FINAL_REPO = os.environ.get("FINAL_REPO", "Geraldine/pub-country")
 FINAL_PRIVATE = os.environ.get("FINAL_PRIVATE", "1") == "1"
 TOKEN = os.environ.get("HF_TOKEN")
 SPLITS = ("train", "validation", "test")

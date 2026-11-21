@@ -36,7 +36,7 @@ from datasets import load_dataset
 from huggingface_hub import HfApi, hf_hub_download
 from openai import AsyncOpenAI
 
-DS_REPO = os.environ.get("DS_REPO", "Geraldine/pub-country-mentions-build")
+DS_REPO = os.environ.get("DS_REPO", "Geraldine/pub-country-build")
 MODEL = os.environ.get("JUDGE_MODEL", "Qwen/Qwen3-235B-A22B-Instruct-2507")
 SPLITS = os.environ.get("JUDGE_SPLITS", "validation,test,train").split(",")
 CONC = int(os.environ.get("JUDGE_CONCURRENCY", "32"))

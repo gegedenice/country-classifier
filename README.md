@@ -4,8 +4,8 @@ Ce projet produit un modèle qui lit une publication scientifique et indique **q
 
 L'objectif est de **compenser le manque d'indexation géographique** des bases bibliographiques. Le champ « couverture géographique » y est souvent vide ou mal rempli, alors que le titre et le résumé contiennent l'information.
 
-- **Modèle** : [`Geraldine/pub-country-mentions-classifier`](https://huggingface.co/Geraldine/pub-country-mentions-classifier)
-- **Dataset** : [`Geraldine/pub-country-mentions`](https://huggingface.co/datasets/Geraldine/pub-country-mentions)
+- **Modèle** : [`Geraldine/pub-country-classifier`](https://huggingface.co/Geraldine/pub-country-classifier)
+- **Dataset** : [`Geraldine/pub-country`](https://huggingface.co/datasets/Geraldine/pub-country)
 - Langues : anglais, français, espagnol, allemand, portugais
 - Modèle de base : [`jhu-clsp/mmBERT-base`](https://huggingface.co/jhu-clsp/mmBERT-base), un encodeur multilingue
 
@@ -333,7 +333,7 @@ import json, torch
 from huggingface_hub import hf_hub_download
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-repo = "Geraldine/pub-country-mentions-classifier"
+repo = "Geraldine/pub-country-classifier"
 tok = AutoTokenizer.from_pretrained(repo)
 model = AutoModelForSequenceClassification.from_pretrained(repo).eval()
 codes = json.load(open(hf_hub_download(repo, "codes.json")))
