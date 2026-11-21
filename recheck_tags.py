@@ -2,27 +2,25 @@
 # requires-python = ">=3.10"
 # dependencies = ["openai>=1.40", "huggingface_hub>=0.30", "pandas", "pyarrow"]
 # ///
-"""Second-pass LLM check of individual country tags (prompt "mention-check-2").
+"""LLM check, step 2: check again, one by one, the labels rejected by step 1.
 
-Why a second prompt: a blind review of 120 decisions of the first pass (judge_labels.py,
-prompt mention-check-1) showed that its KEEP decisions were all right, but about 40 % of its
-REJECT decisions were wrong. The first prompt had three gaps:
-  1. it spoke of "countries", so dependent territories (Martinique, Norfolk Island...) were
-     rejected as "not a country";
-  2. the LLM was not told which word had triggered the tag ("GB" for "Écosse");
-  3. nothing was said about historical or colonial forms ("British raj", "Belgian Congo"),
-     and passing mentions were still dropped as "irrelevant".
-Prompt v2 fixed these (v3 adds two rules: language names and names of other territories, and sends a window around the trigger word for long texts): one verdict per tag, the triggering words are given, territories and
-historical forms are explicitly in scope, and a short reason is required.
+Step 1 (judge_labels.py) tends to reject correct mentions: dependent territories taken for
+"not a country", foreign or historical names it does not link to the code ("Écosse" -> GB,
+"British raj"), passing mentions. This prompt is stricter about what may be rejected:
+  - it gives the word(s) that triggered the label;
+  - it states that territories, former names and historical or colonial forms count;
+  - it lists the only reasons to reject: species, person names, other places with the same
+    name, journal/society/company names, language names, names of another territory, homonyms;
+  - it asks for one verdict and a short reason per label.
+A label is finally removed only if both steps reject it (see finalize_labels.py).
 
-Input:  a parquet file in the dataset repo with columns
-        item_id, text, code, words (list of the words that triggered the tag)
+Input:  parquet file(s) in the working dataset repo (finalize_labels.py prepare) with columns
+        item_id, text, code, words (the words that triggered the label)
 Output: the same rows + verdict ("keep" / "reject"), reason, error, model, prompt.
 
-Run on HF Jobs (CPU), from a clone of the repository:
+Run on HF Jobs (CPU), from a clone of the repository, once per input file:
   hf jobs uv run --flavor cpu-basic --timeout 2h --secrets HF_TOKEN \
-     -e DS_REPO=Geraldine/pub-country-classification-dataset-v2.1 \
-     -e INPUT=eval/judge_sample.parquet -e OUTPUT=eval/judge_sample_v2.parquet recheck_tags.py
+     -e INPUT=recheck/input-000.parquet -e OUTPUT=recheck/output-000.parquet recheck_tags.py
 """
 import asyncio
 import io
@@ -34,13 +32,13 @@ import pandas as pd
 from huggingface_hub import HfApi, hf_hub_download
 from openai import AsyncOpenAI
 
-DS_REPO = os.environ.get("DS_REPO", "Geraldine/pub-country-classification-dataset-v2.1")
+DS_REPO = os.environ.get("DS_REPO", "Geraldine/pub-country-mentions-build")
 MODEL = os.environ.get("JUDGE_MODEL", "Qwen/Qwen3-235B-A22B-Instruct-2507")
-INPUT = os.environ.get("INPUT", "eval/judge_sample.parquet")
-OUTPUT = os.environ.get("OUTPUT", "eval/judge_sample_v2.parquet")
+INPUT = os.environ.get("INPUT", "recheck/input-000.parquet")
+OUTPUT = os.environ.get("OUTPUT", "recheck/output-000.parquet")
 CONC = int(os.environ.get("JUDGE_CONCURRENCY", "32"))
 TOKEN = os.environ["HF_TOKEN"]
-PROMPT_VERSION = "mention-check-3"
+PROMPT_VERSION = "step2"
 
 api = HfApi(token=TOKEN)
 lex = json.load(open(hf_hub_download(DS_REPO, "country_lexicon.json", repo_type="dataset", token=TOKEN)))

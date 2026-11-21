@@ -1,4 +1,4 @@
-"""Regression tests for the rule labeler. Each case comes from a v1 labeling error or a known trap.
+"""Regression tests for the rule labeler. Each case comes from an observed labelling error or a known trap.
 
 Run:  python -m pytest tests/
 """
@@ -13,7 +13,7 @@ from countries.labeler import Labeler  # noqa: E402
 LAB = Labeler()
 
 CASES = [
-    # v1 misses
+    # names that must be recognised
     ("Economic growth in Russia", {"RU"}),
     ("Earthquakes in Turkey", {"TR"}),
     ("Health system of Korea", {"KR"}),
@@ -30,7 +30,7 @@ CASES = [
     ("Scotland and Wales", {"GB"}),
     ("Nuclear program of North Korea", {"KP"}),
     ("Falkland Islands fisheries", {"FK"}),
-    # v1 false positives
+    # traps that must not be labelled
     ("Soil survey of New Jersey", set()),
     ("Atlanta, Georgia public schools", set()),
     ("Jordan curve theorem in topology", set()),
@@ -103,7 +103,7 @@ def test_names_and_places(text, expected):
 
 
 @pytest.mark.parametrize("text,expected", [
-    # v2.1: homonyms found by the LLM check
+    # homonyms found by the LLM check
     ("Circadian rhythm in the eel Anguilla anguilla", set()),
     ("Habitat use by the European eel Anguilla anguilla in Irish waters", {"IE"}),
     ("Tourism in Anguilla", {"AI"}),
@@ -113,10 +113,10 @@ def test_names_and_places(text, expected):
     ("Nutmeg production in Grenada", {"GD"}),
     ("Salomon Maimons Lebensgeschichte", set()),
     ("Excursions into Inauthenticity: The Chamorros of Guam", {"GU"}),
-    # v2.1: Portuguese / Spanish demonyms
+    # Portuguese / Spanish demonyms
     ("A agricultura familiar no semiárido brasileiro", {"BR"}),
     ("Mulheres angolanas e a guerra civil", {"AO"}),
     ("La economía mexicana tras el TLCAN", {"MX"}),
 ])
-def test_v21(text, expected):
+def test_homonyms_and_demonyms(text, expected):
     assert LAB.labels(text) == expected, LAB.explain(text)
