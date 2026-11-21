@@ -1,131 +1,142 @@
 # /// script
 # requires-python = ">=3.10"
-# dependencies = ["openai>=1.40", "datasets>=3.0", "huggingface_hub>=0.30"]
+# dependencies = ["openai>=1.40", "datasets>=3.0", "huggingface_hub>=0.30", "pandas", "pyarrow"]
 # ///
-"""LLM-as-a-judge validation of the rule labels (HF Inference Providers).
+"""LLM check of the rule labels: is each country MENTION correct?
 
-For each row, the judge sees the title/abstract and the countries proposed by the rules,
-and decides for each one whether the publication is really ABOUT that country (study
-area, data, case, policy, population...), as opposed to a passing mention (a journal,
-an organisation, a funder, a comparison made in one sentence). It can also add countries
-the rules missed (named through a city, region or institution).
+The task is deliberately narrow. For each publication the LLM sees the text and the
+countries found by the rules, and answers two questions:
+  1. reject: which of these are NOT a mention of the country? (homonyms: a species,
+     a city or US state with the same name, a person's name, a word in another sense);
+  2. missed: which countries are explicitly NAMED in the text (name, variant or
+     demonym) but missing from the list? Each one must come with the exact words of
+     the text; the script checks that those words really appear in the text.
+It never judges relevance ("is the paper about it?") and never infers a country from
+the language of the text, a city or an institution.
 
-The result is pushed as a new config "judged" of the dataset, with, for each row:
-  labels         rule labels (unchanged)
-  judge_labels   countries kept or added by the judge = the reference for evaluation
-  judge_removed  rule labels rejected by the judge
-  judge_added    countries added by the judge
+    verified_labels = (rule labels - rejected) + missed (with a quote found in the text)
 
-Run on HF Jobs (CPU is enough):
-  hf jobs uv run --flavor cpu-basic --secrets HF_TOKEN \
-     -e DS_REPO=Geraldine/pub-country-classification-dataset-v2 \
-     judge_labels.py        (from a clone of the repository)
+Output: parquet files verified/{split}-NNNNN.parquet in the dataset repo, written chunk
+by chunk, so an interrupted job resumes where it stopped. train_country_model.py uses
+them automatically.
 
-Env: HF_TOKEN, DS_REPO, JUDGE_MODEL, JUDGE_SPLITS (default "validation,test"),
-     JUDGE_MAX_ROWS (per split, default all), JUDGE_CONCURRENCY (default 16).
+Run on HF Jobs (CPU is enough), from a clone of the repository:
+  hf jobs uv run --flavor cpu-basic --timeout 8h --secrets HF_TOKEN \
+     -e DS_REPO=Geraldine/pub-country-classification-dataset-v2.1 judge_labels.py
+
+Env: HF_TOKEN, DS_REPO, JUDGE_MODEL, JUDGE_SPLITS (default "validation,test,train"),
+     JUDGE_CONCURRENCY (default 32), CHUNK (default 5000).
 """
 import asyncio
+import io
 import json
 import os
 import re
 
-from datasets import Dataset, DatasetDict, load_dataset
-from huggingface_hub import hf_hub_download
+import pandas as pd
+from datasets import load_dataset
+from huggingface_hub import HfApi, hf_hub_download
 from openai import AsyncOpenAI
 
-DS_REPO = os.environ.get("DS_REPO", "Geraldine/pub-country-classification-dataset-v2")
+DS_REPO = os.environ.get("DS_REPO", "Geraldine/pub-country-classification-dataset-v2.1")
 MODEL = os.environ.get("JUDGE_MODEL", "Qwen/Qwen3-235B-A22B-Instruct-2507")
-SPLITS = os.environ.get("JUDGE_SPLITS", "validation,test").split(",")
-MAX_ROWS = int(os.environ.get("JUDGE_MAX_ROWS", "0"))
-CONC = int(os.environ.get("JUDGE_CONCURRENCY", "16"))
+SPLITS = os.environ.get("JUDGE_SPLITS", "validation,test,train").split(",")
+CONC = int(os.environ.get("JUDGE_CONCURRENCY", "32"))
+CHUNK = int(os.environ.get("CHUNK", "5000"))
 TOKEN = os.environ["HF_TOKEN"]
+PROMPT_VERSION = "mention-check-1"
 
+api = HfApi(token=TOKEN)
 lex = json.load(open(hf_hub_download(DS_REPO, "country_lexicon.json", repo_type="dataset", token=TOKEN)))
 CODES = set(lex["codes"])
 NAMES = lex["names"]
 
-SYSTEM = """You are an expert indexer of scholarly publications. Your job: decide which countries a
-publication is ABOUT, for geographic subject indexing in a library catalogue.
+SYSTEM = """You check automatic country tags on scholarly publications. A tag is correct when the
+text explicitly MENTIONS that country: its name, a variant (e.g. "USA", "Côte d'Ivoire") or a
+demonym ("Kenyan", "brasileiro", "sénégalais"), used for the country itself, its people, or
+something from it.
 
-A country is ABOUT the publication when the country is a study area, a source of data, a case,
-a population, a policy context or a subject of the work (a comparison between countries counts).
-It is NOT about the publication when the name only appears as part of a journal, society,
-company or organisation name ("American Journal of...", "German Research Foundation"), a funder,
-an author affiliation, a language ("written in French"), a breed, species, food or disease name
-("Spanish flu", "Guinea pig"), a US state or other place with a country-like name ("Georgia, USA",
-"New Mexico"), or a passing example in a single clause with no relation to the study.
+Reject a tag when the word that triggered it means something else: a species ("Anguilla anguilla"),
+a city, region or US state with the same name ("Salvador, Bahia", "Granada, Spain", "Georgia, USA",
+"New Jersey"), a person's name ("Dominique", "Jordan"), a language name used only as a language
+("written in French"), or any other homonym.
 
-Use ISO 3166-1 alpha-2 codes (plus XK for Kosovo). Answer with JSON only:
-{"keep": [codes from the candidate list that are about the publication],
- "add": [other countries clearly about the publication, e.g. named through a city or region]}"""
+Do NOT judge relevance: a correct mention stays, even a passing one. Do NOT add a country because
+of the language of the text, a city, a region or an institution: add it only if the country itself
+is named. Codes are ISO 3166-1 alpha-2 (XK = Kosovo).
 
-
-def prompt(text, labels):
-    cands = ", ".join(f"{c} ({NAMES.get(c, c)})" for c in labels) or "none"
-    return f"Publication (title, then abstract):\n<<<\n{text[:4000]}\n>>>\n\nCandidate countries from rules: {cands}"
+Answer with JSON only:
+{"reject": [codes from the tag list that are not mentions],
+ "missed": [{"code": "XX", "quote": "exact words from the text naming the country"}]}"""
 
 
-def parse(raw, labels):
-    m = re.search(r"\{.*\}", raw or "", re.S)
-    j = json.loads(m.group(0))
-    keep = sorted({c for c in j.get("keep", []) if c in labels})
-    add = sorted({c for c in j.get("add", []) if c in CODES and c not in labels})
-    return keep, add
+def user_prompt(text, labels):
+    tags = ", ".join(f"{c} ({NAMES.get(c, c)})" for c in labels) or "none"
+    return f"Text:\n<<<\n{text[:4000]}\n>>>\n\nTags: {tags}"
 
 
-async def judge_one(client, sem, text, labels):
+def parse(raw, text, labels):
+    j = json.loads(re.search(r"\{.*\}", raw or "", re.S).group(0))
+    reject = sorted({c for c in j.get("reject", []) if c in labels})
+    low = text.casefold()
+    missed, quotes = [], []
+    for m in j.get("missed", []) or []:
+        c, q = m.get("code"), (m.get("quote") or "").strip()
+        if c in CODES and c not in labels and len(q) >= 3 and q.casefold() in low:
+            missed.append(c)
+            quotes.append(f"{c}:{q}")
+    return reject, sorted(set(missed)), quotes
+
+
+async def check(client, sem, text, labels):
     async with sem:
+        err = ""
         for attempt in range(5):
             try:
                 r = await client.chat.completions.create(
                     model=MODEL, temperature=0, max_tokens=200,
                     messages=[{"role": "system", "content": SYSTEM},
-                              {"role": "user", "content": prompt(text, labels)}])
-                raw = r.choices[0].message.content
-                keep, add = parse(raw, labels)
-                return keep, add, raw, None
+                              {"role": "user", "content": user_prompt(text, labels)}])
+                return (*parse(r.choices[0].message.content, text, labels), "")
             except Exception as e:  # noqa: BLE001
-                err = repr(e)
+                err = repr(e)[:300]
                 await asyncio.sleep(2 ** attempt)
-        return list(labels), [], "", err
-
-
-async def run_split(client, ds):
-    sem = asyncio.Semaphore(CONC)
-    tasks = [judge_one(client, sem, t, l) for t, l in zip(ds["text"], ds["labels"])]
-    out, done = [], 0
-    for i in range(0, len(tasks), 500):
-        out += await asyncio.gather(*tasks[i:i + 500])
-        done += len(tasks[i:i + 500])
-        print(f"  {done}/{len(tasks)}", flush=True)
-    return out
+        return [], [], [], err          # on failure the rule labels are kept unchanged
 
 
 async def main():
     client = AsyncOpenAI(base_url="https://router.huggingface.co/v1", api_key=TOKEN)
-    # preflight: fail fast if the model is not served
     await client.chat.completions.create(model=MODEL, max_tokens=5, messages=[{"role": "user", "content": "ping"}])
+    done = set(api.list_repo_files(DS_REPO, repo_type="dataset"))
     ds = load_dataset(DS_REPO, token=TOKEN)
-    out = {}
+    sem = asyncio.Semaphore(CONC)
     for split in SPLITS:
         d = ds[split]
-        if MAX_ROWS:
-            d = d.shuffle(seed=0).select(range(min(MAX_ROWS, len(d))))
-        print(f"[judge] {split}: {len(d)} rows with {MODEL}", flush=True)
-        res = await run_split(client, d)
-        keep = [r[0] for r in res]
-        add = [r[1] for r in res]
-        d = d.add_column("judge_labels", [sorted(set(k) | set(a)) for k, a in zip(keep, add)])
-        d = d.add_column("judge_removed", [sorted(set(l) - set(k)) for l, k in zip(d["labels"], keep)])
-        d = d.add_column("judge_added", add)
-        d = d.add_column("judge_error", [r[3] or "" for r in res])
-        d = d.add_column("judge_model", [MODEL] * len(d))
-        n_err = sum(bool(r[3]) for r in res)
-        agree = sum(a == b for a, b in zip(d["labels"], d["judge_labels"])) / max(1, len(d))
-        print(f"[judge] {split}: exact agreement rules/judge {agree:.3f}, errors {n_err}", flush=True)
-        out[split] = d
-    DatasetDict(out).push_to_hub(DS_REPO, config_name="judged", token=TOKEN)
-    print("[done] pushed config 'judged'", flush=True)
+        n_chunks = (len(d) + CHUNK - 1) // CHUNK
+        for k in range(n_chunks):
+            path = f"verified/{split}-{k:05d}.parquet"
+            if path in done:
+                print(f"[skip] {path} already done", flush=True)
+                continue
+            part = d.select(range(k * CHUNK, min(len(d), (k + 1) * CHUNK)))
+            res = await asyncio.gather(*[check(client, sem, t, l) for t, l in zip(part["text"], part["labels"])])
+            df = part.to_pandas()
+            df["judge_rejected"] = [r[0] for r in res]
+            df["judge_added"] = [r[1] for r in res]
+            df["judge_quotes"] = [r[2] for r in res]
+            df["judge_error"] = [r[3] for r in res]
+            df["verified_labels"] = [sorted((set(l) - set(r[0])) | set(r[1])) for l, r in zip(part["labels"], res)]
+            df["judge_model"] = MODEL
+            df["judge_prompt"] = PROMPT_VERSION
+            buf = io.BytesIO()
+            df.to_parquet(buf, index=False)
+            api.upload_file(path_or_fileobj=buf.getvalue(), path_in_repo=path, repo_id=DS_REPO,
+                            repo_type="dataset", commit_message=f"LLM mention check: {path}")
+            changed = sum(sorted(a) != list(b) for a, b in zip(df["labels"], df["verified_labels"]))
+            print(f"[{split} {k + 1}/{n_chunks}] {len(df)} rows, changed {changed}, "
+                  f"rejected {sum(map(len, df['judge_rejected']))}, added {sum(map(len, df['judge_added']))}, "
+                  f"errors {sum(bool(e) for e in df['judge_error'])}", flush=True)
+    print("[done]", flush=True)
 
 
 if __name__ == "__main__":

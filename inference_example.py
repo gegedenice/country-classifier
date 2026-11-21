@@ -1,7 +1,7 @@
 """Minimal CLI inference for the publication country classifier.
 
 Usage:
-  python inference_example.py --title "..." [--abstract "..."] [--repo Geraldine/pub-country-classifier-v2]
+  python inference_example.py --title "..." [--abstract "..."] [--repo Geraldine/pub-country-classifier-v2.1]
   python inference_example.py "Title on the first line\nAbstract on the second"
 """
 import argparse
@@ -13,11 +13,11 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Detect the countries a publication is about")
+    ap = argparse.ArgumentParser(description="Detect the countries a publication mentions")
     ap.add_argument("text", nargs="?", help="publication text (title, then abstract on line 2)")
     ap.add_argument("--title")
     ap.add_argument("--abstract")
-    ap.add_argument("--repo", default="Geraldine/pub-country-classifier-v2")
+    ap.add_argument("--repo", default="Geraldine/pub-country-classifier-v2.1")
     ap.add_argument("--top", type=int, default=10)
     a = ap.parse_args()
 

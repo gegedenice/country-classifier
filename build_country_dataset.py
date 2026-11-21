@@ -42,7 +42,7 @@ from countries.labeler import Labeler  # noqa: E402
 
 API = "https://api.openalex.org/works"
 KEY = os.environ.get("OPENALEX_API_KEY", "")
-DS_REPO = os.environ.get("DS_REPO", "Geraldine/pub-country-classification-dataset-v2")
+DS_REPO = os.environ.get("DS_REPO", "Geraldine/pub-country-classification-dataset-v2.1")
 DS_PRIVATE = os.environ.get("DS_PRIVATE", "1") == "1"
 CACHE = Path(os.environ.get("CACHE_DIR", ROOT / ".cache" / "openalex"))
 OUT_DIR = Path(os.environ.get("OUT_DIR", ROOT / "build"))

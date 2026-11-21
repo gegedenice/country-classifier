@@ -197,6 +197,10 @@ def main():
     for code, texts in ov.ADD_CI.items():
         for t in texts:
             entries[code][(t, False)] = "manual"
+    for code, texts in ov.PT_ES_DEMONYMS.items():
+        for t in texts:
+            for v in inflect(t, "pt"):
+                entries[code][(v, False)] = "manual_demonym_pt_es"
 
     for code in codes:
         for key in list(entries[code]):
