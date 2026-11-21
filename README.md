@@ -16,7 +16,9 @@ L'objectif est de **compenser le manque d'indexation géographique** des bases b
 | Décision | un seuil par pays | **un seuil unique, 0,5** |
 
 - Dataset : `Geraldine/pub-country-classification-dataset-v2.1` (privé pour l'instant)
-- Modèle : `Geraldine/pub-country-classifier-v2.1` (privé, à entraîner)
+- Modèle : `Geraldine/pub-country-classifier-v2.1` (privé pour l'instant)
+
+**En bref.** Sur le jeu de test (7 954 notices, étiquettes vérifiées, seuil 0,5) : **précision 0,96, rappel 0,94, F1 0,95**. Quand le modèle met un pays en tête, ce pays est juste dans 99 % des cas. Le modèle est utilisable pour de l'**indexation assistée** : il suggère des pays, qu'une personne valide ou qu'on filtre par le score (§ 7).
 - Versions précédentes : voir l'historique (§ 11)
 
 ---
@@ -183,13 +185,35 @@ verified_labels = (étiquettes des règles − étiquettes rejetées) + mentions
 |---|---|
 | Modèle | `Qwen/Qwen3-235B-A22B-Instruct-2507` via HF Inference Providers (modifiable avec `JUDGE_MODEL`) |
 | Volume | les ~162 000 notices (train, validation et test) |
-| Durée | 3 à 4 h sur HF Jobs `cpu-basic` (32 requêtes en parallèle) |
+| Durée | 1 h 36 pour le dernier passage sur HF Jobs `cpu-basic` (32 requêtes en parallèle) |
 | Reprise | les résultats sont écrits par blocs de 5 000 notices (`verified/*.parquet`) : un job interrompu reprend là où il s'est arrêté |
 | En cas d'erreur d'appel | les étiquettes des règles sont gardées telles quelles, et l'erreur est notée dans `judge_error` |
 
 Colonnes ajoutées : `verified_labels`, `judge_rejected`, `judge_added`, `judge_quotes` (les citations), `judge_error`, `judge_model` et `judge_prompt`.
 
-Le LLM n'est pas infaillible. Pour connaître la qualité réelle, il faut relire à la main un échantillon de 100 à 200 notices (§ 12).
+### 5.1 Ce que la vérification a changé
+
+| | train | validation | test |
+|---|---|---|---|
+| notices dont les étiquettes ont changé | 12,8 % | 13,1 % | 12,7 % |
+| étiquettes des règles rejetées | 7,5 % | 7,5 % | 7,0 % |
+| pays ajoutés | 11 192 | 655 | 656 |
+| erreurs d'appel (étiquettes des règles gardées) | 12 | 2 | 0 |
+
+- **Ajouts justifiés.** Environ un quart des ajouts sont des textes écrits **en majuscules** (« ISLE OF MAN », « BRASIL », « DR CONGO ») : les règles, sensibles à la casse, les ratent. Les autres sont surtout des graphies absentes du lexique.
+- **Rejets justifiés.** La plupart des rejets retirent de vrais homonymes :
+  - espèces : *Gossypium barbadense* → `BB` ;
+  - personnes : « Mathilde Brunei », « Edna St. Vincent Millay » ;
+  - lieux : « Georgia Water Resources Conference », « Cerro Santa Lucía » ;
+  - organisations : « Geological Society of America » ;
+  - langues : « Italian tongues ».
+- **Erreurs du LLM.** J'ai relu à la main 40 rejets du jeu de test : **environ un tiers sont à tort**. Le LLM retire encore des mentions correctes :
+  - petits territoires : « Norfolk Island », « Puerto Rico », « Tokélaou », « Saint Helena » ;
+  - mentions historiques ou coloniales : « British » dans un texte sur le Pakistan, « France » et « British » dans un texte sur les Seychelles.
+
+  Il fait aussi quelques ajouts à tort : « New Jersey » → `US`, « América Latina » → plusieurs pays.
+
+Bilan : `verified_labels` est meilleur que les étiquettes des règles, mais ce n'est pas une vérité de référence. Il reste quelques pour cent de bruit. Pour connaître la qualité réelle, il faut relire à la main un échantillon de 100 à 200 notices (§ 12).
 
 ## 6. Le fine-tuning (`train_country_model.py`)
 
@@ -205,7 +229,7 @@ Le LLM n'est pas infaillible. Pour connaître la qualité réelle, il faut relir
 | Weight decay / clipping | 0,01 / 1,0 |
 | Précision | bf16 |
 | Graine | 42 |
-| Matériel | 1 GPU A10G (HF Jobs `a10g-small`), environ 1 h 30 |
+| Matériel | 1 GPU A10G (HF Jobs `a10g-small`) : environ 9 100 pas, 1 h 27 au total |
 | Décision | **seuil unique de 0,5** pour tous les pays |
 
 **Pourquoi un seuil unique ?** Le modèle est entraîné et évalué sur les mêmes étiquettes, et ses scores sont presque toujours très tranchés (proches de 0 ou de 1). Un seuil par pays n'apporterait presque rien et compliquerait l'explication. Cette calibration reste disponible en option (`CALIBRATE=1`) : pour chaque pays, on essaie les seuils de 0,05 à 0,95 sur la partition validation et on garde celui qui fait le moins d'erreurs (F1 maximal).
@@ -221,7 +245,47 @@ Le LLM n'est pas infaillible. Pour connaître la qualité réelle, il faut relir
 
 ## 7. Résultats
 
-*À compléter après l'entraînement de la v2.1.* Les résultats de la v2 sont dans l'historique (§ 11).
+Partition test : 7 954 notices, contre `verified_labels`, avec un seuil unique de 0,5.
+
+| | précision | rappel | F1 micro | F1 macro | précision du 1er pays | faux positifs sur les notices sans pays | n |
+|---|---|---|---|---|---|---|---|
+| **tout** | **0,964** | **0,936** | **0,950** | 0,944 | 0,989 | 6,6 % | 7 954 |
+| anglais | 0,971 | 0,953 | 0,962 | 0,955 | – | 6,6 % | 4 899 |
+| français | 0,945 | 0,895 | 0,919 | 0,881 | – | 11,0 % | 1 070 |
+| espagnol | 0,956 | 0,923 | 0,939 | 0,914 | – | 7,1 % | 933 |
+| allemand | 0,970 | 0,914 | 0,941 | 0,890 | – | 2,5 % | 618 |
+| portugais | 0,942 | 0,892 | 0,916 | 0,877 | – | 5,4 % | 434 |
+| titre seul | 0,973 | 0,950 | 0,961 | 0,965 | 0,983 | 3,7 % | 534 |
+
+**Comment lire ces chiffres :**
+- **Précision 0,96** : sur 100 pays proposés, 96 sont des mentions correctes selon les étiquettes vérifiées. **Rappel 0,94** : sur 100 mentions à trouver, 94 sont trouvées.
+- **Le taux de faux positifs (6,6 %) est surestimé.** J'ai fait tourner le modèle sur les 2 017 notices de test sans aucun pays : il en propose un pour 126 d'entre elles. Dans 78 de ces cas, les règles avaient trouvé ce même pays et c'est le LLM qui l'avait retiré, souvent à tort (§ 5.1). Exemples : « Martinique », « Sri Lanka », « Projet de production semencière à la Guadeloupe », « The Autonomy of the Åland Islands ». Le modèle a donc souvent raison contre sa référence. Le vrai taux est plus bas, et la précision probablement sous-estimée.
+- Le **français** est la langue la plus faible (F1 0,92, 11 % de faux positifs), suivi du **portugais**. Ce sont aussi les langues où le lexique Wikidata était le plus pauvre.
+- Les scores par pays (`per_label_metrics.json`) sont presque tous au-dessus de 0,9. Les plus faibles sont des territoires rares, avec 0 à 15 exemples de test (`MP`, `PM`, `WF`, `SH`, `JE`, `BL`, `BV`, `MF`), donc peu fiables.
+- On ne peut pas comparer ces chiffres directement à ceux de la v2 (F1 0,98) ni de la v1 (0,96) : la référence n'est pas la même. Avant, le modèle était évalué contre les règles qui l'avaient produit. Ici, il est évalué contre des étiquettes corrigées, plus exigeantes.
+
+**Cas concrets** (seuil 0,5) :
+
+| Texte | v2 | v2.1 |
+|---|---|---|
+| Circadian rhythm in the eel Anguilla anguilla | `AI` ✗ | rien ✓ |
+| Urban violence in Salvador, Bahia | `SV` ✗ | rien ✓ |
+| Turismo activo en Granada y Sevilla | `GD` ✗ | rien ✓ |
+| A agricultura familiar no semiárido brasileiro | rien ✗ | `BR` ✓ |
+| MEDICAL LEGISLATION FOR THE ISLE OF MAN | rien ✗ | `IM` ✓ |
+| BRASIL E A ÁFRICA DO SUL NAS PÁGINAS DA REVISTA VEJA | rien ✗ | `BR` + `ZA` ✓ |
+| Ebola outbreak response in the Democratic Republic of the Congo | `CD` ✓ | `CD` ✓ |
+| Soil survey of New Jersey | rien ✓ | rien ✓ |
+| Published in the American Journal of Physics… | rien ✓ | rien ✓ |
+| Enseignement du français langue étrangère à l'université | rien ✓ | rien ✓ |
+| Migrationspolitik in Deutschland und Österreich | `DE` + `AT` ✓ | `DE` + `AT` ✓ |
+| Projet de production semencière à la Guadeloupe | `GP` ✓ | `GP` ✓ |
+| Urban heat islands in Nairobi | rien | `KE` (0,63) |
+| Mulheres angolanas e a guerra civil | rien ✗ | rien ✗ |
+
+Pour « Nairobi », le modèle généralise à partir de ce qu'il sait déjà, alors que le Kenya n'est pas nommé : c'est hors de la définition, mais plutôt utile pour l'indexation.
+
+**Verdict.** Le modèle est utilisable pour de l'**indexation assistée**. Pour une indexation entièrement automatique, il faudrait d'abord mesurer la qualité réelle sur un échantillon annoté à la main.
 
 ## 8. Lancer le pipeline
 
